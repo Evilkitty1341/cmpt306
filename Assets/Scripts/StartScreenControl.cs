@@ -14,8 +14,8 @@ public class StartScreenControl : MonoBehaviour {
 
 		// Check if the object is text
 		if (transform.GetComponent<TextMesh> () != null) {
-			// When the mouse os hovering over text, change its color to green
-			transform.GetComponent<TextMesh> ().color = Color.green;
+			// When the mouse os hovering over text, change its color
+			transform.GetComponent<TextMesh> ().color = Color.cyan;
 			// If hovering over the "Start Game" or "Quit" button, set their respective variables to true
 			if (transform.GetComponent<TextMesh> ().text == "Start Game")
 				isStartButton = true;
@@ -25,21 +25,21 @@ public class StartScreenControl : MonoBehaviour {
 
 		// Check if the object is a sprite
 		if (transform.GetComponent<SpriteRenderer> () != null)
-			// If the mouse os over a sprite, change its color to green
-			transform.GetComponent<SpriteRenderer> ().color = Color.green;
+			// If the mouse os over a sprite, change its color
+			transform.GetComponent<SpriteRenderer> ().color = Color.cyan;
 	}
 
 	// Called whenever the mouse leaves a collidable area/button
 	void OnMouseExit() {
-		// Check if the object is text, and if it is, change its color back to white and set respective value to false
+		// Check if the object is text, and if it is, change its color back to default color and set respective value to false
 		if (transform.GetComponent<TextMesh> () != null) {
-			transform.GetComponent<TextMesh> ().color = Color.white;
+			transform.GetComponent<TextMesh> ().color = Color.black;
 			if (transform.GetComponent<TextMesh> ().text == "Start Game")
 				isStartButton = false;
 			if (transform.GetComponent<TextMesh> ().text == "Quit")
 				isQuitButton = false;
 		}
-		// Check if the object is a sprite, and if it is, change its color back to white
+		// Check if the object is a sprite, and if it is, change its color back to default color
 		if (transform.GetComponent<SpriteRenderer> () != null) {
 			if (tag == "Female" && !PlayerSelect.getFemale())
 				transform.GetComponent<SpriteRenderer> ().color = Color.white;
@@ -56,7 +56,7 @@ public class StartScreenControl : MonoBehaviour {
 			// and ensure that only the female is selected and the male is not
 			PlayerSelect.setFemale(!PlayerSelect.getFemale());
 			PlayerSelect.setMale(false);
-			// Set male color back to white in case this had been previously selected and the player changed their mind
+			// Set male color back to default color in case this had been previously selected and the player changed their mind
 			male.transform.GetComponent<SpriteRenderer> ().color = Color.white;
 		}
 		// Check if the player has selected the male character
@@ -65,7 +65,7 @@ public class StartScreenControl : MonoBehaviour {
 			// and ensure that only the male is selected and the female is not
 			PlayerSelect.setMale(!PlayerSelect.getMale());
 			PlayerSelect.setFemale(false);
-			// Set female color back to white in case this had been previously selected and the player changed their mind
+			// Set female color back to default color in case this had been previously selected and the player changed their mind
 			female.transform.GetComponent<SpriteRenderer> ().color = Color.white;
 		}
 		// The player can select the "Quit" button at any point to exit the application
