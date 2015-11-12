@@ -3,6 +3,11 @@ using System.Collections;
 
 public class WorldGenerate : MonoBehaviour {
 	public GameObject wall;
+	//add for generate items
+	public GameObject Bow;
+	public GameObject Sword;
+	public GameObject Armor;
+
 	public float wallDimensions;
 	public int mapWidth = 1;
 	public int mapHeight = 1;
@@ -23,6 +28,9 @@ public class WorldGenerate : MonoBehaviour {
 			}
 		}
 		GenerateWalls (); // Generates random walls and adds them into the wallSet array
+		GenerateSword (); //Generates random positon items into wallSet array
+		GenerateBow ();
+		GenerateArmor ();
 	}
 	
 	// Update is called once per frame
@@ -57,6 +65,18 @@ public class WorldGenerate : MonoBehaviour {
 		}
 	}
 
+	// place a item object at x,y if it in bounds and nothing here
+	void PutItem (int x, int y,GameObject item) {
+		if (WithinBounds (x, y)) {
+			if (wallSet [x, y] == null) {
+				GameObject temp = Instantiate (item) as GameObject;
+				temp.transform.position = new Vector3 (x - mapOffsetX, y - mapOffsetY, 0f);
+				wallSet [x, y] = temp;
+			}
+		}
+	}
+
+
 	// Removes a wall object at x,y if one exists
 	// and was created by this object
 	void RemoveWall (int x, int y) {
@@ -67,6 +87,8 @@ public class WorldGenerate : MonoBehaviour {
 			}
 		}
 	}
+
+
 
 
 	// Generates a squiggly line of wall objects starting at the position startX,startY
@@ -132,4 +154,39 @@ public class WorldGenerate : MonoBehaviour {
 			GenerateWallGroup (Random.Range (0, mapWidth), Random.Range (0, mapHeight), Random.Range (1, wallsInGroup));
 		}
 	}
+
+	//Generates items by get random x,y in map and check is there any other object
+	void GenerateSword() {
+		int x;
+		int y;
+		do {
+			x = Random.Range (0, mapWidth); //the "pointer" x coord
+			y = Random.Range (0, mapHeight); //the "pointer" y coord
+		} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
+
+		PutItem (x,y,Sword);
+	}
+
+	void GenerateBow() {
+		int x;
+		int y;
+		do {
+			x = Random.Range (0, mapWidth); //the "pointer" x coord
+			y = Random.Range (0, mapHeight); //the "pointer" y coord
+		} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
+		
+		PutItem (x,y,Bow);
+	}
+
+	void GenerateArmor() {
+		int x;
+		int y;
+		do {
+			x = Random.Range (0, mapWidth); //the "pointer" x coord
+			y = Random.Range (0, mapHeight); //the "pointer" y coord
+		} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
+		
+		PutItem (x,y,Armor);
+	}
+
 }
