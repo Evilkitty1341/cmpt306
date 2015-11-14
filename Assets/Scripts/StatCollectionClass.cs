@@ -6,14 +6,26 @@ using System.Collections;
 public class StatCollectionClass : MonoBehaviour {
 	
 	public float health;
+
+	public float initialHealth;
 	
 	public float mana;
+
+	public float initialMana;
 	
 	//connect to player's normal attack damage, uesd for item.
 	public float damage;
+
+	public float baseMeleeDamage;
+
+	public float baseRangedDamage;
+
+	public float baseMagicDamage;
 	
 	//connect to player's ablity to decrease damage from enemy, linked with item.
 	public float defend;
+
+	public float baseDefense;
 	
 	public int strength;
 	
