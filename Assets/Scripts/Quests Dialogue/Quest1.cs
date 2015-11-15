@@ -16,6 +16,7 @@ public class Quest1 : MonoBehaviour {
 	public bool Has;		//when player gets quest set to true
 	public bool Completed;	// when quest is completed set to true
 	public bool Repeat; 	//so Dialogue doesn't repeat for a quest
+	public GameObject Item;
 	
 	// Use this for initialization
 	void Start () {
@@ -26,7 +27,7 @@ public class Quest1 : MonoBehaviour {
 		Has = false;
 		Completed = false;
 		Repeat = true;
-		
+		//item.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -36,7 +37,7 @@ public class Quest1 : MonoBehaviour {
 		if (CurNumItems == ItemsTotal && Completed == false) {
 			Repeat = true;
 		}
-		
+
 	}
 	
 	//Quest Giver Collision
@@ -48,6 +49,7 @@ public class Quest1 : MonoBehaviour {
 		if (col.gameObject.tag == "QuestGiver1" && AllQuests.QL[0].Has == false) 
 		{
 			Has = true;	
+			GameObject Item1 = Instantiate (Item) as GameObject;
 		}
 		
 		//if you've completed the quest they gave you and go collide with them again 

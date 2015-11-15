@@ -15,7 +15,6 @@ public class Dialogue : MonoBehaviour {
 	//		   for now, but will need to move that to end of mid-dialogue
 	//			once we get it working
 	/*****************************/
-	
 	//Quest Script Information
 	All_Quests AllQuests;
 	Quest2 Q2;
@@ -33,8 +32,8 @@ public class Dialogue : MonoBehaviour {
 	string Name;
 	
 	//creating GUI window size / position
-	Rect winPos = new Rect (((Screen.width / 2) - 260), ((Screen.height / 2) + 50), 512, 140);
-	Rect boxPos = new Rect (((Screen.width / 2) - 425), ((Screen.height / 2) - 176), 485, 110);
+	static Rect winPos; 
+	Rect boxPos; 
 
 	//Speech Bubble Information
 	public GameObject speechBubble;
@@ -45,8 +44,10 @@ public class Dialogue : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-		
+
+		winPos = new Rect (this.transform.position.x + 355, this.transform.position.y + 412, 500, 200);
+		boxPos = new Rect (winPos.x-312, winPos.y-387, 475, 165);
+
 		//Quests Components:
 		AllQuests = gameObject.GetComponent<All_Quests>();
 		Q2 = gameObject.GetComponent<Quest2>();
@@ -128,12 +129,10 @@ public class Dialogue : MonoBehaviour {
 		if(col.gameObject.tag == "QuestGiver1" && Q1.Repeat == true)
 		{
 			dialogue = true;
-
 			speechBubble.SetActive(true);
 			MSpeechPos = col.gameObject.transform.position;
 			speechPos = MSpeechPos;
 			speechPos.y += 1f;
-
 		}
 
 		//QuestGiver2 Collision
