@@ -14,7 +14,7 @@ public class StartScreenControl : MonoBehaviour {
 
 		// Check if the object is text
 		if (transform.GetComponent<TextMesh> () != null) {
-			// When the mouse os hovering over text, change its color
+			// When the mouse is hovering over text, change its color
 			transform.GetComponent<TextMesh> ().color = Color.cyan;
 			// If hovering over the "Start Game" or "Quit" button, set their respective variables to true
 			if (transform.GetComponent<TextMesh> ().text == "Start Game")
@@ -25,7 +25,7 @@ public class StartScreenControl : MonoBehaviour {
 
 		// Check if the object is a sprite
 		if (transform.GetComponent<SpriteRenderer> () != null)
-			// If the mouse os over a sprite, change its color
+			// If the mouse is over a sprite, change its color
 			transform.GetComponent<SpriteRenderer> ().color = Color.cyan;
 	}
 

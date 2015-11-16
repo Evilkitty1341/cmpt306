@@ -44,9 +44,10 @@ public class Dialogue : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		winPos = new Rect ((Screen.width / 2) - Screen.width / 4, (Screen.height / 2) - Screen.height / 4, Screen.width / 2, Screen.height / 2);
 
-		winPos = new Rect (this.transform.position.x + 355, this.transform.position.y + 412, 500, 200);
-		boxPos = new Rect (winPos.x-312, winPos.y-387, 475, 165);
+		//winPos = new Rect (this.transform.position.x + 355, this.transform.position.y + 412, 500, 200);
+		//boxPos = new Rect ((Screen.width / 2) - Screen.width / 4, (Screen.height / 2) - Screen.height / 4, Screen.width / 2, Screen.height / 2);
 
 		//Quests Components:
 		AllQuests = gameObject.GetComponent<All_Quests>();
@@ -151,8 +152,12 @@ public class Dialogue : MonoBehaviour {
 	{
 		if (dialogue)
 		{
-			winPos = GUI.Window(3, winPos, DialogueWindow, Name);
-
+			GUI.skin.font = chosenFont;
+			GUIStyle centeredStyle = new GUIStyle("Label");
+			centeredStyle.alignment = TextAnchor.MiddleCenter;
+			//GUI.Label(new Rect((Screen.width / 2) - Screen.width / 4, (Screen.height / 2) - Screen.height / 4, Screen.width / 2, Screen.height / 2), message, centeredStyle);
+			GUI.Box(winPos, message);
+			//winPos = GUI.Window(3, winPos, DialogueWindow, Name);
 			//Not Complete:
 			//if any key is pressed advance the dialogue
 			if(Input.anyKeyDown)
@@ -167,8 +172,10 @@ public class Dialogue : MonoBehaviour {
 	void DialogueWindow(int ID)
 	{
 		//Font style and GUI box
-		GUI.skin.font = chosenFont;
-		GUI.Box (boxPos, message);
+//		GUI.skin.font = chosenFont;
+//		GUIStyle centeredStyle = new GUIStyle("Label");
+//		centeredStyle.alignment = TextAnchor.MiddleCenter;
+//		GUI.Label(new Rect((Screen.width / 2) - Screen.width / 4, (Screen.height / 2) - Screen.height / 4, Screen.width / 2, Screen.height / 2), message, centeredStyle);
 		
 	}
 

@@ -17,7 +17,7 @@ public class All_Quests : MonoBehaviour {
 	 * */
 
 	//shows quests
-	bool showing = false;
+	public bool showing = false;
 	
 	//creating GUI window size / position
 	Rect winPos = new Rect (((Screen.width / 2) - 260), ((Screen.height / 2) - 150), 512, 256);
