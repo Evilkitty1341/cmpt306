@@ -10,6 +10,11 @@ public class PathManager : MonoBehaviour {
 	public Rigidbody2D rbody;
 	public Vector3 homePos;
 
+	bool forward;
+	bool backward;
+	bool left;
+	bool right;
+
 	void Start () {
 		homePos = this.transform.position;
 		rbody = this.GetComponent<Rigidbody2D>();
@@ -126,7 +131,38 @@ public class PathManager : MonoBehaviour {
 		}
 	}
 
+	void DirectionSet(bool c, string direction){
 
+		switch (direction) {
+		case "forward":
+			forward = c;
+			break;
+		case "backward":
+			backward = c;
+			break;
+		case "left":
+			left = c;
+			break;
+		case "right":
+			right = c;
+			break;
+		default:
+			forward = c;
+			backward = c;
+			left = c;
+			right = c;
+			break;
+		}
+
+	}
+
+	void ConfigColliders(){
+
+		//GameObjects[] colliders = GetComponentsInChildren<ColliderCheck> ();
+
+
+
+	}
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/* 
 		Wait to allow object to move away from obstacle (hopefully). Then try and resume following player.
