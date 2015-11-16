@@ -8,9 +8,7 @@
 *.so
 *.sln
 *.csproj
-*.unityproj
 *.userprefs
-*.meta
 
 # Packages #
 ############
