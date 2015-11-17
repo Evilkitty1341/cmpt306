@@ -19,7 +19,7 @@ public class GuiManage : MonoBehaviour {
 	{
 		player = GameObject.FindWithTag ("Player");
 		playerStat = player.GetComponent<StatCollectionClass> ();
-		barLength = Screen.width / 8;
+		barLength = Screen.width / 7;
 		//chMotor = GetComponent(CharacterJoint);
 	}
 	
