@@ -4,11 +4,18 @@ using System.Collections;
 public class PlayerControl : MonoBehaviour {
 	public float speed = 5f; // Character's movement speed
 	private Animator anim;
+    StatCollectionClass playerStat;
+   // public GameObject projectile;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		anim = GetComponent<Animator> ();
-	}
+
+        playerStat = gameObject.GetComponent<StatCollectionClass>();
+        playerStat.health = 100;
+        playerStat.mana = 100;
+        playerStat.intellect = 1;
+    }
 	
 	// Update is called once per frame
 	void Update () {
