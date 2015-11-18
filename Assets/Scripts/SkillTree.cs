@@ -28,94 +28,95 @@ public class SkillTree: MonoBehaviour {
 	public float SunStrikeMpCost = 20f;
 	public float SunStrikeDamage = 300f;
 	int k =0;
+
+	//public boolean to check if showing
+	public bool showing = false;
 	
 	// create GUI Button on panel
 	void OnGUI () {
-		//set the location of button
-		if (GUI.Button (new Rect (Screen.width/2-Screen.width/24, 50, 120, 30), "Energy Ball Lv" + i)) {
-			//skill level must lower than max level
-			if (i < maxEnergyBallLv) {
-				// player's xp value max higher than skill xp cost
-				if (stat.xp >= EnergyBallPrice) {
-					//set skill actived
-					stat.EnergyBallUnlocked = true;
-					//cost the player's xp by skill xp cost value
-					stat.xp -= EnergyBallPrice;
-					//level up
-					i++;
-					//each skill value increase with the level
-					EnergyBallPrice *=i+1;
-					EnergyBallMpCost *=i;
-					stat.EnergyBalldamage+=10f;
+		if (showing) {
+			//set the location of button
+			if (GUI.Button (new Rect (Screen.width / 2 - Screen.width / 24, 50, 120, 30), "Energy Ball Lv" + i)) {
+				//skill level must lower than max level
+				if (i < maxEnergyBallLv) {
+					// player's xp value max higher than skill xp cost
+					if (stat.xp >= EnergyBallPrice) {
+						//set skill actived
+						stat.EnergyBallUnlocked = true;
+						//cost the player's xp by skill xp cost value
+						stat.xp -= EnergyBallPrice;
+						//level up
+						i++;
+						//each skill value increase with the level
+						EnergyBallPrice *= i + 1;
+						EnergyBallMpCost *= i;
+						stat.EnergyBalldamage += 10f;
 					
 					
 					
 					
-				} else if (stat.xp < EnergyBallPrice) {
-					Debug.Log ("not enouph xp");
-				}
-			} else {
-				Debug.Log ("max skill level");
-			}
-			
-		}
-		//same as 1st skill
-		if (GUI.Button (new Rect (Screen.width/2-Screen.width/24, 150, 120, 30), "Fire Breath Lv" + j)) {
-			if (i == maxEnergyBallLv) {
-				if (j < maxFireBreathLv) {
-					
-					if (stat.xp >= FireBreathPrice) {
-						stat.FireBreathUnlocked = true;
-						stat.xp -= FireBreathPrice;
-						j++;
-						FireBreathPrice *= j+1;
-						FireBreathMpCost *=j;
-						FireBreathDamage *=j;
-						
-						
-						
-					} else if (stat.xp < FireBreathPrice) {
+					} else if (stat.xp < EnergyBallPrice) {
 						Debug.Log ("not enouph xp");
 					}
 				} else {
 					Debug.Log ("max skill level");
 				}
+			
+			}
+			//same as 1st skill
+			if (GUI.Button (new Rect (Screen.width / 2 - Screen.width / 24, 150, 120, 30), "Fire Breath Lv" + j)) {
+				if (i == maxEnergyBallLv) {
+					if (j < maxFireBreathLv) {
+					
+						if (stat.xp >= FireBreathPrice) {
+							stat.FireBreathUnlocked = true;
+							stat.xp -= FireBreathPrice;
+							j++;
+							FireBreathPrice *= j + 1;
+							FireBreathMpCost *= j;
+							FireBreathDamage *= j;
+						
+						
+						
+						} else if (stat.xp < FireBreathPrice) {
+							Debug.Log ("not enouph xp");
+						}
+					} else {
+						Debug.Log ("max skill level");
+					}
 				
+				} else {
+					Debug.Log (" need previous skill");
+				}
 			}
-			else 
-			{
-				Debug.Log (" need previous skill");
-			}
-		}
 		
-		//same as 1st skill
-		if (GUI.Button (new Rect (Screen.width/2-Screen.width/24, 250, 120, 30), "Sun Strike Lv" + k)) {
+			//same as 1st skill
+			if (GUI.Button (new Rect (Screen.width / 2 - Screen.width / 24, 250, 120, 30), "Sun Strike Lv" + k)) {
 			
-			if (j == maxFireBreathLv) {
+				if (j == maxFireBreathLv) {
 				
-				if (k < maxSunStrikeLv) {
+					if (k < maxSunStrikeLv) {
 					
-					if (stat.xp >= SunStrikePrice) {
-						stat.SunStrikeUnlocked = true;
-						stat.xp -= SunStrikePrice;
-						k++;
-						SunStrikePrice *= k+1;
-						SunStrikeMpCost *=k;
-						SunStrikeDamage *=k;
+						if (stat.xp >= SunStrikePrice) {
+							stat.SunStrikeUnlocked = true;
+							stat.xp -= SunStrikePrice;
+							k++;
+							SunStrikePrice *= k + 1;
+							SunStrikeMpCost *= k;
+							SunStrikeDamage *= k;
 						
 						
 						
-					} else if (stat.xp < SunStrikePrice) {
-						Debug.Log ("not enouph xp");
+						} else if (stat.xp < SunStrikePrice) {
+							Debug.Log ("not enouph xp");
+						}
+					} else {
+						Debug.Log ("max skill level");
 					}
-				} else {
-					Debug.Log ("max skill level");
-				}
 				
-			}
-			else 
-			{
-				Debug.Log (" need previous skill");
+				} else {
+					Debug.Log (" need previous skill");
+				}
 			}
 		}
 	}
