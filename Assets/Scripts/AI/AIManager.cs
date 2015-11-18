@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using sys = System;
+using UnityEngine;
 using System.Collections;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -113,8 +114,8 @@ public class AIManager : MonoBehaviour {
 	public int manaMul = 1;
 	public string decisionType;
 
-
-
+	SpriteRenderer mySpri;
+	public string spriteSheetName;
 
 	private DecisionTree behavior;
 	
@@ -127,13 +128,28 @@ public class AIManager : MonoBehaviour {
 		gameObject.AddComponent<AIBehavior> ().rb = mob;
 		gameObject.GetComponent<AIBehavior> ().pathing = gameObject.GetComponent<PathManager> ();
 		gameObject.AddComponent<DecisionTree>();
-		gameObject.AddComponent<CollisionHandler> ();
-
+		mySpri = gameObject.GetComponent<SpriteRenderer> ();
 
 		//AI START//
 		behavior = gameObject.GetComponent<DecisionTree> ();
 
 		behavior.startDeciding ();
+	}
+
+	void LateUpdate(){
+
+		
+		var subSprites = Resources.LoadAll<Sprite>("Enemies/" + spriteSheetName);
+		
+		foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
+		{
+			string spriteName = renderer.sprite.name;
+			var newSprite = sys.Array.Find(subSprites, item => item.name == spriteName);
+			
+			if (newSprite)
+				renderer.sprite = newSprite;
+		}
+
 	}
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -235,6 +251,7 @@ public class AIManager : MonoBehaviour {
 
 		switch(type){
 		case "mob":
+
 			if(member.health > 0){
 				//Visual adjustments for health thresholds.
 			}
@@ -242,17 +259,17 @@ public class AIManager : MonoBehaviour {
 				//Visual adjustments for mana thresholds.
 				hasMagic = true;
 			}
-			if(member.strength > 6){
+			if(member.strength > (weightedLevel / numOfStats)){
 				isMelee = true;
 				isAggressive = true;
 				//Visual adjustments for being melee.
 			}
-			if(member.intellect > 6 && member.strength >= member.intellect){
+			if(member.intellect > (weightedLevel / numOfStats) && member.strength >= member.intellect){
 				isCautious = true;
 				isHybrid = true;
 				//Visual adjustments for being cautious.
 			}
-			if(member.intellect > 6 && member.intellect >= member.strength){
+			if(member.intellect > (weightedLevel / numOfStats) && member.intellect >= member.strength){
 				isStalker = true;
 				//Visual adjustments for being a stalker.
 			}

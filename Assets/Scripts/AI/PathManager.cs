@@ -34,17 +34,14 @@ public class PathManager : MonoBehaviour {
 	public void LocalPathToTarget(string tag){
 		player = GameObject.FindWithTag (tag).transform.localPosition;
 		if (!obstacle) {
-			float rotZ = Mathf.Atan2 (player.y - transform.position.y, player.x - transform.position.x) * Mathf.Rad2Deg;
-			transform.rotation = Quaternion.AngleAxis (rotZ, Vector3.forward);
-		} else if (obstacle && !pause) {
-			//print ("Going random angle");
-			float randomAng = Random.Range (-90.0f, 90.0f);
-			//print ("I picked: " + randomAng + "!");
-			transform.rotation = Quaternion.AngleAxis (Random.Range (-90.0f, 90.0f), Vector3.forward);
-			pause = true;
+			MoveToOnAxis(player);
+			//MoveTo (player);
+			//float rotZ = Mathf.Atan2 (player.y - transform.position.y, player.x - transform.position.x) * Mathf.Rad2Deg;
+			//transform.rotation = Quaternion.AngleAxis (rotZ, Vector3.forward);
+		} else if (obstacle || left || right || forward || backward) {
+			Debug.Log ("Obstacle pathing time!");
+			localObstacle();
 		}
-		//print ("moving forward");
-		transform.Translate (Vector3.forward * mobSp);
 	}
 
 
@@ -60,6 +57,9 @@ public class PathManager : MonoBehaviour {
 	*/
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void GlobalPathToTarget(){
+
+
+
 	}
 
 
@@ -74,36 +74,119 @@ public class PathManager : MonoBehaviour {
 		MoveTo (homePos);
 
 	}
+
+	public void localObstacle(){
+		if(forward && (!right || !left)){
+			Debug.Log("Time to do local Obstacle forward stuff.");
+			MoveToOnAxis (new Vector3(transform.position.x + 1f, transform.position.y, 0));
+		}
+		else if(backward){
+			//Nothing
+		}
+		else if(left){
+			MoveToOnAxis (new Vector3(transform.position.x, transform.position.y + Time.deltaTime, 0));
+		}
+		else if(right){
+			MoveToOnAxis (new Vector3(transform.position.x, transform.position.y - Time.deltaTime, 0));
+		}
+		else if(left && forward){
+			MoveToOnAxis (new Vector3(transform.position.x, transform.position.y + Time.deltaTime, 0));
+		}
+		else if(right && forward){
+			MoveToOnAxis (new Vector3(transform.position.x, transform.position.y - Time.deltaTime, 0));
+		}
+		else{
+		}
+		StartCoroutine(waitForMove ());
+	}
+
+
 	public void killForce(){
-		rbody.velocity = Vector2.zero;
+		rbody.angularVelocity = 0.0f;
+		rbody.velocity = Vector3.zero;
+	}
+
+
+	public void MoveToOnAxis(Vector3 pos){
+		float diffX;
+		float diffY;
+
+		killForce ();
+
+		diffX = pos.x - transform.position.x;
+		diffY = pos.y - transform.position.y;
+		if (Mathf.Abs (diffX) >= Mathf.Abs (diffY)) {
+			if (diffX <= 0f) {
+				rbody.AddRelativeForce (Vector2.left * mobSp);
+			} else {
+				rbody.AddRelativeForce (Vector2.right * mobSp);
+			}
+		}	
+		else{
+			if (diffY <= 0f) {
+				rbody.AddRelativeForce (Vector2.down * mobSp);
+			} else {
+				rbody.AddRelativeForce (Vector2.up * mobSp);
+			}
+		}
+		waitForMove ();
+	}
+
+	public void MoveToOnAxis(GameObject name){
+		Vector3 pos = name.transform.position;
+		float diffX;
+		float diffY;
+		
+		killForce ();
+		
+		diffX = pos.x - transform.position.x;
+		diffY = pos.y - transform.position.y;
+		if (Mathf.Abs (diffX) >= Mathf.Abs (diffY)) {
+			if (diffX < 0f) {
+				rbody.AddRelativeForce (Vector2.left * mobSp);
+			} else {
+				rbody.AddRelativeForce (Vector2.right * mobSp);
+			}
+		}	
+		else{
+			if (diffY < 0f) {
+				rbody.AddRelativeForce (Vector2.down * mobSp);
+			} else {
+				rbody.AddRelativeForce (Vector2.up * mobSp);
+			}
+		}
+		waitForMove ();
 	}
 
 	//Moves the caller to the position vector.
 	public void MoveTo(Vector3 pos){
-		if (!obstacle) {
+			waitForMove ();
 			float rotZ = Mathf.Atan2 (pos.y - transform.position.y, pos.x - transform.position.x) * Mathf.Rad2Deg;
 			transform.rotation = Quaternion.AngleAxis (rotZ, Vector3.forward);
-			transform.Translate (Vector3.right * mobSp * Time.deltaTime);
-		}
+			killForce ();
+			rbody.AddRelativeForce (Vector2.right * mobSp);
+			//transform.Translate (Vector3.right * mobSp * Time.deltaTime);
+			StartCoroutine(waitForMove ());
 	}
 
 	public void MoveTo(GameObject target){
-		if (!obstacle) {
-			killForce();
+			killForce ();
+			waitForMove ();	
 			Vector3 pos = target.transform.position;
 			float rotZ = Mathf.Atan2 (pos.y - transform.position.y, pos.x - transform.position.x) * Mathf.Rad2Deg;
 			transform.rotation = Quaternion.AngleAxis (rotZ, Vector3.forward);
-			rbody.AddRelativeForce(Vector2.right * mobSp);
+			killForce ();
+			rbody.AddRelativeForce (Vector2.right * mobSp);
 			//transform.Translate (Vector3.right * mobSp * Time.deltaTime);
-		}
+			StartCoroutine(waitForMove());
 	}
 
 	//Moves the caller random direction for a second or two.
 	public void MoveRandom(){
-			//print ("Going random angle");
-			float randomAng = Random.Range (-90.0f, 90.0f);
-			//print ("I picked: " + randomAng + "!");
-			transform.rotation = Quaternion.AngleAxis (Random.Range (-90.0f, 90.0f), Vector3.forward);
+		//print ("Going random angle");
+		float randomAng = Random.Range (-90.0f, 90.0f);
+		//print ("I picked: " + randomAng + "!");
+		transform.rotation = Quaternion.AngleAxis (Random.Range (-90.0f, 90.0f), Vector3.forward);
 		transform.Translate (Vector3.right * (mobSp / 4) * Time.deltaTime);
 	}
 	
@@ -153,11 +236,13 @@ public class PathManager : MonoBehaviour {
 		case "right":
 			right = true;
 			break;
-		default:
+		case "clear":
 			forward = false;
 			backward = false;
 			left = false;
 			right = false;
+			break;
+		default:
 			break;
 		}
 
@@ -196,9 +281,10 @@ public class PathManager : MonoBehaviour {
 	IEnumerator waitForMove()
 	{
 		//print ("waiting to change direction");
-		obstacle = true;
+		pause = true;
+		yield return new WaitForSeconds(0.5f);
+		DirectionSet ("clear");
 		pause = false;
-		yield return new WaitForSeconds(4);
 		obstacle = false;
 		//print ("finished changing direction");
 	}

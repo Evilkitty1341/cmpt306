@@ -59,6 +59,7 @@ public class WorldGenerate : MonoBehaviour {
 		if (WithinBounds (x, y)) {
 			if (wallSet [x, y] == null) {
 				GameObject tempWall = Instantiate (wall) as GameObject;
+				tempWall.tag = "Wall";
 				tempWall.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
 				wallSet [x, y] = tempWall;
 			}
@@ -70,6 +71,18 @@ public class WorldGenerate : MonoBehaviour {
 		if (WithinBounds (x, y)) {
 			if (wallSet [x, y] == null) {
 				GameObject temp = Instantiate (item) as GameObject;
+				temp.transform.position = new Vector3 (x - mapOffsetX, y - mapOffsetY, 0f);
+				wallSet [x, y] = temp;
+			}
+		}
+	}
+
+	// place a item object at x,y if it in bounds and nothing here
+	void PutItem (int x, int y,GameObject item, string tag) {
+		if (WithinBounds (x, y)) {
+			if (wallSet [x, y] == null) {
+				GameObject temp = Instantiate (item) as GameObject;
+				temp.tag = tag;
 				temp.transform.position = new Vector3 (x - mapOffsetX, y - mapOffsetY, 0f);
 				wallSet [x, y] = temp;
 			}

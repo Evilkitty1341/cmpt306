@@ -148,6 +148,7 @@ public class AIBehavior : MonoBehaviour {
 
 	//TODO Attack stuff goes here.
 	public int Attack(){
+		pathing.killForce ();
 		return 0;
 	}
 	//Stop everything and run away until player is out of threatZone.
@@ -157,7 +158,7 @@ public class AIBehavior : MonoBehaviour {
 	}
 	//Move towards the player
 	public int AdvanceTowards(){
-		pathing.MoveTo(GameObject.FindGameObjectWithTag("Player"));
+		pathing.LocalPathToTarget ("Player");
 		return 0;
 	}
 	//Pick a random direction and walk in it.
@@ -183,6 +184,7 @@ public class AIBehavior : MonoBehaviour {
 
 	//Stop everything and go back to the spawn location.
 	public int ReturnToSpawn(){
+		pathing.MoveTo(pathing.homePos);
 		return 0;
 	}
 
