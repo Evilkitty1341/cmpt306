@@ -4,21 +4,23 @@ using System.Collections;
 public class PathManager : MonoBehaviour {
 
 	public bool obstacle = false;		//Flag if an obstacle has been hit.
-	bool pause = false; 		//Flag if entity is pathing a random distance. Pauses other pathing logic temporarily.
-	Vector3 player;				//The player position vector.
-	public float mobSp;			//Keep a record of the spawn location, so we can return to it if necessary.
+	bool pause = false; 				//Flag if entity is pathing a random distance. Pauses other pathing logic temporarily.
+	Vector3 player;						//The player position vector.
+	public float mobSp;					//Keep a record of the spawn location, so we can return to it if necessary.
 	public Rigidbody2D rbody;
 	public Vector3 homePos;
 
-	bool forward;
-	bool backward;
-	bool left;
-	bool right;
+	public bool forward;
+	public bool backward;
+	public bool left;
+	public bool right;
 
 	void Start () {
 		homePos = this.transform.position;
 		rbody = this.GetComponent<Rigidbody2D>();
 		Debug.Log (homePos.ToString ());
+
+		ConfigColliders ();
 	}
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -72,6 +74,9 @@ public class PathManager : MonoBehaviour {
 		MoveTo (homePos);
 
 	}
+	public void killForce(){
+		rbody.velocity = Vector2.zero;
+	}
 
 	//Moves the caller to the position vector.
 	public void MoveTo(Vector3 pos){
@@ -84,6 +89,7 @@ public class PathManager : MonoBehaviour {
 
 	public void MoveTo(GameObject target){
 		if (!obstacle) {
+			killForce();
 			Vector3 pos = target.transform.position;
 			float rotZ = Mathf.Atan2 (pos.y - transform.position.y, pos.x - transform.position.x) * Mathf.Rad2Deg;
 			transform.rotation = Quaternion.AngleAxis (rotZ, Vector3.forward);
@@ -122,35 +128,36 @@ public class PathManager : MonoBehaviour {
 		Throw an error.
 	*/
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/*
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		//TODO Tags need to be adjusted for all collidables.
 		if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy" ) {
-		StartCoroutine(waitForMove ());
+		//StartCoroutine(waitForMove ());
 
 		}
 	}
-
-	void DirectionSet(bool c, string direction){
+	*/	
+	void DirectionSet(string direction){
 
 		switch (direction) {
 		case "forward":
-			forward = c;
+			forward = true;
 			break;
 		case "backward":
-			backward = c;
+			backward = true;
 			break;
 		case "left":
-			left = c;
+			left = true;
 			break;
 		case "right":
-			right = c;
+			right = true;
 			break;
 		default:
-			forward = c;
-			backward = c;
-			left = c;
-			right = c;
+			forward = false;
+			backward = false;
+			left = false;
+			right = false;
 			break;
 		}
 
@@ -158,10 +165,27 @@ public class PathManager : MonoBehaviour {
 
 	void ConfigColliders(){
 
-		//GameObjects[] colliders = GetComponentsInChildren<ColliderCheck> ();
+		ColliderCheck[] colliders = GetComponentsInChildren<ColliderCheck> ();
 
-
-
+		foreach (ColliderCheck n in colliders) {
+			switch (n.name) {
+			case "ColliderLeft":
+				n.direction = "left";
+				break;
+			case "ColliderRight":
+				n.direction = "right";
+				break;
+			case "ColliderForward":
+				n.direction = "forward";
+				break;
+			case "ColliderBackward":
+				n.direction = "backward";
+				break;
+			default:
+				break;
+			}
+		}
+	
 	}
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/* 

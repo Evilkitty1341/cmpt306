@@ -227,8 +227,11 @@ public class AIManager : MonoBehaviour {
 			Debug.LogError ("AIManager failed to create a proper AIBuild");
 		}
 
-		AIConfig config = new AIConfig ();		
+		AIConfig config = new AIConfig ();	
+
+		#pragma warning disable
 		BehaviorTypes assignBehavior = new BehaviorTypes ();
+		#pragma warning restore
 
 		switch(type){
 		case "mob":

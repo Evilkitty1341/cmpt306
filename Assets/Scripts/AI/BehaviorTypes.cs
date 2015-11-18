@@ -17,7 +17,7 @@ public class BehaviorTypes : MonoBehaviour {
 		ai.healthMultiplier = 1.0f;
 		ai.attackMultiplier = 1.0f;
 		ai.manaMultiplier = 1.0f;
-		ai.movementSpeed = 1.0f * 100;
+		ai.movementSpeed = 10f;
 		return ai;
 	}
 
@@ -30,7 +30,7 @@ public class BehaviorTypes : MonoBehaviour {
 		ai.healthMultiplier = 1.0f;
 		ai.attackMultiplier = 1.0f;
 		ai.manaMultiplier = 1.0f;
-		ai.movementSpeed = 1.2f * 100;
+		ai.movementSpeed = 12f;
 		return ai;
 	}
 
@@ -43,7 +43,7 @@ public class BehaviorTypes : MonoBehaviour {
 		ai.healthMultiplier = 1.0f;
 		ai.attackMultiplier = 1.0f;
 		ai.manaMultiplier = 1.0f;
-		ai.movementSpeed = 1.0f * 100;
+		ai.movementSpeed = 10f;
 		return ai;
 	}
 

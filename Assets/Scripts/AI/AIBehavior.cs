@@ -35,7 +35,6 @@ public class AIBehavior : MonoBehaviour {
 			Debug.Log("I am NOT threatened! Where am I?");
 			return 2;
 		}
-		return 0;
 	}
 
 	//If the player is a threat, are they in melee range?
@@ -54,7 +53,6 @@ public class AIBehavior : MonoBehaviour {
 			Debug.Log("Target is out of range.");
 			return 2;
 		}
-		//return 0;
 	}
  
 	//TODO No enemy prefabs.
@@ -70,8 +68,6 @@ public class AIBehavior : MonoBehaviour {
 			Debug.Log("I am at home!");
 			return 2;
 		}
-		return 0;
-
 	}
 	//What is the distance to every ally?
 	//For every ally that is within friendlyMinDis increment a counter.
@@ -106,8 +102,6 @@ public class AIBehavior : MonoBehaviour {
 			Debug.Log("No friends!? How am I?");
 			return 2;
 		}
-		return 0;
-		
 	}
 	//Check the hitpoints of the current entity.
 	//Run away if its low, advance or attack if its high.
@@ -125,8 +119,6 @@ public class AIBehavior : MonoBehaviour {
 				Debug.Log("My HP is low, this is unfortunate");
 				return 2;
 			}
-
-		return 0;
 	}
 	//Randomly pick between a walk, idle, or taunt action.
 	public int RandomWalkOrIdle(){
@@ -145,7 +137,6 @@ public class AIBehavior : MonoBehaviour {
 			return 3;
 			//action = RandomWalk;
 		}
-		return 0;
 	}
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
