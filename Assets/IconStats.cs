@@ -13,12 +13,11 @@ public class IconStats : MonoBehaviour {
 		icons.GetComponent<SpriteRenderer> ().sprite = icons.gameObject.GetComponent<IconControl>().icons [0];
 	}
 
-	void OnMouseUp() {
+	void OnMouseUp(){
+		player.GetComponent<PlayerStateGUI> ().showing = !player.GetComponent<PlayerStateGUI> ().showing;
 
-		player.GetComponent<StatGUI>().showing = !player.GetComponent<StatGUI>().showing;
-
-		//make other GUI's false so if they're currently open they close
-		player.GetComponent<SkillTree>().showing = false;
-		player.GetComponent<All_Quests>().showing = false;
+		if (player.GetComponent<SkillTree> ().showing = true) {
+			player.GetComponent<SkillTree> ().showing = false;
+		}
 	}
 }

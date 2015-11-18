@@ -4,7 +4,25 @@ using System.Collections;
 public class SkillTree: MonoBehaviour {
 	
 	// connect skilltree to stat class
-	public StatCollectionClass stat;
+	StatCollectionClass stat;
+
+	GameObject player;
+
+	// now have 3 GUI 
+    
+	
+	PlayerStateGUI psg;
+
+	GameObject ItemStateGui;
+	
+
+	// use to check if the GUI is actived
+
+
+	public bool showing = false;
+	
+	//creating GUI window size / position
+	Rect winPos = new Rect (Screen.width/13, Screen.height/5, Screen.width-Screen.width/6, Screen.height-Screen.height/2);
 	
 	//skill level
 	public int maxEnergyBallLv=5;
@@ -29,102 +47,147 @@ public class SkillTree: MonoBehaviour {
 	public float SunStrikeDamage = 300f;
 	int k =0;
 
-	//public boolean to check if showing
-	public bool showing = false;
-	
+	void Start()
+	{
+		player = GameObject.FindWithTag ("Player");
+		
+		stat = player.GetComponent<StatCollectionClass >();
+
+		psg = player.GetComponent<PlayerStateGUI> ();
+
+
+
+	}
 	// create GUI Button on panel
-	void OnGUI () {
-		if (showing) {
-			//set the location of button
-			if (GUI.Button (new Rect (Screen.width / 2 - Screen.width / 24, 50, 120, 30), "Energy Ball Lv" + i)) {
-				//skill level must lower than max level
-				if (i < maxEnergyBallLv) {
-					// player's xp value max higher than skill xp cost
-					if (stat.xp >= EnergyBallPrice) {
-						//set skill actived
-						stat.EnergyBallUnlocked = true;
-						//cost the player's xp by skill xp cost value
-						stat.xp -= EnergyBallPrice;
-						//level up
-						i++;
-						//each skill value increase with the level
-						EnergyBallPrice *= i + 1;
-						EnergyBallMpCost *= i;
-						stat.EnergyBalldamage += 10f;
+	void something (int ID) {
+		//set the location of button
+		if (GUI.Button (new Rect (Screen.width/2-Screen.width/7, 50, Screen.width/7, 30), "Energy Ball Lv" + i)) {
+			//skill level must lower than max level
+			if (i < maxEnergyBallLv) {
+				// player's xp value max higher than skill xp cost
+				if (stat.xp >= EnergyBallPrice) {
+					//set skill actived
+					stat.EnergyBallUnlocked = true;
+					//cost the player's xp by skill xp cost value
+					stat.xp -= EnergyBallPrice;
+					//level up
+					i++;
+					//each skill value increase with the level
+					EnergyBallPrice *=i+1;
+					EnergyBallMpCost *=i;
+					stat.EnergyBalldamage+=10f;
 					
 					
 					
 					
-					} else if (stat.xp < EnergyBallPrice) {
+				} else if (stat.xp < EnergyBallPrice) {
+					Debug.Log ("not enouph xp");
+				}
+			} else {
+				Debug.Log ("max skill level");
+			}
+			
+		}
+		//same as 1st skill
+		if (GUI.Button (new Rect (Screen.width/2-Screen.width/7, 150, Screen.width/7, 30), "Fire Breath Lv" + j)) {
+			if (i == maxEnergyBallLv) {
+				if (j < maxFireBreathLv) {
+					
+					if (stat.xp >= FireBreathPrice) {
+						stat.FireBreathUnlocked = true;
+						stat.xp -= FireBreathPrice;
+						j++;
+						FireBreathPrice *= j+1;
+						FireBreathMpCost *=j;
+						FireBreathDamage *=j;
+						
+						
+						
+					} else if (stat.xp < FireBreathPrice) {
 						Debug.Log ("not enouph xp");
 					}
 				} else {
 					Debug.Log ("max skill level");
 				}
-			
-			}
-			//same as 1st skill
-			if (GUI.Button (new Rect (Screen.width / 2 - Screen.width / 24, 150, 120, 30), "Fire Breath Lv" + j)) {
-				if (i == maxEnergyBallLv) {
-					if (j < maxFireBreathLv) {
-					
-						if (stat.xp >= FireBreathPrice) {
-							stat.FireBreathUnlocked = true;
-							stat.xp -= FireBreathPrice;
-							j++;
-							FireBreathPrice *= j + 1;
-							FireBreathMpCost *= j;
-							FireBreathDamage *= j;
-						
-						
-						
-						} else if (stat.xp < FireBreathPrice) {
-							Debug.Log ("not enouph xp");
-						}
-					} else {
-						Debug.Log ("max skill level");
-					}
 				
-				} else {
-					Debug.Log (" need previous skill");
-				}
 			}
+			else 
+			{
+				Debug.Log (" need previous skill");
+			}
+		}
 		
-			//same as 1st skill
-			if (GUI.Button (new Rect (Screen.width / 2 - Screen.width / 24, 250, 120, 30), "Sun Strike Lv" + k)) {
+		//same as 1st skill
+		if (GUI.Button (new Rect (Screen.width/2-Screen.width/7, 250, Screen.width/7, 30), "Sun Strike Lv" + k)) {
 			
-				if (j == maxFireBreathLv) {
+			if (j == maxFireBreathLv) {
 				
-					if (k < maxSunStrikeLv) {
+				if (k < maxSunStrikeLv) {
 					
-						if (stat.xp >= SunStrikePrice) {
-							stat.SunStrikeUnlocked = true;
-							stat.xp -= SunStrikePrice;
-							k++;
-							SunStrikePrice *= k + 1;
-							SunStrikeMpCost *= k;
-							SunStrikeDamage *= k;
+					if (stat.xp >= SunStrikePrice) {
+						stat.SunStrikeUnlocked = true;
+						stat.xp -= SunStrikePrice;
+						k++;
+						SunStrikePrice *= k+1;
+						SunStrikeMpCost *=k;
+						SunStrikeDamage *=k;
 						
 						
 						
-						} else if (stat.xp < SunStrikePrice) {
-							Debug.Log ("not enouph xp");
-						}
-					} else {
-						Debug.Log ("max skill level");
+					} else if (stat.xp < SunStrikePrice) {
+						Debug.Log ("not enouph xp");
 					}
-				
 				} else {
-					Debug.Log (" need previous skill");
+					Debug.Log ("max skill level");
 				}
+				
+			}
+			else 
+			{
+				Debug.Log (" need previous skill");
 			}
 		}
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void OnGUI () {
 		
+
+		if (showing)
+		{
+			winPos = GUI.Window(2, winPos, something, "Skill Tree");
+		}
+		
+	}
+
+	void FixedUpdate()
+	{
+
 		
 		
 	}
+		void Update ()
+		{     
+			
+			//if the key is pressed and the GUI is showing, hide it
+			// else show the GUI
+			if (Input.GetButtonDown ("K")) {
+				//set showing to true if false, if false turn it to true
+				showing = !showing;
+				
+				
+				//if other GUI actived turn it off
+				if(psg.showing==true)
+				{
+				psg.showing=false;
+					
+				}
+				
+
+				
+				
+				
+			}
+		}
+
 }
