@@ -1,6 +1,6 @@
 ﻿//Script from http://schemingdeveloper.com/2014/10/15/tiling-sprites-unity/ by Charis Marangos
 
-Shader "Custom/GrassShader" {
+Shader "Custom/TreeShaderHorizontal" {
 	Properties
 	{
 		[PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
