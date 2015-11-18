@@ -16,32 +16,36 @@ public class PlayerControl : MonoBehaviour {
         playerStat.mana = 100;
         playerStat.intellect = 1;
     }
-	
+
 	// Update is called once per frame
 	void Update () {
-		// Controlls for character movement
-		if (Input.GetKey(KeyCode.UpArrow))
-		{
+		// Controls for character movement
+		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {
 			transform.Translate (Vector3.up * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 0); // Up
 			anim.SetBool ("Moving", true);
-		} else if (Input.GetKey(KeyCode.DownArrow))
-		{
-			transform.Translate (Vector3.down * speed * Time.deltaTime);
-			anim.SetInteger ("Direction", 1); // Down
-			anim.SetBool ("Moving", true);
-		} else if (Input.GetKey(KeyCode.LeftArrow))
-		{
-			transform.Translate (Vector3.left * speed * Time.deltaTime);
-			anim.SetInteger ("Direction", 2); // Left
-			anim.SetBool ("Moving", true);
-		} else if (Input.GetKey (KeyCode.RightArrow)) {
+		} else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
 			transform.Translate (Vector3.right * speed * Time.deltaTime);
-			anim.SetInteger ("Direction", 3); // Right
+			anim.SetInteger ("Direction", 1); // Right
+			anim.SetBool ("Moving", true);
+		} else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
+			transform.Translate (Vector3.down * speed * Time.deltaTime);
+			anim.SetInteger ("Direction", 2); // Down
+			anim.SetBool ("Moving", true);
+		} else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
+			transform.Translate (Vector3.left * speed * Time.deltaTime);
+			anim.SetInteger ("Direction", 3); // Left
 			anim.SetBool ("Moving", true);
 		} else {
 			anim.SetBool ("Moving", false);
 		}
+		// Controls for attacking
+		if (Input.GetKey (KeyCode.Space)) {
+			anim.SetBool ("Attacking", true);
+		} else {
+			anim.SetBool ("Attacking", false);
+		}
+
 	}
 
 
