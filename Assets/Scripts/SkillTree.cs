@@ -13,7 +13,9 @@ public class SkillTree: MonoBehaviour {
 	
 	PlayerStateGUI psg;
 
-	GameObject ItemStateGui;
+	All_Quests quest;
+			
+
 	
 
 	// use to check if the GUI is actived
@@ -54,6 +56,8 @@ public class SkillTree: MonoBehaviour {
 		stat = player.GetComponent<StatCollectionClass >();
 
 		psg = player.GetComponent<PlayerStateGUI> ();
+
+		quest = player.GetComponent<All_Quests> ();
 
 
 
@@ -182,6 +186,11 @@ public class SkillTree: MonoBehaviour {
 				psg.showing=false;
 					
 				}
+
+				if(quest.showing==true)
+			{
+				quest.showing=false;
+			}
 				
 
 				

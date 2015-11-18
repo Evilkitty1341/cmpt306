@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 6a859ff30fe48314a8be218b0b9be4f0
-timeCreated: 1447162596
+timeCreated: 1447879388
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - stat: {instanceID: 0}
+  - Sword: {instanceID: 0}
+  - Armor: {instanceID: 0}
+  - Bow: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

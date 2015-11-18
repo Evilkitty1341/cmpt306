@@ -6,10 +6,10 @@ public class ItemState : MonoBehaviour {
 	// this class use to describe item's state
 	public StatCollectionClass stat;
 	
-	Text txt;
+	public GameObject txt;
 	
 	void Start () {
-		txt = gameObject.GetComponent<Text>();
+
 	}
 	
 	
@@ -17,15 +17,15 @@ public class ItemState : MonoBehaviour {
 		
 		
 		if (stat.ArmorEquip == true) {
-			txt.text = "Armor: defend +50";
+			txt.GetComponent<TextMesh>().text="Armor: defend +50\n"+"(O to change items)";
 		}
 		
 		if (stat.SwordEquip == true) {
-			txt.text = "Sword: damage +100";
+			txt.GetComponent<TextMesh>().text = "Sword: damage +100\n"+"(O to change items)";
 		}
 		
 		if (stat.BowEquip == true) {
-			txt.text = "Bow: damage +50";
+			txt.GetComponent<TextMesh>().text = "Bow: damage +50\n"+"(O to change items)";
 		}
 	}
 }

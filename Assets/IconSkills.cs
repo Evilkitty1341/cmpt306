@@ -19,5 +19,9 @@ public class IconSkills : MonoBehaviour {
 		if (player.GetComponent<PlayerStateGUI> ().showing = true) {
 			player.GetComponent<PlayerStateGUI> ().showing = false;
 		}
+
+		if (player.GetComponent<All_Quests> ().showing = true) {
+			player.GetComponent<All_Quests> ().showing = false;
+		}
 	}
 }

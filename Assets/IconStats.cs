@@ -19,5 +19,9 @@ public class IconStats : MonoBehaviour {
 		if (player.GetComponent<SkillTree> ().showing = true) {
 			player.GetComponent<SkillTree> ().showing = false;
 		}
+
+		if (player.GetComponent<All_Quests> ().showing = true) {
+			player.GetComponent<All_Quests> ().showing = false;
+		}
 	}
 }
