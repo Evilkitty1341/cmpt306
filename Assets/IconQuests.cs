@@ -15,5 +15,13 @@ public class IconQuests : MonoBehaviour {
 
 	void OnMouseUp() {
 		player.GetComponent<All_Quests>().showing = !player.GetComponent<All_Quests>().showing;
+
+		if (player.GetComponent<PlayerStateGUI> ().showing = true) {
+			player.GetComponent<PlayerStateGUI> ().showing = false;
+		}
+		
+		if (player.GetComponent<SkillTree> ().showing = true) {
+			player.GetComponent<SkillTree> ().showing = false;
+		}
 	}
 }

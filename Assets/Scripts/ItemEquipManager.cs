@@ -14,7 +14,7 @@ public class ItemEquipManager : MonoBehaviour {
 	public GameObject Bow;
 	
 	// set input key
-	public string InputKey;
+	string InputKey="O";
 	
 	void Update ()
 	{     
