@@ -10,6 +10,8 @@ public class PlayerStateGUI : MonoBehaviour {
 
 	SkillTree skill;
 
+	All_Quests quest;
+
 	public bool showing = false;
 	
 	//creating GUI window size / position
@@ -23,6 +25,8 @@ public class PlayerStateGUI : MonoBehaviour {
 		stat = player.GetComponent<StatCollectionClass >();
 
 		skill = player.GetComponent<SkillTree >();
+
+		quest = player.GetComponent<All_Quests> ();
 		
 	}
 	// create GUI Button on panel
@@ -72,6 +76,11 @@ public class PlayerStateGUI : MonoBehaviour {
 			{
 				skill.showing=false;
 				
+			}
+
+			if(quest.showing==true)
+			{
+				quest.showing=false;
 			}
 			
 			

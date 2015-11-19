@@ -16,8 +16,12 @@ public class IconQuests : MonoBehaviour {
 	void OnMouseUp() {
 		player.GetComponent<All_Quests>().showing = !player.GetComponent<All_Quests>().showing;
 
-		//make other GUI's false so if they're currently open they close
-		player.GetComponent<SkillTree>().showing = false;
-		player.GetComponent<StatGUI>().showing = false;
+		if (player.GetComponent<PlayerStateGUI> ().showing = true) {
+			player.GetComponent<PlayerStateGUI> ().showing = false;
+		}
+		
+		if (player.GetComponent<SkillTree> ().showing = true) {
+			player.GetComponent<SkillTree> ().showing = false;
+		}
 	}
 }

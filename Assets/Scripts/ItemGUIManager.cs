@@ -15,12 +15,21 @@ public class ItemGUIManager : MonoBehaviour {
 	
 	void Update ()
 	{     
+
 		// show the picture on the scene if player got the item
-		Sword.SetActive(stat.itemSword);
-		
-		Armor.SetActive (stat.itemArmor);
-		
-		Bow.SetActive (stat.itemBow);
+
+		if (stat.itemSword) {
+			Sword.GetComponent<SpriteRenderer> ().color = Color.white;
+		}
+
+		if (stat.itemArmor) {
+			Armor.GetComponent<SpriteRenderer> ().color = Color.white;
+		}
+
+		if (stat.itemBow) {
+
+			Bow.GetComponent<SpriteRenderer> ().color = Color.white;
+		}
 		
 	}
 }

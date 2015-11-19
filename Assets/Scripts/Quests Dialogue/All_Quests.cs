@@ -16,6 +16,12 @@ public class All_Quests : MonoBehaviour {
 	 * need to change anyways. Just made a dummyItems for Quest1 to make sure everything was working correctly.
 	 * */
 
+	//use to control all GUI when open 1 of them
+	GameObject player;
+
+	PlayerStateGUI psg;
+
+	SkillTree skill;
 	//shows quests
 	public bool showing = false;
 	
@@ -94,6 +100,13 @@ public class All_Quests : MonoBehaviour {
 	void Start () {
 		
 		CreateQuests ();
+
+		//find out all GUI we need to handle
+		player = GameObject.FindWithTag ("Player");
+		
+		psg = player.GetComponent<PlayerStateGUI> ();
+		
+		skill = player.GetComponent<SkillTree> ();
 	}
 	
 	// Update is called once per frame
@@ -109,6 +122,18 @@ public class All_Quests : MonoBehaviour {
 				showing = false;
 			}  else {
 				showing = true;
+			}
+
+			//if other GUI actived when open this GUI turn it off
+			if(psg.showing==true)
+			{
+				psg.showing=false;
+				
+			}
+			
+			if(skill.showing==true)
+			{
+				skill.showing=false;
 			}
 			
 		}
