@@ -87,7 +87,7 @@ public class AIBehavior : MonoBehaviour {
 		//The count and bool may seem redundant.
 		//In this context it is.
 		//However if the # of allies around becomes important, then we need this information.
-		if (allyInRg >= 1) {
+		if (allyInRg > 1) {
 			friends = true;
 		}
 		
@@ -184,7 +184,7 @@ public class AIBehavior : MonoBehaviour {
 
 	//Stop everything and go back to the spawn location.
 	public int ReturnToSpawn(){
-		pathing.MoveTo(pathing.homePos);
+		pathing.LocalPathToTarget(pathing.homePos);
 		return 0;
 	}
 

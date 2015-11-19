@@ -4,7 +4,25 @@ using System.Collections;
 public class SkillTree: MonoBehaviour {
 	
 	// connect skilltree to stat class
-	public StatCollectionClass stat;
+	StatCollectionClass stat;
+
+	GameObject player;
+
+	// now have 3 GUI 
+    
+	
+	PlayerStateGUI psg;
+
+	GameObject ItemStateGui;
+	
+
+	// use to check if the GUI is actived
+
+
+	public bool showing = false;
+	
+	//creating GUI window size / position
+	Rect winPos = new Rect (Screen.width/13, Screen.height/5, Screen.width-Screen.width/6, Screen.height-Screen.height/2);
 	
 	//skill level
 	public int maxEnergyBallLv=5;
@@ -28,11 +46,22 @@ public class SkillTree: MonoBehaviour {
 	public float SunStrikeMpCost = 20f;
 	public float SunStrikeDamage = 300f;
 	int k =0;
-	
+
+	void Start()
+	{
+		player = GameObject.FindWithTag ("Player");
+		
+		stat = player.GetComponent<StatCollectionClass >();
+
+		psg = player.GetComponent<PlayerStateGUI> ();
+
+
+
+	}
 	// create GUI Button on panel
-	void OnGUI () {
+	void something (int ID) {
 		//set the location of button
-		if (GUI.Button (new Rect (Screen.width/2-Screen.width/24, 50, 120, 30), "Energy Ball Lv" + i)) {
+		if (GUI.Button (new Rect (Screen.width/2-Screen.width/7, 50, Screen.width/7, 30), "Energy Ball Lv" + i)) {
 			//skill level must lower than max level
 			if (i < maxEnergyBallLv) {
 				// player's xp value max higher than skill xp cost
@@ -60,7 +89,7 @@ public class SkillTree: MonoBehaviour {
 			
 		}
 		//same as 1st skill
-		if (GUI.Button (new Rect (Screen.width/2-Screen.width/24, 150, 120, 30), "Fire Breath Lv" + j)) {
+		if (GUI.Button (new Rect (Screen.width/2-Screen.width/7, 150, Screen.width/7, 30), "Fire Breath Lv" + j)) {
 			if (i == maxEnergyBallLv) {
 				if (j < maxFireBreathLv) {
 					
@@ -89,7 +118,7 @@ public class SkillTree: MonoBehaviour {
 		}
 		
 		//same as 1st skill
-		if (GUI.Button (new Rect (Screen.width/2-Screen.width/24, 250, 120, 30), "Sun Strike Lv" + k)) {
+		if (GUI.Button (new Rect (Screen.width/2-Screen.width/7, 250, Screen.width/7, 30), "Sun Strike Lv" + k)) {
 			
 			if (j == maxFireBreathLv) {
 				
@@ -121,9 +150,44 @@ public class SkillTree: MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void OnGUI () {
 		
+
+		if (showing)
+		{
+			winPos = GUI.Window(2, winPos, something, "Skill Tree");
+		}
+		
+	}
+
+	void FixedUpdate()
+	{
+
 		
 		
 	}
+		void Update ()
+		{     
+			
+			//if the key is pressed and the GUI is showing, hide it
+			// else show the GUI
+			if (Input.GetButtonDown ("K")) {
+				//set showing to true if false, if false turn it to true
+				showing = !showing;
+				
+				
+				//if other GUI actived turn it off
+				if(psg.showing==true)
+				{
+				psg.showing=false;
+					
+				}
+				
+
+				
+				
+				
+			}
+		}
+
 }

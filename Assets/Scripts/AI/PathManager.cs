@@ -10,15 +10,29 @@ public class PathManager : MonoBehaviour {
 	public Rigidbody2D rbody;
 	public Vector3 homePos;
 
+	float randomSign;
+
 	public bool forward;
 	public bool backward;
 	public bool left;
 	public bool right;
 
+
+
 	void Start () {
 		homePos = this.transform.position;
 		rbody = this.GetComponent<Rigidbody2D>();
 		Debug.Log (homePos.ToString ());
+		int check = Random.Range (1, 3);
+
+		if (check == 1) {
+			randomSign = -1.0f;
+		}
+		else
+		{
+			randomSign = 1.0f;
+		}
+
 
 		ConfigColliders ();
 	}
@@ -44,7 +58,17 @@ public class PathManager : MonoBehaviour {
 		}
 	}
 
-
+	public void LocalPathToTarget(Vector3 tar){
+		if (!obstacle) {
+			MoveToOnAxis(tar);
+			//MoveTo (player);
+			//float rotZ = Mathf.Atan2 (player.y - transform.position.y, player.x - transform.position.x) * Mathf.Rad2Deg;
+			//transform.rotation = Quaternion.AngleAxis (rotZ, Vector3.forward);
+		} else if (obstacle || left || right || forward || backward) {
+			Debug.Log ("Obstacle pathing time!");
+			localObstacle();
+		}
+	}
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/* 
 		TODO The function to handle global pathing. Room to room, area to area pathing.
@@ -78,22 +102,22 @@ public class PathManager : MonoBehaviour {
 	public void localObstacle(){
 		if(forward && (!right || !left)){
 			Debug.Log("Time to do local Obstacle forward stuff.");
-			MoveToOnAxis (new Vector3(transform.position.x + 1f, transform.position.y, 0));
+			MoveToOnAxis (new Vector3(transform.position.x + 1f * randomSign, transform.position.y, 0));
 		}
 		else if(backward){
 			//Nothing
 		}
 		else if(left){
-			MoveToOnAxis (new Vector3(transform.position.x, transform.position.y + Time.deltaTime, 0));
+			MoveToOnAxis (new Vector3(transform.position.x, transform.position.y + Time.deltaTime * randomSign, 0));
 		}
 		else if(right){
-			MoveToOnAxis (new Vector3(transform.position.x, transform.position.y - Time.deltaTime, 0));
+			MoveToOnAxis (new Vector3(transform.position.x, transform.position.y - Time.deltaTime * randomSign, 0));
 		}
 		else if(left && forward){
-			MoveToOnAxis (new Vector3(transform.position.x, transform.position.y + Time.deltaTime, 0));
+			MoveToOnAxis (new Vector3(transform.position.x + Time.deltaTime, transform.position.y, 0));
 		}
 		else if(right && forward){
-			MoveToOnAxis (new Vector3(transform.position.x, transform.position.y - Time.deltaTime, 0));
+			MoveToOnAxis (new Vector3(transform.position.x - Time.deltaTime, transform.position.y, 0));
 		}
 		else{
 		}
