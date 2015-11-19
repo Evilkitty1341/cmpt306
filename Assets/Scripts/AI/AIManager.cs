@@ -1,5 +1,4 @@
-using sys = System;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -114,20 +113,8 @@ public class AIManager : MonoBehaviour {
 	public int manaMul = 1;
 	public string decisionType;
 
-	bool makeSprite = false;
 
-	SpriteRenderer mySpri;
-	Animator myAnCon;
-	string meleeSet = "EnemyMelee";
-	string rangedSet = "EnemyRanged";
-	string hybridSet = "EnemyCombo";
 
-	string meleeTemp = "EnemyMelee_15";
-	string rangedTemp = "EnemyRanged_45";
-	string hybridTemp = "EnemyCombo_14";
-
-	string spriteSheetName;
-	string spriteSelect;
 
 	private DecisionTree behavior;
 	
@@ -135,42 +122,18 @@ public class AIManager : MonoBehaviour {
 	void Start () {
 
 		AIConfig mob = AIBuilder ("mob", weightedLevel);
+		
 		gameObject.AddComponent<PathManager> ().mobSp = mob.movementSpeed; 
 		gameObject.AddComponent<AIBehavior> ().rb = mob;
 		gameObject.GetComponent<AIBehavior> ().pathing = gameObject.GetComponent<PathManager> ();
 		gameObject.AddComponent<DecisionTree>();
+		gameObject.AddComponent<CollisionHandler> ();
 
-		mySpri = gameObject.GetComponent<SpriteRenderer> ();
 
 		//AI START//
 		behavior = gameObject.GetComponent<DecisionTree> ();
 
 		behavior.startDeciding ();
-	}
-
-	void LateUpdate(){
-		//Sprite test = Resources.Load ("Enemies/EnemyMelee") as Sprite;
-		if (makeSprite) {
-			var subSprites = Resources.LoadAll<Sprite> (spriteSheetName);
-
-			foreach (var renderer in GetComponentsInChildren<SpriteRenderer>()) {
-
-				string spriteName = spriteSelect;
-				//string spriteName = renderer.sprite.name;
-				var newSprite = sys.Array.Find (subSprites, item => item.name == spriteName);
-			
-				if (newSprite) {
-					gameObject.GetComponent<SpriteRenderer> ().sprite = newSprite;
-				} else {
-					Debug.LogError ("Sprite '" + spriteSheetName + "' not found.");
-				}
-			}
-		}
-		//if (test != null) {
-		//	gameObject.GetComponent<SpriteRenderer> ().sprite = test;
-		//} else
-		//	Debug.LogError ("Sprite not found");
-
 	}
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -270,13 +233,8 @@ public class AIManager : MonoBehaviour {
 		BehaviorTypes assignBehavior = new BehaviorTypes ();
 		#pragma warning restore
 
-		mySpri = GetComponent<SpriteRenderer> ();
-		myAnCon = GetComponent<Animator> ();
-		//RuntimeAnimatorController test = null;
-
 		switch(type){
 		case "mob":
-
 			if(member.health > 0){
 				//Visual adjustments for health thresholds.
 			}
@@ -284,59 +242,20 @@ public class AIManager : MonoBehaviour {
 				//Visual adjustments for mana thresholds.
 				hasMagic = true;
 			}
-			if(member.strength >= (weightedLevel / numOfStats)){
+			if(member.strength > 6){
 				isMelee = true;
 				isAggressive = true;
-
-				//test = Resources.Load("EnemyMelee") as RuntimeAnimatorController;
 				//Visual adjustments for being melee.
 			}
-			if(member.intellect >= member.health){
+			if(member.intellect > 6 && member.strength >= member.intellect){
 				isCautious = true;
 				isHybrid = true;
-
-				//test = Resources.Load("EnemyRanged") as RuntimeAnimatorController;
-
 				//Visual adjustments for being cautious.
 			}
-			if(member.intellect >= (weightedLevel / numOfStats) && member.intellect > member.strength){
+			if(member.intellect > 6 && member.intellect >= member.strength){
 				isStalker = true;
-				//test = Resources.Load("EnemyBoth") as RuntimeAnimatorController;
 				//Visual adjustments for being a stalker.
 			}
-
-			//test = Resources.Load ("Enemies/EnemyMelee") as RuntimeAnimatorController;
-
-			if(isMelee && !isHybrid){
-				spriteSheetName = meleeSet;
-				spriteSelect = meleeTemp;
-				float str = member.strength;
-				float scale = (1.5f * (1f + str/50f));
-				transform.localScale = new Vector3(scale, scale, 0);
-				member.AIType = "Melee";
-			}else if(isHybrid){
-				spriteSheetName = hybridSet;
-				spriteSelect = hybridTemp;
-				transform.localScale = new Vector3(2f, 2f, 0);
-				member.AIType = "Hybrid";
-			}else{
-				spriteSheetName = rangedSet;
-				spriteSelect = rangedTemp;
-				transform.localScale = new Vector3(1.8f, 1.8f, 0);
-				member.AIType = "Ranged";
-			}
-
-			//transform.localScale = new Vector3(2.2f, 2.2f, 0);
-
-			//if(test == null){
-			//	Debug.LogError("Load failed");
-			//}
-			//else{
-			//	myAnCon.runtimeAnimatorController = test;
-			//	myAnCon.ApplyBuiltinRootMotion();
-			//}
-
-			makeSprite = true;
 
 			config.isMelee = isMelee;
 			config.isHybrid = isHybrid;
@@ -366,6 +285,7 @@ public class AIManager : MonoBehaviour {
 			Debug.LogError (type + ": is not a supported type.");
 			break;
 		}
+
 
 		print(config.ToString ());
 

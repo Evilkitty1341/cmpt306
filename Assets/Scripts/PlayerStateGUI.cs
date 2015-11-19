@@ -5,17 +5,19 @@ public class PlayerStateGUI : MonoBehaviour {
 	
 	// connect stateGUI to stat class
 	StatCollectionClass stat;
-	
+
+	//now we have 3 GUI used to handle open and close
 	GameObject player;
 
 	SkillTree skill;
 
 	All_Quests quest;
 
+	//set GUI to inactive first
 	public bool showing = false;
 	
 	//creating GUI window size / position
-	Rect winPos = new Rect (Screen.width/13, Screen.height/5, Screen.width-Screen.width/6, Screen.height-Screen.height/2);
+	Rect winPos = new Rect (Screen.width/2-Screen.width/6, Screen.height/5, Screen.width/2-Screen.width/7, Screen.height-Screen.height/2);
 
 
 	void Start()
@@ -29,32 +31,35 @@ public class PlayerStateGUI : MonoBehaviour {
 		quest = player.GetComponent<All_Quests> ();
 		
 	}
-	// create GUI Button on panel
+
 	
 	//create gui for each state
 	void StateGui (int ID) {
 		
-		GUI.TextArea (new Rect (Screen.width/2-Screen.width/7, 50, Screen.width/7, 30), "Level: " + stat.playerLevel);
+		GUI.TextArea (new Rect (Screen.width/8, 50, Screen.width/7, 30), "Level: " + stat.playerLevel);
 		
-		GUI.TextArea (new Rect (Screen.width/2-Screen.width/7, 90, Screen.width/7, 30), "Xp: " + stat.xp);
+		GUI.TextArea (new Rect (Screen.width/8, 90, Screen.width/7, 30), "Xp: " + stat.xp);
 		
-		GUI.TextArea (new Rect (Screen.width/2-Screen.width/7, 130, Screen.width/7, 30), "Health: " + stat.health);
+//		GUI.TextArea (new Rect (Screen.width/8, 130, Screen.width/7, 30), "Health: " + stat.health+"/"+stat.initialHealth);
+//		
+//		GUI.TextArea (new Rect (Screen.width/8, 170, Screen.width/7, 30), "Mana: " + stat.mana+"/"+stat.initialMana);
+
+		GUI.TextArea (new Rect (Screen.width/8, 130, Screen.width/7, 30), "Damage: " + stat.damage);
 		
-		GUI.TextArea (new Rect (Screen.width/2-Screen.width/7, 170, Screen.width/7, 30), "Mana: " + stat.mana);
+		GUI.TextArea (new Rect (Screen.width/8, 170, Screen.width/7, 30), "defend: " + stat.defend);
 		
-		GUI.TextArea (new Rect (Screen.width/2-Screen.width/7, 210, Screen.width/7, 30), "Damage: " + stat.damage);
+		GUI.TextArea (new Rect (Screen.width/8, 210, Screen.width/7, 30), "Strength: " + stat.strength);
 		
-		GUI.TextArea (new Rect (Screen.width/2-Screen.width/7, 250, Screen.width/7, 30), "defend: " + stat.defend);
-		
-		GUI.TextArea (new Rect (Screen.width/2-Screen.width/7, 290, Screen.width/7, 30), "Strength: " + stat.strength);
-		
-		GUI.TextArea (new Rect (Screen.width/2-Screen.width/7, 330, Screen.width/7, 30), "Intellect: " + stat.intellect);
+		GUI.TextArea (new Rect (Screen.width/8, 250, Screen.width/7, 30), "Intellect: " + stat.intellect);
+
+		GUI.TextArea (new Rect (Screen.width/8, 290, Screen.width/7, 30), "agility: " + stat.agility);
 		
 	}
 
+
 	void OnGUI () {
-		
-		
+
+		//show GUI with the showing's value
 		if (showing)
 		{
 			winPos = GUI.Window(2, winPos, StateGui, "Player State");

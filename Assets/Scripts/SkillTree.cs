@@ -8,7 +8,7 @@ public class SkillTree: MonoBehaviour {
 
 	GameObject player;
 
-	// now have 3 GUI 
+	// now have 3 GUI need other 2 GUI to handle open and close
     
 	
 	PlayerStateGUI psg;
@@ -49,6 +49,7 @@ public class SkillTree: MonoBehaviour {
 	public float SunStrikeDamage = 300f;
 	int k =0;
 
+	//connect to each script
 	void Start()
 	{
 		player = GameObject.FindWithTag ("Player");
@@ -62,6 +63,7 @@ public class SkillTree: MonoBehaviour {
 
 
 	}
+
 	// create GUI Button on panel
 	void something (int ID) {
 		//set the location of button
@@ -153,23 +155,18 @@ public class SkillTree: MonoBehaviour {
 		}
 	}
 	
-	// Update is called once per frame
-	void OnGUI () {
-		
 
-		if (showing)
-		{
+		void OnGUI () {
+		
+		//check value of showing determing show GUI or not
+			if (showing)
+			{
 			winPos = GUI.Window(2, winPos, something, "Skill Tree");
+			}
+		
 		}
-		
-	}
 
-	void FixedUpdate()
-	{
 
-		
-		
-	}
 		void Update ()
 		{     
 			

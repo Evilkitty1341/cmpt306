@@ -23,8 +23,9 @@ public class All_Quests : MonoBehaviour {
 
 	SkillTree skill;
 
-	//for Font
+	//change font
 	public Font chosenFont;
+
 
 	//shows quests
 	public bool showing = false;

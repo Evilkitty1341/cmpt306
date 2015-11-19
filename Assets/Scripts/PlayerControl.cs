@@ -2,15 +2,16 @@
 using System.Collections;
 
 public class PlayerControl : MonoBehaviour {
-	public float speed = 5f; // Character's movement speed
+	public float speed = 8f; // Character's movement speed
 	private Animator anim;
+	Vector3 startPosition; 
     StatCollectionClass playerStat;
    // public GameObject projectile;
 
     // Use this for initialization
     void Start () {
 		anim = GetComponent<Animator> ();
-
+		startPosition = new Vector3(120, 0, -1);
         playerStat = gameObject.GetComponent<StatCollectionClass>();
         playerStat.health = 100;
         playerStat.mana = 100;
@@ -60,19 +61,21 @@ public class PlayerControl : MonoBehaviour {
 
         if (playerStat.health <= 0)
         {
-
+			transform.position = startPosition;
+			playerStat.health = playerStat.initialHealth;
+			playerStat.mana = playerStat.initialMana;
             //Reset ();
             //Instantiate(deadsound);
-            Destroy(gameObject);
+            //Destroy(gameObject);
             //GUI.Label(new Rect(Screen.width / 2, Screen.height / 2 - 25, 100, 50), " You Dead!!!!! ");
 
-            Application.LoadLevel(Application.loadedLevel);
+            //Application.LoadLevel(Application.loadedLevel);
         }
     }
 
-    // Restart level
-    void Reset()
-    {
-        Application.LoadLevel(Application.loadedLevel);
-    }
+//    // Restart level
+//    void Reset()
+//    {
+//        Application.LoadLevel(Application.loadedLevel);
+//    }
 }

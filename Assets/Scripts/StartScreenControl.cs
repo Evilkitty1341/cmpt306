@@ -70,10 +70,8 @@ public class StartScreenControl : MonoBehaviour {
 		}
 		// The player can select the "Quit" button at any point to exit the application
 		// If the player wants to start the game, ensure a character has been chosen and load the corresponding level
-		if (isStartButton && PlayerSelect.getFemale ()) {
+		if ((isStartButton && PlayerSelect.getFemale ()) || (isStartButton && PlayerSelect.getMale ())) {
 			Application.LoadLevel (1);
-		} else if (isStartButton && PlayerSelect.getMale ()) {
-			Application.LoadLevel (2);
 		} else if (isQuitButton) {
 			Application.Quit ();
 		}

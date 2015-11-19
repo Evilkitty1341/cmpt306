@@ -3,6 +3,7 @@ using System.Collections;
 
 public class WorldGenerate : MonoBehaviour {
 	public GameObject wall;
+	public GameObject spawn;
 	//add for generate items
 	public GameObject Bow;
 	public GameObject Sword;
@@ -16,6 +17,8 @@ public class WorldGenerate : MonoBehaviour {
 	public int wallsInGroup = 1;
 	public int minWallsInLevel = 1;
 	public int maxWallsInLevel = 1;
+	public int minSpawnsInLevel = 1;
+	public int maxSpawnsInLevel = 1;
 
 	private GameObject[ , ] wallSet; // Storage for walls
 
@@ -28,6 +31,7 @@ public class WorldGenerate : MonoBehaviour {
 			}
 		}
 		GenerateWalls (); // Generates random walls and adds them into the wallSet array
+		GenerateSpawns (); // Generates random enemy spawns and adds them into the wallSet array
 		GenerateSword (); //Generates random positon items into wallSet array
 		GenerateBow ();
 		GenerateArmor ();
@@ -59,31 +63,30 @@ public class WorldGenerate : MonoBehaviour {
 		if (WithinBounds (x, y)) {
 			if (wallSet [x, y] == null) {
 				GameObject tempWall = Instantiate (wall) as GameObject;
-				tempWall.tag = "Wall";
 				tempWall.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
 				wallSet [x, y] = tempWall;
 			}
 		}
 	}
 
-	// place a item object at x,y if it in bounds and nothing here
-	void PutItem (int x, int y,GameObject item) {
+	// Places an enemy spawn point at x,y if it is within bounds and null
+	void putSpawn (int x, int y) {
 		if (WithinBounds (x, y)) {
 			if (wallSet [x, y] == null) {
-				GameObject temp = Instantiate (item) as GameObject;
-				temp.transform.position = new Vector3 (x - mapOffsetX, y - mapOffsetY, 0f);
-				wallSet [x, y] = temp;
+				GameObject tempSpawn = Instantiate (spawn) as GameObject;
+				tempSpawn.tag = "Spawn";
+				tempSpawn.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
+				wallSet [x, y] = tempSpawn;
 			}
 		}
 	}
 
 	// place a item object at x,y if it in bounds and nothing here
-	void PutItem (int x, int y,GameObject item, string tag) {
+	void PutItem (int x, int y, GameObject item) {
 		if (WithinBounds (x, y)) {
 			if (wallSet [x, y] == null) {
 				GameObject temp = Instantiate (item) as GameObject;
-				temp.tag = tag;
-				temp.transform.position = new Vector3 (x - mapOffsetX, y - mapOffsetY, 0f);
+				temp.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
 				wallSet [x, y] = temp;
 			}
 		}
@@ -168,13 +171,27 @@ public class WorldGenerate : MonoBehaviour {
 		}
 	}
 
-	//Generates items by get random x,y in map and check is there any other object
+	// Generates a random number of enemy spawn points in the level
+	void GenerateSpawns () {
+		int x;
+		int y;
+		for (int i=0; i<Random.Range(minSpawnsInLevel,maxSpawnsInLevel); i++) {
+			do {
+				x = Random.Range (0, mapWidth); 
+				y = Random.Range (0, mapHeight); 
+			} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
+			putSpawn (x, y);
+		}
+
+	}
+
+	//Generates items by get random x,y within map bounds and check is there any other object
 	void GenerateSword() {
 		int x;
 		int y;
 		do {
-			x = Random.Range (0, mapWidth); //the "pointer" x coord
-			y = Random.Range (0, mapHeight); //the "pointer" y coord
+			x = Random.Range (0, mapWidth); 
+			y = Random.Range (0, mapHeight); 
 		} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
 
 		PutItem (x,y,Sword);
@@ -184,8 +201,8 @@ public class WorldGenerate : MonoBehaviour {
 		int x;
 		int y;
 		do {
-			x = Random.Range (0, mapWidth); //the "pointer" x coord
-			y = Random.Range (0, mapHeight); //the "pointer" y coord
+			x = Random.Range (0, mapWidth); 
+			y = Random.Range (0, mapHeight); 
 		} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
 		
 		PutItem (x,y,Bow);
@@ -195,8 +212,8 @@ public class WorldGenerate : MonoBehaviour {
 		int x;
 		int y;
 		do {
-			x = Random.Range (0, mapWidth); //the "pointer" x coord
-			y = Random.Range (0, mapHeight); //the "pointer" y coord
+			x = Random.Range (0, mapWidth); 
+			y = Random.Range (0, mapHeight); 
 		} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
 		
 		PutItem (x,y,Armor);

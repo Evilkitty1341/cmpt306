@@ -20,7 +20,7 @@ public class DecisionTree : MonoBehaviour {
 	}
 
 	public void startDeciding(){
-		InvokeRepeating ("makeDecision", 1, 0.2f);
+		InvokeRepeating ("makeDecision", 1, 1);
 	}
 
 	public void stopDeciding(){
