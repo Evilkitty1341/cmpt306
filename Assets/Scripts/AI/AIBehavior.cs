@@ -87,7 +87,7 @@ public class AIBehavior : MonoBehaviour {
 		//The count and bool may seem redundant.
 		//In this context it is.
 		//However if the # of allies around becomes important, then we need this information.
-		if (allyInRg >= 1) {
+		if (allyInRg > 1) {
 			friends = true;
 		}
 		
@@ -148,6 +148,7 @@ public class AIBehavior : MonoBehaviour {
 
 	//TODO Attack stuff goes here.
 	public int Attack(){
+		pathing.killForce ();
 		return 0;
 	}
 	//Stop everything and run away until player is out of threatZone.
@@ -157,7 +158,7 @@ public class AIBehavior : MonoBehaviour {
 	}
 	//Move towards the player
 	public int AdvanceTowards(){
-		pathing.MoveTo(GameObject.FindGameObjectWithTag("Player"));
+		pathing.LocalPathToTarget ("Player");
 		return 0;
 	}
 	//Pick a random direction and walk in it.
@@ -183,6 +184,7 @@ public class AIBehavior : MonoBehaviour {
 
 	//Stop everything and go back to the spawn location.
 	public int ReturnToSpawn(){
+		pathing.LocalPathToTarget(pathing.homePos);
 		return 0;
 	}
 

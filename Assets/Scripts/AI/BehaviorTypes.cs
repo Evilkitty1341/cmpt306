@@ -3,13 +3,25 @@ using System.Collections;
 
 public class BehaviorTypes : MonoBehaviour {
 
+	static float movSpeedScale = 10.0f;
+
+	float bThreatZone = 10.00f;
+	float bIdealRange = 5.0f;
+	float bFriendlyMinDis = 5.0f;
+	float bKiteDistance = 10.0f;
+	float bMinHealth = 3;
+	float bHealthMultiplier = 1.0f;
+	float bAttackMultiplier = 1.0f;
+	float bManaMultiplier = 1.0f;
+	float bMovementSpeed = 10.0f;
+	
 	// Use this for initialization
 	void Start () {
 	
 	}
 
 	public AIConfig intializeRangedGeneric(AIConfig ai){
-		ai.threatZone = 25.00f;
+		ai.threatZone = 14.00f;
 		ai.idealRange = 10.0f;
 		ai.friendlyMinDis = 5.0f;
 		ai.kiteDistance = 20.0f;
@@ -17,33 +29,33 @@ public class BehaviorTypes : MonoBehaviour {
 		ai.healthMultiplier = 1.0f;
 		ai.attackMultiplier = 1.0f;
 		ai.manaMultiplier = 1.0f;
-		ai.movementSpeed = 10f;
+		ai.movementSpeed = 10.0f * movSpeedScale;
 		return ai;
 	}
 
 	public AIConfig intializeMeleeGeneric(AIConfig ai){
-		ai.threatZone = 20.00f;
-		ai.idealRange = 1.0f;
+		ai.threatZone = 10.00f;
+		ai.idealRange = 0f;
 		ai.friendlyMinDis = 5.0f;
-		ai.kiteDistance = 10.0f;
+		ai.kiteDistance = 5.0f;
 		ai.minHealth = 1;
 		ai.healthMultiplier = 1.0f;
 		ai.attackMultiplier = 1.0f;
 		ai.manaMultiplier = 1.0f;
-		ai.movementSpeed = 12f;
+		ai.movementSpeed = 12.0f * movSpeedScale;
 		return ai;
 	}
 
 	public AIConfig intializeHybridGeneric(AIConfig ai){
-		ai.threatZone = 25.00f;
-		ai.idealRange = 5.0f;
+		ai.threatZone = 12.00f;
+		ai.idealRange = 4.0f;
 		ai.friendlyMinDis = 5.0f;
-		ai.kiteDistance = 20.0f;
+		ai.kiteDistance = 7.5f;
 		ai.minHealth = 3;
 		ai.healthMultiplier = 1.0f;
 		ai.attackMultiplier = 1.0f;
 		ai.manaMultiplier = 1.0f;
-		ai.movementSpeed = 10f;
+		ai.movementSpeed = 10.0f * movSpeedScale;
 		return ai;
 	}
 

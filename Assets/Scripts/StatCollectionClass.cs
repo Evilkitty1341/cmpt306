@@ -4,6 +4,8 @@ using System.Collections;
 // This class holds the various stats that will be used by the player and enemies in our game
 // Each object will have their own version of a stat collection
 public class StatCollectionClass : MonoBehaviour {
+
+	public string AIType;
 	
 	public float health;
 
