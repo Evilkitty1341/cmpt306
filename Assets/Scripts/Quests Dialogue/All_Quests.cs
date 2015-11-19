@@ -22,6 +22,10 @@ public class All_Quests : MonoBehaviour {
 	PlayerStateGUI psg;
 
 	SkillTree skill;
+
+	//for Font
+	public Font chosenFont;
+
 	//shows quests
 	public bool showing = false;
 	
@@ -144,6 +148,7 @@ public class All_Quests : MonoBehaviour {
 		//if GUI is showing, setting size, title, etc.
 		if (showing)
 		{
+			GUI.skin.font = chosenFont;
 			winPos = GUI.Window(2, winPos, QuestWindow, "Quest Journal");
 		}
 	}
