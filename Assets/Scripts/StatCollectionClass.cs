@@ -59,5 +59,7 @@ public class StatCollectionClass : MonoBehaviour {
 	public bool FireBreathUnlocked;
 	
 	public bool SunStrikeUnlocked;
+
+    public int playerDirection;
 }
 
