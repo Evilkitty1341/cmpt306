@@ -169,7 +169,7 @@ Transform:
   m_LocalScale: {x: 574.926147, y: 8.50823212, z: 25.4852161}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!1 &407974091 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 142528, guid: e24d50567164e4ca781904828d7fc408, type: 2}
@@ -416,7 +416,7 @@ Transform:
   m_LocalScale: {x: 5.67502785, y: 245.641846, z: 6.20223522}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!61 &1021368173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -522,13 +522,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 148420, guid: 2dbf5fb7271474b41bf317c18b08dcbb, type: 2}
+  rocks: {fileID: 143526, guid: 0707ece510bf0e54ebf2355fe0a86a22, type: 2}
+  obstacle: {fileID: 176380, guid: a4fa114d423420d42adf089dd0d7e6dc, type: 2}
   spawn: {fileID: 115206, guid: ccbf2a0e5536f72438efc3a62ea38e98, type: 2}
   Bow: {fileID: 122454, guid: 934f1e8b26fba4c43a334733c3e5abef, type: 2}
   Sword: {fileID: 120608, guid: 5ee6297b67822c741bd04e7d3d904056, type: 2}
   Armor: {fileID: 185516, guid: 7c971857f2d8b23429d9370b0ca4b750, type: 2}
+  XroomNum: 2
+  YroomNum: 2
   wallDimensions: .600000024
   mapWidth: 300
   mapHeight: 200
+  type: 0
   mapOffsetX: 30
   mapOffsetY: 60
   wallsInGroup: 10
@@ -536,6 +541,8 @@ MonoBehaviour:
   maxWallsInLevel: 400
   minSpawnsInLevel: 3
   maxSpawnsInLevel: 15
+  minObstaclesInLevel: 500
+  maxObstaclesInLevel: 400
 --- !u!81 &1192517868
 AudioListener:
   m_ObjectHideFlags: 0
@@ -930,7 +937,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1687736290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4000001, y: 12.1999998, z: 10}
+  m_LocalPosition: {x: -7.71000004, y: 11.96, z: 10}
   m_LocalScale: {x: 160.922943, y: 160.923004, z: 32.1846008}
   m_Children: []
   m_Father: {fileID: 0}
