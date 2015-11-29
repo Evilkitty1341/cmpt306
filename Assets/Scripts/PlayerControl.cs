@@ -6,16 +6,7 @@ public class PlayerControl : MonoBehaviour {
 	private Animator anim;
 	Vector3 startPosition; 
     StatCollectionClass playerStat;
-    public GameObject bulletPrefab;
-
-    //the bullet that has been spawned
-    public GameObject spawnedBullet;
-
-    public float fireRate = 1.0F;
-    private float nextFire = 0.0F;
-    
-
-    // public GameObject projectile;
+   // public GameObject projectile;
 
     // Use this for initialization
     void Start () {
@@ -25,7 +16,6 @@ public class PlayerControl : MonoBehaviour {
         playerStat.health = 100;
         playerStat.mana = 100;
         playerStat.intellect = 1;
-        playerStat.playerDirection = 2;
     }
 
 	// Update is called once per frame
@@ -35,51 +25,25 @@ public class PlayerControl : MonoBehaviour {
 			transform.Translate (Vector3.up * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 0); // Up
 			anim.SetBool ("Moving", true);
-            playerStat.playerDirection = 1;
-        } else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
+		} else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
 			transform.Translate (Vector3.right * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 1); // Right
 			anim.SetBool ("Moving", true);
-            playerStat.playerDirection = 2;
-        } else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
+		} else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
 			transform.Translate (Vector3.down * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 2); // Down
 			anim.SetBool ("Moving", true);
-            playerStat.playerDirection = 3;
-        } else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
+		} else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
 			transform.Translate (Vector3.left * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 3); // Left
 			anim.SetBool ("Moving", true);
-            playerStat.playerDirection = 4;
-        } else {
+		} else {
 			anim.SetBool ("Moving", false);
 		}
 		// Controls for attacking
-		if (Input.GetButtonDown("Fire1") && Time.time > nextFire) {
+		if (Input.GetKey (KeyCode.Space)) {
 			anim.SetBool ("Attacking", true);
-            nextFire = Time.time + fireRate;
-            //print ("fire");
-            // audio.Play();
-            //spawn a bullet as an object
-            spawnedBullet = GameObject.Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
-            //add force to bullet
-            if (playerStat.playerDirection == 1)
-            {
-                spawnedBullet.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, 500));
-            }
-            else if (playerStat.playerDirection == 2)
-            {
-                spawnedBullet.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(500, 0));
-            }
-            else if (playerStat.playerDirection == 3)
-            {
-                spawnedBullet.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, -500));
-            }
-            else if (playerStat.playerDirection == 4)
-            {
-                spawnedBullet.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-500, -0));
-            }
-        } else {
+		} else {
 			anim.SetBool ("Attacking", false);
 		}
 

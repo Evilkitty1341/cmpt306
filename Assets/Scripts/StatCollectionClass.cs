@@ -41,7 +41,7 @@ public class StatCollectionClass : MonoBehaviour {
 	public bool itemSword;
 	
 	public bool SwordEquip;
-	
+
 	public bool itemArmor;
 	
 	public bool ArmorEquip;
@@ -60,6 +60,34 @@ public class StatCollectionClass : MonoBehaviour {
 	
 	public bool SunStrikeUnlocked;
 
-    public int playerDirection;
+	public void copyStats(StatCollectionClass target){
+
+		health = target.health;
+		initialHealth = target.initialHealth;
+		mana = target.mana;
+		initialMana = target.initialMana;
+		damage = target.damage;
+		baseMeleeDamage = target.baseMeleeDamage;
+		baseRangedDamage = target.baseRangedDamage;
+		baseMagicDamage = target.baseMagicDamage;
+		defend = target.defend;
+		baseDefense = target.baseDefense;
+		strength = target.strength;
+		intellect = target.intellect;
+		agility = target.agility;
+		xp = target.xp;
+		playerLevel = target.playerLevel;
+		itemSword = target.itemSword;
+		SwordEquip = target.SwordEquip;
+		itemArmor = target.itemArmor;
+		ArmorEquip = target.ArmorEquip;
+		itemBow = target.itemBow;
+		BowEquip = target.BowEquip;
+		EnergyBallUnlocked = target.EnergyBallUnlocked;
+		EnergyBalldamage = target.EnergyBalldamage;
+		FireBreathUnlocked = target.FireBreathUnlocked;
+		SunStrikeUnlocked = target.SunStrikeUnlocked;
+	}
+
 }
 
