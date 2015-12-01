@@ -6,15 +6,13 @@ public class ItemArmor : MonoBehaviour {
 	StatCollectionClass stat;
 	
 	GameObject player;
+
+	ItemUpgrade Up;
 	
 	//give armor a value of defend
 	public float ArmorDef = 50f;
 
 	void Start(){
-		
-		player = GameObject.FindWithTag ("Player");
-		
-		stat = player.GetComponent<StatCollectionClass >();
 		
 	}
 
@@ -24,23 +22,31 @@ public class ItemArmor : MonoBehaviour {
 		
 		// If player collided with item armor
 		if (other.tag == "Player") {
-			
+
+			stat=other.GetComponent<StatCollectionClass>();
+
 			// set item armor unlocked
 			stat.itemArmor = true;
-			
+
+			Up = other.GetComponent<ItemUpgrade>();
+
+			Up.ArmorLevel++;
+
+			Up.ArmorDamage+=50f;
+	
 			//if not equipment now just equip it
 			if(stat.SwordEquip ==false && stat.BowEquip==false)
 			{
 				//add player defend with armor defend
-				stat.defend+=ArmorDef;
+				stat.defend+=Up.ArmorDamage;
 				//set armor equip true
 				stat.ArmorEquip = true; 	
 			}
+
 			// Destroy the item
 			Destroy(this.gameObject);
 			
-			
+		}
 			
 		}
 	}
-}

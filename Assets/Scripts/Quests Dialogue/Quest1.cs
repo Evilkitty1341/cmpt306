@@ -3,12 +3,6 @@ using System.Collections;
 
 public class Quest1 : MonoBehaviour {
 
-	//number of items the player currently has
-	int CurNumItems;
-
-	//number of items needed to complete this quest
-	int ItemsTotal;
-	
 	All_Quests AllQuests;
 
 	//Variables made so the Dialogue script has something
@@ -17,6 +11,15 @@ public class Quest1 : MonoBehaviour {
 	public bool Completed;	// when quest is completed set to true
 	public bool Repeat; 	//so Dialogue doesn't repeat for a quest
 	public GameObject Item;
+	int identify = 1;
+
+	//number of items the player currently has
+	public int CurNumItems;
+	
+	//number of items needed to complete this quest
+	public int ItemsTotal;
+
+	public bool Finished;
 	
 	// Use this for initialization
 	void Start () {
@@ -27,6 +30,8 @@ public class Quest1 : MonoBehaviour {
 		Has = false;
 		Completed = false;
 		Repeat = true;
+
+		Finished = false;
 		//item.SetActive (false);
 	}
 	
@@ -36,6 +41,13 @@ public class Quest1 : MonoBehaviour {
 		//Set Repeat to true so dialogue will work
 		if (CurNumItems == ItemsTotal && Completed == false) {
 			Repeat = true;
+		}
+
+		//if you've completed the quest they gave you and go collide with them again 
+		//they give you your reward
+		if (AllQuests.QL[0].Has == true && CurNumItems == ItemsTotal) 
+		{
+			Completed = true;
 		}
 
 	}
@@ -50,13 +62,7 @@ public class Quest1 : MonoBehaviour {
 		{
 			Has = true;	
 			GameObject Item1 = Instantiate (Item) as GameObject;
-		}
-		
-		//if you've completed the quest they gave you and go collide with them again 
-		//they give you your reward
-		if (col.gameObject.tag == "QuestGiver1" && AllQuests.QL[0].Has == true && CurNumItems == ItemsTotal) 
-		{
-			Completed = true;
+	
 		}
 		
 		//if you collide with an Item before you have the quest it won't do anything
@@ -65,7 +71,6 @@ public class Quest1 : MonoBehaviour {
 		{
 			Destroy(col.gameObject);
 			CurNumItems += 1;
-			
 		}
 	}
 

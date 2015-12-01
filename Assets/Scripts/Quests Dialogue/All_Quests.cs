@@ -23,8 +23,17 @@ public class All_Quests : MonoBehaviour {
 
 	SkillTree skill;
 
+	ItemGUI item;
+
 	//change font
 	public Font chosenFont;
+
+	//counter for quests
+	Quest1 Q1Script;
+	Quest2 Q2Script;
+
+	//Array for quest items
+	public int[] QI = new int[4]; 
 
 
 	//shows quests
@@ -41,14 +50,16 @@ public class All_Quests : MonoBehaviour {
 		private string info;
 		private bool has_quest;
 		private bool completed;
+		private int id;
 		
 		//so we're able to set values of structs
-		public quest(string n, string i, bool has, bool complete)
+		public quest(string n, string i, bool has, bool complete, int identify)
 		{
 			q_name = n;
 			info = i;
 			has_quest = has;
 			completed = complete;
+			id = identify;
 		}
 		
 		//quest field getters and setters
@@ -79,17 +90,26 @@ public class All_Quests : MonoBehaviour {
 			set{ completed = value;}
 			
 		}
+
+		public int Identify
+		{
+			get{return id;}
+			set{id = value;}
+			
+		}
+
 	}
 	
 	//Array for quests
 	public quest[] QL = new quest[4]; 
 
 	//creating quests
-	quest Q1 = new quest ("Q1: ", "Go get Mathius' bag and return it to him!", false, false); 
-	quest Q2 = new quest ("Q2: ", "Return Elizabeths items to her", false, false);
-	quest Q3 = new quest ("Q3: ", "laugh at a bad joke", false, false); 
-	quest Q4 = new quest ("Q4: ", "sing in the shower", false, false);
-	
+	quest Q1 = new quest ("Q1: ", "Return Mathius' bag!", false, false, 1); 
+	quest Q2 = new quest ("Q2: ", "Gain entry into the town!", false, false, 2);
+	quest Q3 = new quest ("Q3: ", "laugh at a bad joke", false, false, 3); 
+	quest Q4 = new quest ("Q4: ", "sing in the shower", false, false, 4);
+
+
 	//putting quests into an array list
 	void CreateQuests()
 	{
@@ -100,7 +120,7 @@ public class All_Quests : MonoBehaviour {
 		QL [3] = Q4;
 		
 	}
-	
+
 	// Use this for initialization
 	void Start () {
 		
@@ -112,11 +132,17 @@ public class All_Quests : MonoBehaviour {
 		psg = player.GetComponent<PlayerStateGUI> ();
 		
 		skill = player.GetComponent<SkillTree> ();
+
+		item = player.GetComponent<ItemGUI> ();
+
+		Q1Script = this.gameObject.GetComponent<Quest1>();
+		Q2Script = this.gameObject.GetComponent<Quest2>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 	
 	void FixedUpdate ()
@@ -140,6 +166,11 @@ public class All_Quests : MonoBehaviour {
 			{
 				skill.showing=false;
 			}
+
+			if(item.showing==true)
+			{
+				item.showing=false;
+			}
 			
 		}
 	}
@@ -156,12 +187,24 @@ public class All_Quests : MonoBehaviour {
 	
 	void QuestWindow(int ID)
 	{
-
 		//show all the quests that the player has that aren't completed yet
+		int j = 0;
 		for (int i =0; i < QL.Length; i++) {
 			if((QL[i].Has) && !QL[i].Complete)
 			{
-				GUILayout.Box((QL[i]).Name + (QL[i]).Info);
+				//Make sure it displays proper cur num items / total nums 
+				//is right for the quests
+				if(QL[i].Identify == 1)
+				{
+					QI [0] = Q1Script.CurNumItems;
+					QI [1] = Q1Script.ItemsTotal;
+				}
+				else if(QL[i].Identify == 2)
+				{
+					QI [0] = Q2Script.CurNumItems;
+					QI [1] = Q2Script.ItemsTotal;
+				}
+				GUILayout.Box((QL[i]).Name + (QL[i]).Info + " " + QI[0] + "/" + QI[1]);
 			}
 		}
 		

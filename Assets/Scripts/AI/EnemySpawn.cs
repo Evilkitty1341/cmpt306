@@ -17,10 +17,12 @@ public class EnemySpawn : MonoBehaviour {
 	public GameObject spawnObjectHybrid;
 	public GameObject spawnObjectBoss;
 
-	public int maxNumGroups;		// Maximum number of group of enemies to spawn in the area
-	private int groupWeight = 12;		// Overall weighting for a group of enemies
-	private int minInGroup = 1;		// Minimum number of enemies that can spawn in a group
-	private int maxInGroup = 1;		// Maximum number of enemies that can spawn in a group
+	public int maxNumGroups;	// Maximum number of group of enemies to spawn in the area
+	public int groupWeight;	// Overall weighting for a group of enemies
+	public int minInGroup;		// Minimum number of enemies that can spawn in a group
+	public int maxInGroup;		// Maximum number of enemies that can spawn in a group
+	public int minStatPerNPC;
+	public int maxStatPerNpc;
 	private float countdown;
 	private int numEnemies;			// This will be determined per group spawned
 	private int statPerEnemy;		// This will be determined after the number of enemies for a group is determined
@@ -29,74 +31,15 @@ public class EnemySpawn : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		maxNumGroups = 1;
-		spawnRadius = 0.5f;
-		spawnLocations = GameObject.FindGameObjectsWithTag ("Spawn");
-		spawnFilled = new int[spawnLocations.Length];
-
-		if (spawnLocations.Equals (null)) {
-			Debug.LogError("Spawn locations not properly added or configured!!!");
+		if((groupWeight/minInGroup) > maxStatPerNpc * 3){
+			Debug.LogError("Improper spawn configuration");
 		}
-
-		for(int i = 0; i < spawnLocations.Length; i++) {
-			spawnFilled [i] = 0;
+		else{
+			SpawnWave();
+			//SpawnSingle(Vector3.zero);
 		}
-
-		aiMaker = gameObject.AddComponent<ProceduralAI> ();
-		int failedAttempts = 0;
-
-		for(int k = 0; k < maxNumGroups; k++)
-		{
-			// Pick random spawn point
-			int j = Random.Range(0, spawnLocations.Length);
-			if(spawnFilled[j] >= maxInGroup && failedAttempts < 10){
-				failedAttempts++;
-				k--;
-			}
-			else if(failedAttempts >= 10){
-				Debug.LogError("Spawn assignments failed before spawn locations were exhausted: Check variables and spawn points for consistency.");
-				return;
-			}
-
-			else{
-				// Determine number of enemies to spawn and assign each a number of stat points
-				numEnemies = Random.Range (minInGroup, maxInGroup);
-				statPerEnemy = groupWeight / numEnemies;
-				spawnFilled[j] += 1;
-
-				for (int i = 0; i < numEnemies; i++)
-				{
-					float spawnDelta = Random.Range(0f, 2f * Mathf.PI);
-					AIConfig a = aiMaker.AIBuilder("mob", statPerEnemy, 2, 10);
-					// Spawn enemy
-
-					GameObject enemy;
-
-					if(a.isMelee)
-						enemy = Instantiate(spawnObjectMelee) as GameObject;
-					else if(a.isHybrid)
-						enemy = Instantiate(spawnObjectHybrid) as GameObject;
-					else
-						enemy = Instantiate(spawnObjectRanged) as GameObject;
-
-					enemy.GetComponent<AIManager>().config = a;
-					enemy.GetComponent<AIManager>().enabled = true;
-					// Set position to selected spawn point
-					Vector3 locWDelta = spawnLocations[j].transform.position;
-					locWDelta.x = locWDelta.x + Random.Range(0.1f, spawnRadius) * Mathf.Sin (spawnDelta);
-					locWDelta.y = locWDelta.y + Random.Range(0.1f, spawnRadius) * Mathf.Cos (spawnDelta);
-					locWDelta.z = 0.0f;
-					enemy.transform.position = locWDelta;
-
-					
-				}
-			}
-		}
-
-		// Initial timer
-		countdown = timer + dTimer;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		countdown -= Time.deltaTime;
@@ -125,5 +68,93 @@ public class EnemySpawn : MonoBehaviour {
 			// Will logarithmically decrease the time between enemy spawns to a minimum of timer seconds apart
 			countdown = timer - Mathf.Min (0f, 0.5f * dTimer * Mathf.Log10(Mathf.Max (1f, Time.timeSinceLevelLoad) * dTimerReduce) - dTimer);
 		}
+	}
+
+	public void SpawnSingle(Vector3 pos){
+
+		AIConfig ai = new AIConfig();
+		ManualAI mAI = new ManualAI();
+
+		ai = mAI.LevelOneBoss(ai);
+		GameObject enemy;
+
+		enemy = Instantiate(spawnObjectBoss) as GameObject;
+
+		enemy.GetComponent<AIManager>().config = ai;
+		enemy.GetComponent<AIManager>().decisionType = "boss";
+		enemy.GetComponent<AIManager>().enabled = true;
+
+		// Set position to selected spawn point
+		enemy.transform.position = pos;
+
+	}
+
+	void SpawnWave(){
+		spawnRadius = 1.0f;
+		spawnLocations = GameObject.FindGameObjectsWithTag ("Spawn");
+		print (spawnLocations.Length);
+		spawnFilled = new int[spawnLocations.Length];
+		
+		if (spawnLocations.Equals (null)) {
+			Debug.LogError("Spawn locations not properly added or configured!!!");
+		}
+		
+		for(int i = 0; i < spawnLocations.Length; i++) {
+			spawnFilled [i] = 0;
+		}
+		
+		aiMaker = gameObject.AddComponent<ProceduralAI> ();
+		int failedAttempts = 0;
+
+		for(int k = 0; k < maxNumGroups; k++)
+		{
+			// Pick random spawn point
+			int j = Random.Range(0, spawnLocations.Length);
+			print (j);
+			if(spawnFilled[j] == 1 && failedAttempts < 10){
+				failedAttempts++;
+				k--;
+			}
+			else if(failedAttempts >= 10){
+				Debug.LogError("Spawn assignments failed before spawn locations were exhausted: Check variables and spawn points for consistency.");
+				return;
+			}
+			
+			else{
+				// Determine number of enemies to spawn and assign each a number of stat points
+				numEnemies = Random.Range (minInGroup, maxInGroup);
+				statPerEnemy = groupWeight / numEnemies;
+				spawnFilled[j] += 1;
+
+				for (int i = 1; i < numEnemies; i++)
+				{
+					float spawnDelta = Random.Range(0f, 2f * Mathf.PI);
+					AIConfig a = aiMaker.AIBuilder("mob", statPerEnemy, minStatPerNPC, maxStatPerNpc);
+					// Spawn enemy
+					
+					GameObject enemy;
+					
+					if(a.isMelee)
+						enemy = Instantiate(spawnObjectMelee) as GameObject;
+					else if(a.isHybrid)
+						enemy = Instantiate(spawnObjectHybrid) as GameObject;
+					else
+						enemy = Instantiate(spawnObjectRanged) as GameObject;
+					
+					enemy.GetComponent<AIManager>().config = a;
+					enemy.GetComponent<AIManager>().enabled = true;
+					// Set position to selected spawn point
+					Vector3 locWDelta = spawnLocations[j].transform.position;
+					locWDelta.x = locWDelta.x + Random.Range(0.25f, spawnRadius) * Mathf.Sin (spawnDelta);
+					locWDelta.y = locWDelta.y + Random.Range(0.25f, spawnRadius) * Mathf.Cos (spawnDelta);
+					locWDelta.z = 0.0f;
+					enemy.transform.position = locWDelta;
+				}
+
+			}
+		}
+
+		// Initial timer
+		countdown = timer + dTimer;
 	}
 }

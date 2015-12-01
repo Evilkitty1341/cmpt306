@@ -4,6 +4,8 @@ using System.Collections;
 // This class holds the various stats that will be used by the player and enemies in our game
 // Each object will have their own version of a stat collection
 public class StatCollectionClass : MonoBehaviour {
+
+	public int playerDirection;
 	
 	public float health;
 
@@ -41,7 +43,7 @@ public class StatCollectionClass : MonoBehaviour {
 	public bool itemSword;
 	
 	public bool SwordEquip;
-
+	
 	public bool itemArmor;
 	
 	public bool ArmorEquip;
@@ -61,7 +63,7 @@ public class StatCollectionClass : MonoBehaviour {
 	public bool SunStrikeUnlocked;
 
 	public void copyStats(StatCollectionClass target){
-
+		
 		health = target.health;
 		initialHealth = target.initialHealth;
 		mana = target.mana;
@@ -89,5 +91,15 @@ public class StatCollectionClass : MonoBehaviour {
 		SunStrikeUnlocked = target.SunStrikeUnlocked;
 	}
 
+	public void doDamage(float damage){
+		
+		float check = damage - baseDefense - defend;
+		if(check >= health){
+			health = 0;
+		}
+		else{
+			health -= check;
+		}
+	}
 }
 

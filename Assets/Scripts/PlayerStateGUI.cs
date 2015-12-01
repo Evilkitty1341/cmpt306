@@ -13,6 +13,8 @@ public class PlayerStateGUI : MonoBehaviour {
 
 	All_Quests quest;
 
+	ItemGUI item;
+
 	//set GUI to inactive first
 	public bool showing = false;
 	
@@ -22,13 +24,15 @@ public class PlayerStateGUI : MonoBehaviour {
 
 	void Start()
 	{
-		player = GameObject.FindWithTag ("Player");
+		player = this.gameObject;
 		
 		stat = player.GetComponent<StatCollectionClass >();
 
 		skill = player.GetComponent<SkillTree >();
 
 		quest = player.GetComponent<All_Quests> ();
+
+		item = player.GetComponent<ItemGUI>();
 		
 	}
 
@@ -86,6 +90,11 @@ public class PlayerStateGUI : MonoBehaviour {
 			if(quest.showing==true)
 			{
 				quest.showing=false;
+			}
+
+			if(item.showing==true)
+			{
+				item.showing=false;
 			}
 			
 			

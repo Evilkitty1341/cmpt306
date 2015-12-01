@@ -1,9 +1,187 @@
 fileFormatVersion: 2
 guid: ac02846def96eb0428f858bbdc11e66c
-timeCreated: 1446588916
-licenseType: Pro
+timeCreated: 1448967276
+licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: FemaleLeatherArmorWand_0
+    21300002: FemaleLeatherArmorWand_1
+    21300004: FemaleLeatherArmorWand_2
+    21300006: FemaleLeatherArmorWand_3
+    21300008: FemaleLeatherArmorWand_4
+    21300010: FemaleLeatherArmorWand_5
+    21300012: FemaleLeatherArmorWand_6
+    21300014: FemaleLeatherArmorWand_7
+    21300016: FemaleLeatherArmorWand_8
+    21300018: FemaleLeatherArmorWand_9
+    21300020: FemaleLeatherArmorWand_10
+    21300022: FemaleLeatherArmorWand_11
+    21300024: FemaleLeatherArmorWand_12
+    21300026: FemaleLeatherArmorWand_13
+    21300028: FemaleLeatherArmorWand_14
+    21300030: FemaleLeatherArmorWand_15
+    21300032: FemaleLeatherArmorWand_16
+    21300034: FemaleLeatherArmorWand_17
+    21300036: FemaleLeatherArmorWand_18
+    21300038: FemaleLeatherArmorWand_19
+    21300040: FemaleLeatherArmorWand_20
+    21300042: FemaleLeatherArmorWand_21
+    21300044: FemaleLeatherArmorWand_22
+    21300046: FemaleLeatherArmorWand_23
+    21300048: FemaleLeatherArmorWand_24
+    21300050: FemaleLeatherArmorWand_25
+    21300052: FemaleLeatherArmorWand_26
+    21300054: FemaleLeatherArmorWand_27
+    21300056: FemaleLeatherArmorWand_28
+    21300058: FemaleLeatherArmorWand_29
+    21300060: FemaleLeatherArmorWand_30
+    21300062: FemaleLeatherArmorWand_31
+    21300064: FemaleLeatherArmorWand_32
+    21300066: FemaleLeatherArmorWand_33
+    21300068: FemaleLeatherArmorWand_34
+    21300070: FemaleLeatherArmorWand_35
+    21300072: FemaleLeatherArmorWand_36
+    21300074: FemaleLeatherArmorWand_37
+    21300076: FemaleLeatherArmorWand_38
+    21300078: FemaleLeatherArmorWand_39
+    21300080: FemaleLeatherArmorWand_40
+    21300082: FemaleLeatherArmorWand_41
+    21300084: FemaleLeatherArmorWand_42
+    21300086: FemaleLeatherArmorWand_43
+    21300088: FemaleLeatherArmorWand_44
+    21300090: FemaleLeatherArmorWand_45
+    21300092: FemaleLeatherArmorWand_46
+    21300094: FemaleLeatherArmorWand_47
+    21300096: FemaleLeatherArmorWand_48
+    21300098: FemaleLeatherArmorWand_49
+    21300100: FemaleLeatherArmorWand_50
+    21300102: FemaleLeatherArmorWand_51
+    21300104: FemaleLeatherArmorWand_52
+    21300106: FemaleLeatherArmorWand_53
+    21300108: FemaleLeatherArmorWand_54
+    21300110: FemaleLeatherArmorWand_55
+    21300112: FemaleLeatherArmorWand_56
+    21300114: FemaleLeatherArmorWand_57
+    21300116: FemaleLeatherArmorWand_58
+    21300118: FemaleLeatherArmorWand_59
+    21300120: FemaleLeatherArmorWand_60
+    21300122: FemaleLeatherArmorWand_61
+    21300124: FemaleLeatherArmorWand_62
+    21300126: FemaleLeatherArmorWand_63
+    21300128: FemaleLeatherArmorWand_64
+    21300130: FemaleLeatherArmorWand_65
+    21300132: FemaleLeatherArmorWand_66
+    21300134: FemaleLeatherArmorWand_67
+    21300136: FemaleLeatherArmorWand_68
+    21300138: FemaleLeatherArmorWand_69
+    21300140: FemaleLeatherArmorWand_70
+    21300142: FemaleLeatherArmorWand_71
+    21300144: FemaleLeatherArmorWand_72
+    21300146: FemaleLeatherArmorWand_73
+    21300148: FemaleLeatherArmorWand_74
+    21300150: FemaleLeatherArmorWand_75
+    21300152: FemaleLeatherArmorWand_76
+    21300154: FemaleLeatherArmorWand_77
+    21300156: FemaleLeatherArmorWand_78
+    21300158: FemaleLeatherArmorWand_79
+    21300160: FemaleLeatherArmorWand_80
+    21300162: FemaleLeatherArmorWand_81
+    21300164: FemaleLeatherArmorWand_82
+    21300166: FemaleLeatherArmorWand_83
+    21300168: FemaleLeatherArmorWand_84
+    21300170: FemaleLeatherArmorWand_85
+    21300172: FemaleLeatherArmorWand_86
+    21300174: FemaleLeatherArmorWand_87
+    21300176: FemaleLeatherArmorWand_88
+    21300178: FemaleLeatherArmorWand_89
+    21300180: FemaleLeatherArmorWand_90
+    21300182: FemaleLeatherArmorWand_91
+    21300184: FemaleLeatherArmorWand_92
+    21300186: FemaleLeatherArmorWand_93
+    21300188: FemaleLeatherArmorWand_94
+    21300190: FemaleLeatherArmorWand_95
+    21300192: FemaleLeatherArmorWand_96
+    21300194: FemaleLeatherArmorWand_97
+    21300196: FemaleLeatherArmorWand_98
+    21300198: FemaleLeatherArmorWand_99
+    21300200: FemaleLeatherArmorWand_100
+    21300202: FemaleLeatherArmorWand_101
+    21300204: FemaleLeatherArmorWand_102
+    21300206: FemaleLeatherArmorWand_103
+    21300208: FemaleLeatherArmorWand_104
+    21300210: FemaleLeatherArmorWand_105
+    21300212: FemaleLeatherArmorWand_106
+    21300214: FemaleLeatherArmorWand_107
+    21300216: FemaleLeatherArmorWand_108
+    21300218: FemaleLeatherArmorWand_109
+    21300220: FemaleLeatherArmorWand_110
+    21300222: FemaleLeatherArmorWand_111
+    21300224: FemaleLeatherArmorWand_112
+    21300226: FemaleLeatherArmorWand_113
+    21300228: FemaleLeatherArmorWand_114
+    21300230: FemaleLeatherArmorWand_115
+    21300232: FemaleLeatherArmorWand_116
+    21300234: FemaleLeatherArmorWand_117
+    21300236: FemaleLeatherArmorWand_118
+    21300238: FemaleLeatherArmorWand_119
+    21300240: FemaleLeatherArmorWand_120
+    21300242: FemaleLeatherArmorWand_121
+    21300244: FemaleLeatherArmorWand_122
+    21300246: FemaleLeatherArmorWand_123
+    21300248: FemaleLeatherArmorWand_124
+    21300250: FemaleLeatherArmorWand_125
+    21300252: FemaleLeatherArmorWand_126
+    21300254: FemaleLeatherArmorWand_127
+    21300256: FemaleLeatherArmorWand_128
+    21300258: FemaleLeatherArmorWand_129
+    21300260: FemaleLeatherArmorWand_130
+    21300262: FemaleLeatherArmorWand_131
+    21300264: FemaleLeatherArmorWand_132
+    21300266: FemaleLeatherArmorWand_133
+    21300268: FemaleLeatherArmorWand_134
+    21300270: FemaleLeatherArmorWand_135
+    21300272: FemaleLeatherArmorWand_136
+    21300274: FemaleLeatherArmorWand_137
+    21300276: FemaleLeatherArmorWand_138
+    21300278: FemaleLeatherArmorWand_139
+    21300280: FemaleLeatherArmorWand_140
+    21300282: FemaleLeatherArmorWand_141
+    21300284: FemaleLeatherArmorWand_142
+    21300286: FemaleLeatherArmorWand_143
+    21300288: FemaleLeatherArmorWand_144
+    21300290: FemaleLeatherArmorWand_145
+    21300292: FemaleLeatherArmorWand_146
+    21300294: FemaleLeatherArmorWand_147
+    21300296: FemaleLeatherArmorWand_148
+    21300298: FemaleLeatherArmorWand_149
+    21300300: FemaleLeatherArmorWand_150
+    21300302: FemaleLeatherArmorWand_151
+    21300304: FemaleLeatherArmorWand_152
+    21300306: FemaleLeatherArmorWand_153
+    21300308: FemaleLeatherArmorWand_154
+    21300310: FemaleLeatherArmorWand_155
+    21300312: FemaleLeatherArmorWand_156
+    21300314: FemaleLeatherArmorWand_157
+    21300316: FemaleLeatherArmorWand_158
+    21300318: FemaleLeatherArmorWand_159
+    21300320: FemaleLeatherArmorWand_160
+    21300322: FemaleLeatherArmorWand_161
+    21300324: FemaleLeatherArmorWand_162
+    21300326: FemaleLeatherArmorWand_163
+    21300328: FemaleLeatherArmorWand_164
+    21300330: FemaleLeatherArmorWand_165
+    21300332: FemaleLeatherArmorWand_166
+    21300334: FemaleLeatherArmorWand_167
+    21300336: FemaleLeatherArmorWand_168
+    21300338: FemaleLeatherArmorWand_169
+    21300340: FemaleLeatherArmorWand_170
+    21300342: FemaleLeatherArmorWand_171
+    21300344: FemaleLeatherArmorWand_172
+    21300346: FemaleLeatherArmorWand_173
+    21300348: FemaleLeatherArmorWand_174
+    21300350: FemaleLeatherArmorWand_175
+    21300352: FemaleLeatherArmorWand_176
+    21300354: FemaleLeatherArmorWand_177
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +208,15 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  allowsAlphaSplitting: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +227,1787 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: FemaleLeatherArmorWand_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1281
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1281
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1281
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1281
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_4
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1281
+        width: 44
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1281
+        width: 44
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_6
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1281
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1217
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1217
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1217
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1217
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_11
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1217
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_12
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1217
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_13
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1217
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_14
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1153
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_15
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1153
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_16
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1153
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_17
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1153
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_18
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1153
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_19
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1153
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_20
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1153
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_21
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1089
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_22
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1089
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_23
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1089
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_24
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1089
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_25
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1089
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_26
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1089
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_27
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1089
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_28
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1024
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_29
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1024
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_30
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1023
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_31
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1023
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_32
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1023
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_33
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1023
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_34
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1023
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_35
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1023
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_36
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 961
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_37
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 961
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_38
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 961
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_39
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 961
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_40
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 961
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_41
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 961
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_42
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 961
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_43
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 961
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_44
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 897
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_45
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 897
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_46
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 898
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_47
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 898
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_48
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 898
+        width: 27
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_49
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 898
+        width: 27
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_50
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 898
+        width: 27
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_51
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 898
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_52
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 833
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_53
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 833
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_54
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 833
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_55
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 833
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_56
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 833
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_57
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 833
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_58
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 833
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_59
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 833
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_60
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 769
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_61
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 769
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_62
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 768
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_63
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 767
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_64
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 768
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_65
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 769
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_66
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 768
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_67
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 767
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_68
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 768
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_69
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 705
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_70
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 705
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_71
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 706
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_72
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 706
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_73
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 705
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_74
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 705
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_75
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 705
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_76
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 705
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_77
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 705
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_78
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 641
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_79
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 641
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_80
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 640
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_81
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 640
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_82
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 640
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_83
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 641
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_84
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 640
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_85
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 640
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_86
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 640
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_87
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 577
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_88
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 577
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_89
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 578
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_90
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 578
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_91
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 577
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_92
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 577
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_93
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 577
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_94
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 577
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_95
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 577
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_96
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 513
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_97
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 513
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_98
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 513
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_99
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 513
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_100
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 513
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_101
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 513
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_102
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 449
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_103
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 449
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_104
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 449
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_105
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 449
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_106
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 449
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_107
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 449
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_108
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 385
+        width: 28
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_109
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 385
+        width: 27
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_110
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 385
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_111
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 385
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_112
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 385
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_113
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 385
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_114
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 321
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_115
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 321
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_116
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 321
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_117
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 321
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_118
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 321
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_119
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 321
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_120
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 257
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_121
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 257
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_122
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 255
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_123
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 255
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_124
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 255
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_125
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 255
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_126
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 255
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_127
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 255
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_128
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 255
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_129
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 255
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_130
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 255
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_131
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 255
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_132
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 255
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_133
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 193
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_134
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 193
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_135
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 193
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_136
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 193
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_137
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 193
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_138
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 193
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_139
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 193
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_140
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 193
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_141
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 193
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_142
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 193
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_143
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 193
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_144
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 193
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_145
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 193
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_146
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 129
+        width: 29
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_147
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 128
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_148
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 130
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_149
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 129
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_150
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 129
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_151
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 129
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_152
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 129
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_153
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 129
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_154
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 129
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_155
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 129
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_156
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 129
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_157
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 129
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_158
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 129
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_159
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 65
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_160
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 65
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_161
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 65
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_162
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 65
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_163
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 65
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_164
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 65
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_165
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 65
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_166
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 65
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_167
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 65
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_168
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 65
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_169
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 65
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_170
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 65
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_171
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 65
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_172
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_173
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1
+        width: 28
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_174
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_175
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_176
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 3
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FemaleLeatherArmorWand_177
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 0
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

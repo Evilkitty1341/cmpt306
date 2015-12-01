@@ -14,6 +14,8 @@ public class SkillTree: MonoBehaviour {
 	PlayerStateGUI psg;
 
 	All_Quests quest;
+
+	ItemGUI item;
 			
 
 	
@@ -52,13 +54,15 @@ public class SkillTree: MonoBehaviour {
 	//connect to each script
 	void Start()
 	{
-		player = GameObject.FindWithTag ("Player");
+		player = this.gameObject;
 		
 		stat = player.GetComponent<StatCollectionClass >();
 
 		psg = player.GetComponent<PlayerStateGUI> ();
 
 		quest = player.GetComponent<All_Quests> ();
+
+		item = player.GetComponent<ItemGUI>();
 
 
 
@@ -190,6 +194,10 @@ public class SkillTree: MonoBehaviour {
 			}
 				
 
+			if(item.showing==true)
+			{
+				item.showing=false;
+			}
 				
 				
 				

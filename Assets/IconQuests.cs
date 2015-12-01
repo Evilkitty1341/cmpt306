@@ -23,5 +23,9 @@ public class IconQuests : MonoBehaviour {
 		if (player.GetComponent<SkillTree> ().showing = true) {
 			player.GetComponent<SkillTree> ().showing = false;
 		}
+
+		if (player.GetComponent<ItemGUI> ().showing == true) {
+			player.GetComponent<ItemGUI> ().showing =false;
+		}
 	}
 }

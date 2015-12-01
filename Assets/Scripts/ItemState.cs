@@ -6,6 +6,8 @@ public class ItemState : MonoBehaviour {
 
 	// this class use to find out is the item equiped
 	public StatCollectionClass stat;
+
+	public ItemUpgrade up;
 	
 	public GameObject txt;
 	
@@ -18,17 +20,17 @@ public class ItemState : MonoBehaviour {
 		
 		//when armor equiped 
 		if (stat.ArmorEquip == true) {
-			txt.GetComponent<TextMesh>().text="Armor: defend +50\n"+"(O to change items)";
+			txt.GetComponent<TextMesh>().text="Armor: defend + "+up.ArmorDamage+"\n"+"(O to change items)";
 		}
 
 		//when sword equiped
 		if (stat.SwordEquip == true) {
-			txt.GetComponent<TextMesh>().text = "Sword: damage +100\n"+"(O to change items)";
+			txt.GetComponent<TextMesh>().text = "Sword: damage +"+up.SwordDamage+"\n"+"(O to change items)";
 		}
 
 		//when bow equiped
 		if (stat.BowEquip == true) {
-			txt.GetComponent<TextMesh>().text = "Bow: damage +50\n"+"(O to change items)";
+			txt.GetComponent<TextMesh>().text = "Bow: damage + " +up.BowDamage+"\n"+"(O to change items)";
 		}
 	}
 }

@@ -18,7 +18,7 @@ public class GuiManage : MonoBehaviour {
 	void Start()
 	{
 		player = GameObject.FindWithTag ("Player");
-		playerStat = player.GetComponent<StatCollectionClass> ();
+		playerStat = gameObject.GetComponent<StatCollectionClass> ();
 		barLength = Screen.width / 7;
 		//chMotor = GetComponent(CharacterJoint);
 	}
@@ -43,10 +43,13 @@ public class GuiManage : MonoBehaviour {
 		{
 			playerStat.mana=0;
 		}
-		if(Input.GetKeyDown("f"))
+		/*if(Input.GetKeyDown("f")&& playerStat.mana >= 40)
 		{
-			AdjustCurrentMana(-20);
-		}
+            
+            
+
+            AdjustCurrentMana(-40);
+		}*/
 		
 		/*  var controller : CharacterController = GetComponent(CharacterController);
 

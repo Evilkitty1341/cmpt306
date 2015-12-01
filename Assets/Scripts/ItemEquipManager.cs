@@ -12,6 +12,8 @@ public class ItemEquipManager : MonoBehaviour {
 	public GameObject Armor;
 	
 	public GameObject Bow;
+
+	public ItemUpgrade up;
 	
 	// set input key
 	string InputKey="O";
@@ -42,9 +44,9 @@ public class ItemEquipManager : MonoBehaviour {
 					stat.ArmorEquip =true;
 					
 					//adjust player state
-					stat.damage-=100f;
+					stat.damage-=up.SwordDamage;
 					
-					stat.defend+=50f;
+					stat.defend+=up.ArmorDamage;
 					
 					//adjust item show on the scene
 					Sword.SetActive(false);
@@ -60,7 +62,7 @@ public class ItemEquipManager : MonoBehaviour {
 					
 					stat.BowEquip =true;
 					
-					stat.damage-=50f;
+					stat.damage-=up.SwordDamage-up.BowDamage;
 					
 					Sword.SetActive (false);
 					
@@ -79,9 +81,9 @@ public class ItemEquipManager : MonoBehaviour {
 					
 					stat.BowEquip =true;
 					
-					stat.damage+=50f;
+					stat.damage+=up.BowDamage;
 					
-					stat.defend-=50f;
+					stat.defend-=up.ArmorDamage;
 					
 					Armor.SetActive (false);
 					
@@ -95,9 +97,9 @@ public class ItemEquipManager : MonoBehaviour {
 					
 					stat.SwordEquip =true;
 					
-					stat.damage+=100f;
+					stat.damage+=up.SwordDamage;
 					
-					stat.defend-=50;
+					stat.defend-=up.ArmorDamage;
 					
 					Sword.SetActive (true);
 					
@@ -116,7 +118,7 @@ public class ItemEquipManager : MonoBehaviour {
 					
 					stat.SwordEquip =true;
 					
-					stat.damage+=50f;
+					stat.damage+=up.SwordDamage-up.BowDamage;
 					
 					Sword.SetActive (true);
 					
@@ -130,9 +132,9 @@ public class ItemEquipManager : MonoBehaviour {
 					
 					stat.ArmorEquip =true;
 					
-					stat.damage-=50f;
+					stat.damage-=up.BowDamage;
 					
-					stat.defend+=50f;
+					stat.defend+=up.ArmorDamage;
 					
 					Bow.SetActive(false);
 					

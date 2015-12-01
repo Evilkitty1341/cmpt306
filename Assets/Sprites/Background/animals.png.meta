@@ -1,0 +1,8009 @@
+fileFormatVersion: 2
+guid: 338d6bbed2327463c8455a12a5ade02a
+timeCreated: 1448866978
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: animals_0
+    21300002: animals_1
+    21300004: animals_2
+    21300006: animals_3
+    21300008: animals_4
+    21300010: animals_5
+    21300012: animals_6
+    21300014: animals_7
+    21300016: animals_8
+    21300018: animals_9
+    21300020: animals_10
+    21300022: animals_11
+    21300024: animals_12
+    21300026: animals_13
+    21300028: animals_14
+    21300030: animals_15
+    21300032: animals_16
+    21300034: animals_17
+    21300036: animals_18
+    21300038: animals_19
+    21300040: animals_20
+    21300042: animals_21
+    21300044: animals_22
+    21300046: animals_23
+    21300048: animals_24
+    21300050: animals_25
+    21300052: animals_26
+    21300054: animals_27
+    21300056: animals_28
+    21300058: animals_29
+    21300060: animals_30
+    21300062: animals_31
+    21300064: animals_32
+    21300066: animals_33
+    21300068: animals_34
+    21300070: animals_35
+    21300072: animals_36
+    21300074: animals_37
+    21300076: animals_38
+    21300078: animals_39
+    21300080: animals_40
+    21300082: animals_41
+    21300084: animals_42
+    21300086: animals_43
+    21300088: animals_44
+    21300090: animals_45
+    21300092: animals_46
+    21300094: animals_47
+    21300096: animals_48
+    21300098: animals_49
+    21300100: animals_50
+    21300102: animals_51
+    21300104: animals_52
+    21300106: animals_53
+    21300108: animals_54
+    21300110: animals_55
+    21300112: animals_56
+    21300114: animals_57
+    21300116: animals_58
+    21300118: animals_59
+    21300120: animals_60
+    21300122: animals_61
+    21300124: animals_62
+    21300126: animals_63
+    21300128: animals_64
+    21300130: animals_65
+    21300132: animals_66
+    21300134: animals_67
+    21300136: animals_68
+    21300138: animals_69
+    21300140: animals_70
+    21300142: animals_71
+    21300144: animals_72
+    21300146: animals_73
+    21300148: animals_74
+    21300150: animals_75
+    21300152: animals_76
+    21300154: animals_77
+    21300156: animals_78
+    21300158: animals_79
+    21300160: animals_80
+    21300162: animals_81
+    21300164: animals_82
+    21300166: animals_83
+    21300168: animals_84
+    21300170: animals_85
+    21300172: animals_86
+    21300174: animals_87
+    21300176: animals_88
+    21300178: animals_89
+    21300180: animals_90
+    21300182: animals_91
+    21300184: animals_92
+    21300186: animals_93
+    21300188: animals_94
+    21300190: animals_95
+    21300192: animals_96
+    21300194: animals_97
+    21300196: animals_98
+    21300198: animals_99
+    21300200: animals_100
+    21300202: animals_101
+    21300204: animals_102
+    21300206: animals_103
+    21300208: animals_104
+    21300210: animals_105
+    21300212: animals_106
+    21300214: animals_107
+    21300216: animals_108
+    21300218: animals_109
+    21300220: animals_110
+    21300222: animals_111
+    21300224: animals_112
+    21300226: animals_113
+    21300228: animals_114
+    21300230: animals_115
+    21300232: animals_116
+    21300234: animals_117
+    21300236: animals_118
+    21300238: animals_119
+    21300240: animals_120
+    21300242: animals_121
+    21300244: animals_122
+    21300246: animals_123
+    21300248: animals_124
+    21300250: animals_125
+    21300252: animals_126
+    21300254: animals_127
+    21300256: animals_128
+    21300258: animals_129
+    21300260: animals_130
+    21300262: animals_131
+    21300264: animals_132
+    21300266: animals_133
+    21300268: animals_134
+    21300270: animals_135
+    21300272: animals_136
+    21300274: animals_137
+    21300276: animals_138
+    21300278: animals_139
+    21300280: animals_140
+    21300282: animals_141
+    21300284: animals_142
+    21300286: animals_143
+    21300288: animals_144
+    21300290: animals_145
+    21300292: animals_146
+    21300294: animals_147
+    21300296: animals_148
+    21300298: animals_149
+    21300300: animals_150
+    21300302: animals_151
+    21300304: animals_152
+    21300306: animals_153
+    21300308: animals_154
+    21300310: animals_155
+    21300312: animals_156
+    21300314: animals_157
+    21300316: animals_158
+    21300318: animals_159
+    21300320: animals_160
+    21300322: animals_161
+    21300324: animals_162
+    21300326: animals_163
+    21300328: animals_164
+    21300330: animals_165
+    21300332: animals_166
+    21300334: animals_167
+    21300336: animals_168
+    21300338: animals_169
+    21300340: animals_170
+    21300342: animals_171
+    21300344: animals_172
+    21300346: animals_173
+    21300348: animals_174
+    21300350: animals_175
+    21300352: animals_176
+    21300354: animals_177
+    21300356: animals_178
+    21300358: animals_179
+    21300360: animals_180
+    21300362: animals_181
+    21300364: animals_182
+    21300366: animals_183
+    21300368: animals_184
+    21300370: animals_185
+    21300372: animals_186
+    21300374: animals_187
+    21300376: animals_188
+    21300378: animals_189
+    21300380: animals_190
+    21300382: animals_191
+    21300384: animals_192
+    21300386: animals_193
+    21300388: animals_194
+    21300390: animals_195
+    21300392: animals_196
+    21300394: animals_197
+    21300396: animals_198
+    21300398: animals_199
+    21300400: animals_200
+    21300402: animals_201
+    21300404: animals_202
+    21300406: animals_203
+    21300408: animals_204
+    21300410: animals_205
+    21300412: animals_206
+    21300414: animals_207
+    21300416: animals_208
+    21300418: animals_209
+    21300420: animals_210
+    21300422: animals_211
+    21300424: animals_212
+    21300426: animals_213
+    21300428: animals_214
+    21300430: animals_215
+    21300432: animals_216
+    21300434: animals_217
+    21300436: animals_218
+    21300438: animals_219
+    21300440: animals_220
+    21300442: animals_221
+    21300444: animals_222
+    21300446: animals_223
+    21300448: animals_224
+    21300450: animals_225
+    21300452: animals_226
+    21300454: animals_227
+    21300456: animals_228
+    21300458: animals_229
+    21300460: animals_230
+    21300462: animals_231
+    21300464: animals_232
+    21300466: animals_233
+    21300468: animals_234
+    21300470: animals_235
+    21300472: animals_236
+    21300474: animals_237
+    21300476: animals_238
+    21300478: animals_239
+    21300480: animals_240
+    21300482: animals_241
+    21300484: animals_242
+    21300486: animals_243
+    21300488: animals_244
+    21300490: animals_245
+    21300492: animals_246
+    21300494: animals_247
+    21300496: animals_248
+    21300498: animals_249
+    21300500: animals_250
+    21300502: animals_251
+    21300504: animals_252
+    21300506: animals_253
+    21300508: animals_254
+    21300510: animals_255
+    21300512: animals_256
+    21300514: animals_257
+    21300516: animals_258
+    21300518: animals_259
+    21300520: animals_260
+    21300522: animals_261
+    21300524: animals_262
+    21300526: animals_263
+    21300528: animals_264
+    21300530: animals_265
+    21300532: animals_266
+    21300534: animals_267
+    21300536: animals_268
+    21300538: animals_269
+    21300540: animals_270
+    21300542: animals_271
+    21300544: animals_272
+    21300546: animals_273
+    21300548: animals_274
+    21300550: animals_275
+    21300552: animals_276
+    21300554: animals_277
+    21300556: animals_278
+    21300558: animals_279
+    21300560: animals_280
+    21300562: animals_281
+    21300564: animals_282
+    21300566: animals_283
+    21300568: animals_284
+    21300570: animals_285
+    21300572: animals_286
+    21300574: animals_287
+    21300576: animals_288
+    21300578: animals_289
+    21300580: animals_290
+    21300582: animals_291
+    21300584: animals_292
+    21300586: animals_293
+    21300588: animals_294
+    21300590: animals_295
+    21300592: animals_296
+    21300594: animals_297
+    21300596: animals_298
+    21300598: animals_299
+    21300600: animals_300
+    21300602: animals_301
+    21300604: animals_302
+    21300606: animals_303
+    21300608: animals_304
+    21300610: animals_305
+    21300612: animals_306
+    21300614: animals_307
+    21300616: animals_308
+    21300618: animals_309
+    21300620: animals_310
+    21300622: animals_311
+    21300624: animals_312
+    21300626: animals_313
+    21300628: animals_314
+    21300630: animals_315
+    21300632: animals_316
+    21300634: animals_317
+    21300636: animals_318
+    21300638: animals_319
+    21300640: animals_320
+    21300642: animals_321
+    21300644: animals_322
+    21300646: animals_323
+    21300648: animals_324
+    21300650: animals_325
+    21300652: animals_326
+    21300654: animals_327
+    21300656: animals_328
+    21300658: animals_329
+    21300660: animals_330
+    21300662: animals_331
+    21300664: animals_332
+    21300666: animals_333
+    21300668: animals_334
+    21300670: animals_335
+    21300672: animals_336
+    21300674: animals_337
+    21300676: animals_338
+    21300678: animals_339
+    21300680: animals_340
+    21300682: animals_341
+    21300684: animals_342
+    21300686: animals_343
+    21300688: animals_344
+    21300690: animals_345
+    21300692: animals_346
+    21300694: animals_347
+    21300696: animals_348
+    21300698: animals_349
+    21300700: animals_350
+    21300702: animals_351
+    21300704: animals_352
+    21300706: animals_353
+    21300708: animals_354
+    21300710: animals_355
+    21300712: animals_356
+    21300714: animals_357
+    21300716: animals_358
+    21300718: animals_359
+    21300720: animals_360
+    21300722: animals_361
+    21300724: animals_362
+    21300726: animals_363
+    21300728: animals_364
+    21300730: animals_365
+    21300732: animals_366
+    21300734: animals_367
+    21300736: animals_368
+    21300738: animals_369
+    21300740: animals_370
+    21300742: animals_371
+    21300744: animals_372
+    21300746: animals_373
+    21300748: animals_374
+    21300750: animals_375
+    21300752: animals_376
+    21300754: animals_377
+    21300756: animals_378
+    21300758: animals_379
+    21300760: animals_380
+    21300762: animals_381
+    21300764: animals_382
+    21300766: animals_383
+    21300768: animals_384
+    21300770: animals_385
+    21300772: animals_386
+    21300774: animals_387
+    21300776: animals_388
+    21300778: animals_389
+    21300780: animals_390
+    21300782: animals_391
+    21300784: animals_392
+    21300786: animals_393
+    21300788: animals_394
+    21300790: animals_395
+    21300792: animals_396
+    21300794: animals_397
+    21300796: animals_398
+    21300798: animals_399
+    21300800: animals_400
+    21300802: animals_401
+    21300804: animals_402
+    21300806: animals_403
+    21300808: animals_404
+    21300810: animals_405
+    21300812: animals_406
+    21300814: animals_407
+    21300816: animals_408
+    21300818: animals_409
+    21300820: animals_410
+    21300822: animals_411
+    21300824: animals_412
+    21300826: animals_413
+    21300828: animals_414
+    21300830: animals_415
+    21300832: animals_416
+    21300834: animals_417
+    21300836: animals_418
+    21300838: animals_419
+    21300840: animals_420
+    21300842: animals_421
+    21300844: animals_422
+    21300846: animals_423
+    21300848: animals_424
+    21300850: animals_425
+    21300852: animals_426
+    21300854: animals_427
+    21300856: animals_428
+    21300858: animals_429
+    21300860: animals_430
+    21300862: animals_431
+    21300864: animals_432
+    21300866: animals_433
+    21300868: animals_434
+    21300870: animals_435
+    21300872: animals_436
+    21300874: animals_437
+    21300876: animals_438
+    21300878: animals_439
+    21300880: animals_440
+    21300882: animals_441
+    21300884: animals_442
+    21300886: animals_443
+    21300888: animals_444
+    21300890: animals_445
+    21300892: animals_446
+    21300894: animals_447
+    21300896: animals_448
+    21300898: animals_449
+    21300900: animals_450
+    21300902: animals_451
+    21300904: animals_452
+    21300906: animals_453
+    21300908: animals_454
+    21300910: animals_455
+    21300912: animals_456
+    21300914: animals_457
+    21300916: animals_458
+    21300918: animals_459
+    21300920: animals_460
+    21300922: animals_461
+    21300924: animals_462
+    21300926: animals_463
+    21300928: animals_464
+    21300930: animals_465
+    21300932: animals_466
+    21300934: animals_467
+    21300936: animals_468
+    21300938: animals_469
+    21300940: animals_470
+    21300942: animals_471
+    21300944: animals_472
+    21300946: animals_473
+    21300948: animals_474
+    21300950: animals_475
+    21300952: animals_476
+    21300954: animals_477
+    21300956: animals_478
+    21300958: animals_479
+    21300960: animals_480
+    21300962: animals_481
+    21300964: animals_482
+    21300966: animals_483
+    21300968: animals_484
+    21300970: animals_485
+    21300972: animals_486
+    21300974: animals_487
+    21300976: animals_488
+    21300978: animals_489
+    21300980: animals_490
+    21300982: animals_491
+    21300984: animals_492
+    21300986: animals_493
+    21300988: animals_494
+    21300990: animals_495
+    21300992: animals_496
+    21300994: animals_497
+    21300996: animals_498
+    21300998: animals_499
+    21301000: animals_500
+    21301002: animals_501
+    21301004: animals_502
+    21301006: animals_503
+    21301008: animals_504
+    21301010: animals_505
+    21301012: animals_506
+    21301014: animals_507
+    21301016: animals_508
+    21301018: animals_509
+    21301020: animals_510
+    21301022: animals_511
+    21301024: animals_512
+    21301026: animals_513
+    21301028: animals_514
+    21301030: animals_515
+    21301032: animals_516
+    21301034: animals_517
+    21301036: animals_518
+    21301038: animals_519
+    21301040: animals_520
+    21301042: animals_521
+    21301044: animals_522
+    21301046: animals_523
+    21301048: animals_524
+    21301050: animals_525
+    21301052: animals_526
+    21301054: animals_527
+    21301056: animals_528
+    21301058: animals_529
+    21301060: animals_530
+    21301062: animals_531
+    21301064: animals_532
+    21301066: animals_533
+    21301068: animals_534
+    21301070: animals_535
+    21301072: animals_536
+    21301074: animals_537
+    21301076: animals_538
+    21301078: animals_539
+    21301080: animals_540
+    21301082: animals_541
+    21301084: animals_542
+    21301086: animals_543
+    21301088: animals_544
+    21301090: animals_545
+    21301092: animals_546
+    21301094: animals_547
+    21301096: animals_548
+    21301098: animals_549
+    21301100: animals_550
+    21301102: animals_551
+    21301104: animals_552
+    21301106: animals_553
+    21301108: animals_554
+    21301110: animals_555
+    21301112: animals_556
+    21301114: animals_557
+    21301116: animals_558
+    21301118: animals_559
+    21301120: animals_560
+    21301122: animals_561
+    21301124: animals_562
+    21301126: animals_563
+    21301128: animals_564
+    21301130: animals_565
+    21301132: animals_566
+    21301134: animals_567
+    21301136: animals_568
+    21301138: animals_569
+    21301140: animals_570
+    21301142: animals_571
+    21301144: animals_572
+    21301146: animals_573
+    21301148: animals_574
+    21301150: animals_575
+    21301152: animals_576
+    21301154: animals_577
+    21301156: animals_578
+    21301158: animals_579
+    21301160: animals_580
+    21301162: animals_581
+    21301164: animals_582
+    21301166: animals_583
+    21301168: animals_584
+    21301170: animals_585
+    21301172: animals_586
+    21301174: animals_587
+    21301176: animals_588
+    21301178: animals_589
+    21301180: animals_590
+    21301182: animals_591
+    21301184: animals_592
+    21301186: animals_593
+    21301188: animals_594
+    21301190: animals_595
+    21301192: animals_596
+    21301194: animals_597
+    21301196: animals_598
+    21301198: animals_599
+    21301200: animals_600
+    21301202: animals_601
+    21301204: animals_602
+    21301206: animals_603
+    21301208: animals_604
+    21301210: animals_605
+    21301212: animals_606
+    21301214: animals_607
+    21301216: animals_608
+    21301218: animals_609
+    21301220: animals_610
+    21301222: animals_611
+    21301224: animals_612
+    21301226: animals_613
+    21301228: animals_614
+    21301230: animals_615
+    21301232: animals_616
+    21301234: animals_617
+    21301236: animals_618
+    21301238: animals_619
+    21301240: animals_620
+    21301242: animals_621
+    21301244: animals_622
+    21301246: animals_623
+    21301248: animals_624
+    21301250: animals_625
+    21301252: animals_626
+    21301254: animals_627
+    21301256: animals_628
+    21301258: animals_629
+    21301260: animals_630
+    21301262: animals_631
+    21301264: animals_632
+    21301266: animals_633
+    21301268: animals_634
+    21301270: animals_635
+    21301272: animals_636
+    21301274: animals_637
+    21301276: animals_638
+    21301278: animals_639
+    21301280: animals_640
+    21301282: animals_641
+    21301284: animals_642
+    21301286: animals_643
+    21301288: animals_644
+    21301290: animals_645
+    21301292: animals_646
+    21301294: animals_647
+    21301296: animals_648
+    21301298: animals_649
+    21301300: animals_650
+    21301302: animals_651
+    21301304: animals_652
+    21301306: animals_653
+    21301308: animals_654
+    21301310: animals_655
+    21301312: animals_656
+    21301314: animals_657
+    21301316: animals_658
+    21301318: animals_659
+    21301320: animals_660
+    21301322: animals_661
+    21301324: animals_662
+    21301326: animals_663
+    21301328: animals_664
+    21301330: animals_665
+    21301332: animals_666
+    21301334: animals_667
+    21301336: animals_668
+    21301338: animals_669
+    21301340: animals_670
+    21301342: animals_671
+    21301344: animals_672
+    21301346: animals_673
+    21301348: animals_674
+    21301350: animals_675
+    21301352: animals_676
+    21301354: animals_677
+    21301356: animals_678
+    21301358: animals_679
+    21301360: animals_680
+    21301362: animals_681
+    21301364: animals_682
+    21301366: animals_683
+    21301368: animals_684
+    21301370: animals_685
+    21301372: animals_686
+    21301374: animals_687
+    21301376: animals_688
+    21301378: animals_689
+    21301380: animals_690
+    21301382: animals_691
+    21301384: animals_692
+    21301386: animals_693
+    21301388: animals_694
+    21301390: animals_695
+    21301392: animals_696
+    21301394: animals_697
+    21301396: animals_698
+    21301398: animals_699
+    21301400: animals_700
+    21301402: animals_701
+    21301404: animals_702
+    21301406: animals_703
+    21301408: animals_704
+    21301410: animals_705
+    21301412: animals_706
+    21301414: animals_707
+    21301416: animals_708
+    21301418: animals_709
+    21301420: animals_710
+    21301422: animals_711
+    21301424: animals_712
+    21301426: animals_713
+    21301428: animals_714
+    21301430: animals_715
+    21301432: animals_716
+    21301434: animals_717
+    21301436: animals_718
+    21301438: animals_719
+    21301440: animals_720
+    21301442: animals_721
+    21301444: animals_722
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: animals_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 954
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 956
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 955
+        width: 59
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_3
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 961
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 964
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 956
+        width: 51
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 960
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_7
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 954
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_8
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 958
+        width: 48
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_9
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 955
+        width: 83
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_10
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 948
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_11
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 948
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_12
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 950
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_13
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 949
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_14
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 946
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_15
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 942
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_16
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 944
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_17
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 948
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_18
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 946
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_19
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 943
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_20
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 946
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_21
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 898
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 897
+        width: 51
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_23
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 896
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_24
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 898
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_25
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 898
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_26
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 896
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_27
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 899
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_28
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 895
+        width: 51
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_29
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 895
+        width: 41
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_30
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 895
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_31
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 903
+        width: 39
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_32
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 906
+        width: 38
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_33
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 919
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_34
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 916
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_35
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 917
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_36
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 922
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_37
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 922
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_38
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 920
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_39
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 921
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_40
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 922
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_41
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 917
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_42
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 918
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_43
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 918
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_44
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 918
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_45
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 906
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_46
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 919
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_47
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 911
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_48
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 911
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_49
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 917
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_50
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 908
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_51
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 922
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_52
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 895
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_53
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 895
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_54
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 896
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_55
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 896
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_56
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 890
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_57
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 895
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_58
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 891
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_59
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 894
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_60
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 892
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_61
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 886
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_62
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 888
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_63
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 886
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_64
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 885
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_65
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 886
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_66
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 873
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_67
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 860
+        width: 21
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_68
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 876
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_69
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 865
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_70
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 888
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_71
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 844
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_72
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 844
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_73
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 845
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_74
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 848
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_75
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 849
+        width: 46
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_76
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 864
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_77
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 849
+        width: 54
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_78
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 883
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_79
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 844
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_80
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 843
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_81
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 845
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_82
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 845
+        width: 46
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_83
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 846
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_84
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 853
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_85
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 867
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_86
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 867
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_87
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 865
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_88
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 864
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_89
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 867
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_90
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 860
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_91
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 862
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_92
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 863
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_93
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 863
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_94
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 862
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_95
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 860
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_96
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 835
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_97
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 828
+        width: 20
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_98
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 853
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_99
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 808
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_100
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 807
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_101
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 805
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_102
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 829
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_103
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 828
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_104
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 830
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_105
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 829
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_106
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 829
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_107
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 830
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_108
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 829
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_109
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 830
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_110
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 831
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_111
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 832
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_112
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 832
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_113
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 835
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_114
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 829
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_115
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 829
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_116
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 829
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_117
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 830
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_118
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 827
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_119
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 794
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_120
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 793
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_121
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 793
+        width: 42
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_122
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 795
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_123
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 796
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_124
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 793
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_125
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 796
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_126
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 795
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_127
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 801
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_128
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 800
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_129
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 800
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_130
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 802
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_131
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 802
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_132
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 801
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_133
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 802
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_134
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 803
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_135
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 802
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_136
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 802
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_137
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 802
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_138
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 804
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_139
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 740
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_140
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 754
+        width: 55
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_141
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 758
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_142
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 748
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_143
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 771
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_144
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 774
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_145
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 773
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_146
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 773
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_147
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 766
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_148
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 775
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_149
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 772
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_150
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 766
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_151
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 769
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_152
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 769
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_153
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 773
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_154
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 774
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_155
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 768
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_156
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 770
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_157
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 782
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_158
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 773
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_159
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 778
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_160
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 772
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_161
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 768
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_162
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 775
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_163
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 773
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_164
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 743
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_165
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 741
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_166
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 739
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_167
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 739
+        width: 62
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_168
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 738
+        width: 57
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_169
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 740
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_170
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 744
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_171
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 732
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_172
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 743
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_173
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 744
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_174
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 744
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_175
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 744
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_176
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 740
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_177
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 742
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_178
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 738
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_179
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 739
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_180
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 737
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_181
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 735
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_182
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 733
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_183
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 750
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_184
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 739
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_185
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 741
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_186
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 736
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_187
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 736
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_188
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 744
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_189
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 673
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_190
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 677
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_191
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 676
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_192
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 676
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_193
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 677
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_194
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 714
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_195
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 712
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_196
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 712
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_197
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 714
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_198
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 710
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_199
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 713
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_200
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 715
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_201
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 716
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_202
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 714
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_203
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 714
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_204
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 714
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_205
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 716
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_206
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 714
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_207
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 714
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_208
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 715
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_209
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 713
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_210
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 716
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_211
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 714
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_212
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 713
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_213
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 712
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_214
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 697
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_215
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 711
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_216
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 706
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_217
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 679
+        width: 61
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_218
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 680
+        width: 53
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_219
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 679
+        width: 46
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_220
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 682
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_221
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 681
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_222
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 682
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_223
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 683
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_224
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 681
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_225
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 681
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_226
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 684
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_227
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 683
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_228
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 682
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_229
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 679
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_230
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 680
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_231
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 680
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_232
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 680
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_233
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 679
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_234
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 680
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_235
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 680
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_236
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 679
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_237
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 679
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_238
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 678
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_239
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 686
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_240
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 678
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_241
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 680
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_242
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 674
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_243
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 672
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_244
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 657
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_245
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 656
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_246
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 656
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_247
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 654
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_248
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 656
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_249
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 650
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_250
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 659
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_251
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 659
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_252
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 658
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_253
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 654
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_254
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 655
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_255
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 656
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_256
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 652
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_257
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 656
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_258
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 654
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_259
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 653
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_260
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 653
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_261
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 632
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_262
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 659
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_263
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 646
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_264
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 628
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_265
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 643
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_266
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 634
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_267
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 596
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_268
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 581
+        width: 18
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_269
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 591
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_270
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 611
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_271
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 606
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_272
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 607
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_273
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 619
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_274
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 609
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_275
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 575
+        width: 12
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_276
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 592
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_277
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 593
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_278
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 591
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_279
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 600
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_280
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 588
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_281
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 588
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_282
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 587
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_283
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 588
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_284
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 582
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_285
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 586
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_286
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 580
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_287
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 543
+        width: 14
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_288
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 563
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_289
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 543
+        width: 17
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_290
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 573
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_291
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 563
+        width: 37
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_292
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 559
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_293
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 578
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_294
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 585
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_295
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 575
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_296
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 573
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_297
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 575
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_298
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 577
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_299
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 530
+        width: 19
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_300
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 561
+        width: 36
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_301
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 567
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_302
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 568
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_303
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 563
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_304
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 567
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_305
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 567
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_306
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 531
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_307
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 530
+        width: 18
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_308
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 544
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_309
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 570
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_310
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 548
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_311
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 559
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_312
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 558
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_313
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 504
+        width: 13
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_314
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 525
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_315
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 542
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_316
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 533
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_317
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 529
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_318
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 526
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_319
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 527
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_320
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 508
+        width: 23
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_321
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 544
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_322
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 542
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_323
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 537
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_324
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 540
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_325
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 538
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_326
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 546
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_327
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 548
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_328
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 549
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_329
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 549
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_330
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 529
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_331
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 530
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_332
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 535
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_333
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 512
+        width: 9
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_334
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 500
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_335
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 514
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_336
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 519
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_337
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 512
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_338
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 512
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_339
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 525
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_340
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 513
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_341
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 514
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_342
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 517
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_343
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 525
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_344
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 527
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_345
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 515
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_346
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 523
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_347
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 520
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_348
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 495
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_349
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 473
+        width: 18
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_350
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 480
+        width: 16
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_351
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 483
+        width: 10
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_352
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 495
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_353
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 489
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_354
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 490
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_355
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 491
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_356
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 494
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_357
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 498
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_358
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 504
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_359
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 500
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_360
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 493
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_361
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 491
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_362
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 491
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_363
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 490
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_364
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 506
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_365
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 459
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_366
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 450
+        width: 13
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_367
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 463
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_368
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 489
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_369
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 484
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_370
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 477
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_371
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 482
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_372
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 484
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_373
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 481
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_374
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 487
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_375
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 473
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_376
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 474
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_377
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 473
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_378
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 468
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_379
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 462
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_380
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_381
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 468
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_382
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 465
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_383
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 459
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_384
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 432
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_385
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 436
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_386
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 425
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_387
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 436
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_388
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 437
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_389
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 439
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_390
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 438
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_391
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 395
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_392
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 384
+        width: 11
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_393
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 382
+        width: 11
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_394
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 390
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_395
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 398
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_396
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 391
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_397
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 407
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_398
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 408
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_399
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 411
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_400
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 408
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_401
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 386
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_402
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 383
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_403
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 381
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_404
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 377
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_405
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 379
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_406
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 375
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_407
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 374
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_408
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 382
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_409
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 383
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_410
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 370
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_411
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 364
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_412
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 385
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_413
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 385
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_414
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 387
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_415
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 365
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_416
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 362
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_417
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 357
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_418
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 356
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_419
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 357
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_420
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 353
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_421
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 349
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_422
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 353
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_423
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 354
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_424
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 346
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_425
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 342
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_426
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 346
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_427
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 335
+        width: 10
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_428
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 340
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_429
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 345
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_430
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 360
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_431
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 330
+        width: 12
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_432
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 350
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_433
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 346
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_434
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 352
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_435
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 363
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_436
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 360
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_437
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 347
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_438
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 344
+        width: 54
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_439
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 344
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_440
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 344
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_441
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 344
+        width: 4
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_442
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 308
+        width: 19
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_443
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 312
+        width: 15
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_444
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 319
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_445
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 309
+        width: 11
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_446
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 327
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_447
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 334
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_448
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 320
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_449
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 308
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_450
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 316
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_451
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 314
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_452
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 289
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_453
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 300
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_454
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 307
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_455
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 303
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_456
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 299
+        width: 14
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_457
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 297
+        width: 12
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_458
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 296
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_459
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 298
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_460
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 313
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_461
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 292
+        width: 16
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_462
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 302
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_463
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 325
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_464
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 327
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_465
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 307
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_466
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 276
+        width: 8
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_467
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 280
+        width: 19
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_468
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 309
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_469
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 296
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_470
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 313
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_471
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 296
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_472
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 278
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_473
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 284
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_474
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 287
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_475
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 279
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_476
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 264
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_477
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 269
+        width: 14
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_478
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 267
+        width: 24
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_479
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 278
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_480
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 292
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_481
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 295
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_482
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 272
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_483
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 247
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_484
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 248
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_485
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 247
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_486
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 254
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_487
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 250
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_488
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 261
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_489
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 252
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_490
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 247
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_491
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 262
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_492
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 253
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_493
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 267
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_494
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 269
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_495
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 264
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_496
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 265
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_497
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 257
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_498
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 273
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_499
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 248
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_500
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 248
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_501
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 225
+        width: 8
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_502
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 245
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_503
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 251
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_504
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 233
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_505
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 233
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_506
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 239
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_507
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 166
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_508
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 179
+        width: 12
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_509
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 185
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_510
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 167
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_511
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 163
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_512
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 157
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_513
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 159
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_514
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 157
+        width: 39
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_515
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 167
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_516
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 170
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_517
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 141
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_518
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 153
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_519
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 143
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_520
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 161
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_521
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 162
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_522
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 160
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_523
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 160
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_524
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 155
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_525
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 155
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_526
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 159
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_527
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 157
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_528
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 153
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_529
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 159
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_530
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 165
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_531
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 159
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_532
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 155
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_533
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 159
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_534
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 157
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_535
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 159
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_536
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 157
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_537
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 159
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_538
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 164
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_539
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 170
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_540
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 149
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_541
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 139
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_542
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 130
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_543
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 126
+        width: 9
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_544
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 129
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_545
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 141
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_546
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 139
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_547
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 139
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_548
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 141
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_549
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 143
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_550
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 145
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_551
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 154
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_552
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 153
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_553
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 149
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_554
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 151
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_555
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 149
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_556
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 114
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_557
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 116
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_558
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 121
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_559
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 118
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_560
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 124
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_561
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 126
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_562
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 124
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_563
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 123
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_564
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 120
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_565
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 121
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_566
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 122
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_567
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 123
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_568
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 123
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_569
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 127
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_570
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 127
+        width: 57
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_571
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 130
+        width: 54
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_572
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 127
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_573
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 131
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_574
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 133
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_575
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 134
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_576
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 128
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_577
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 129
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_578
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 131
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_579
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 135
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_580
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 133
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_581
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 126
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_582
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 128
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_583
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 118
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_584
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 107
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_585
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 101
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_586
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 118
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_587
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 93
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_588
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 98
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_589
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 98
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_590
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 107
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_591
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 99
+        width: 44
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_592
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 103
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_593
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 113
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_594
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 107
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_595
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 101
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_596
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 87
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_597
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 76
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_598
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 87
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_599
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 88
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_600
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 80
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_601
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 87
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_602
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 99
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_603
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 95
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_604
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 90
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_605
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 79
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_606
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 81
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_607
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 83
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_608
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 84
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_609
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 84
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_610
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 83
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_611
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 76
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_612
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 82
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_613
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 80
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_614
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 91
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_615
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 92
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_616
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 90
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_617
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 88
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_618
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 89
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_619
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 89
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_620
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 89
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_621
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 92
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_622
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 86
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_623
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 89
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_624
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 88
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_625
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 91
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_626
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 90
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_627
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 84
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_628
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 82
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_629
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 85
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_630
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 87
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_631
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 86
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_632
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 91
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_633
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 93
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_634
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_635
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 64
+        width: 11
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_636
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 67
+        width: 39
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_637
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 55
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_638
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 69
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_639
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 57
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_640
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 57
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_641
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 59
+        width: 9
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_642
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 44
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_643
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 61
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_644
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 59
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_645
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 78
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_646
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 51
+        width: 12
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_647
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 54
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_648
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 75
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_649
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 65
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_650
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 43
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_651
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 59
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_652
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 42
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_653
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 40
+        width: 13
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_654
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 65
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_655
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 45
+        width: 42
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_656
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 46
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_657
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 51
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_658
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 49
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_659
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 52
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_660
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 43
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_661
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 45
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_662
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 46
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_663
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 58
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_664
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 58
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_665
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 57
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_666
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 58
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_667
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 59
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_668
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 59
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_669
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 59
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_670
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 57
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_671
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 60
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_672
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 56
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_673
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 58
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_674
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 59
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_675
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 58
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_676
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 43
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_677
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 43
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_678
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 24
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_679
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 30
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_680
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 19
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_681
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 23
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_682
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 37
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_683
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 35
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_684
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 20
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_685
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 21
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_686
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 31
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_687
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 30
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_688
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 29
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_689
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 30
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_690
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 29
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_691
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 28
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_692
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 27
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_693
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 27
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_694
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 26
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_695
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 28
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_696
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 29
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_697
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 27
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_698
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 30
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_699
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 27
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_700
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 25
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_701
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 25
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_702
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 28
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_703
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 30
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_704
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 14
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_705
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 10
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_706
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 9
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_707
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 15
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_708
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 16
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_709
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 15
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_710
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 12
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_711
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 13
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_712
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 13
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_713
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 16
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_714
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 19
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_715
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 16
+        width: 38
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_716
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 28
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_717
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 28
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_718
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 28
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_719
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 27
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_720
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 26
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_721
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 4
+        width: 212
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: animals_722
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 13
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

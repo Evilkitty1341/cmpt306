@@ -6,16 +6,47 @@ public class PlayerControl : MonoBehaviour {
 	private Animator anim;
 	Vector3 startPosition; 
     StatCollectionClass playerStat;
-   // public GameObject projectile;
+    
+    public float attackRate = 1.0F;
+    private float nextAttack = 1.0F;
+
+    AudioSource attackSound;
+    public GameObject attackPrefab;
+    public GameObject spawnedAttack;
+
+    public GameObject magicPrefab;
+    public GameObject magicPrefab01;
+    public GameObject magicPrefab02;
+    public GameObject magicPrefab03;
+    public GameObject magicPrefab04;
+    public GameObject magicPrefab05;
+    public GameObject magicPrefab06;
+    public GameObject magicPrefab07;
+    public GameObject spawnedMagic;
+    public GameObject spawnedMagic01;
+    public GameObject spawnedMagic02;
+    public GameObject spawnedMagic03;
+    public GameObject spawnedMagic04;
+    public GameObject spawnedMagic05;
+    public GameObject spawnedMagic06;
+    public GameObject spawnedMagic07;
+    public int lives =4;
+
+    public GameObject deadSoundObject;
+    
+
+    // public GameObject projectile;
 
     // Use this for initialization
     void Start () {
 		anim = GetComponent<Animator> ();
-		startPosition = new Vector3(120, 0, -1);
+		startPosition = new Vector3(-120, 0, -1);
         playerStat = gameObject.GetComponent<StatCollectionClass>();
         playerStat.health = 100;
         playerStat.mana = 100;
         playerStat.intellect = 1;
+        playerStat.playerDirection = 2;
+        attackSound = GetComponent<AudioSource>();
     }
 
 	// Update is called once per frame
@@ -23,47 +54,113 @@ public class PlayerControl : MonoBehaviour {
 		// Controls for character movement
 		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {
 			transform.Translate (Vector3.up * speed * Time.deltaTime);
-			anim.SetInteger ("Direction", 0); // Up
+            playerStat.playerDirection = 1;
+            anim.SetInteger ("Direction", 0); // Up
 			anim.SetBool ("Moving", true);
 		} else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
 			transform.Translate (Vector3.right * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 1); // Right
-			anim.SetBool ("Moving", true);
+            playerStat.playerDirection = 2;
+            anim.SetBool ("Moving", true);
 		} else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
 			transform.Translate (Vector3.down * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 2); // Down
-			anim.SetBool ("Moving", true);
+            playerStat.playerDirection = 3;
+            anim.SetBool ("Moving", true);
 		} else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
 			transform.Translate (Vector3.left * speed * Time.deltaTime);
-			anim.SetInteger ("Direction", 3); // Left
+            playerStat.playerDirection = 4;
+            anim.SetInteger ("Direction", 3); // Left
 			anim.SetBool ("Moving", true);
 		} else {
 			anim.SetBool ("Moving", false);
 		}
-		// Controls for attacking
-		if (Input.GetKey (KeyCode.Space)) {
+        // Controls for attacking
+        if (Input.GetKeyDown("f") && Time.time > nextAttack && playerStat.mana >= 40)
+        {
+
+            anim.SetBool("Attacking", true);
+            attackSound.Play();
+            nextAttack = Time.time + attackRate;
+
+
+            playerStat.mana = playerStat.mana - 40f;
+
+            spawnedMagic = GameObject.Instantiate(magicPrefab, transform.position, transform.rotation) as GameObject;
+            spawnedMagic01 = GameObject.Instantiate(magicPrefab01, transform.position, transform.rotation) as GameObject;
+            spawnedMagic02 = GameObject.Instantiate(magicPrefab02, transform.position, transform.rotation) as GameObject;
+            spawnedMagic03 = GameObject.Instantiate(magicPrefab03, transform.position, transform.rotation) as GameObject;
+            spawnedMagic04 = GameObject.Instantiate(magicPrefab04, transform.position, transform.rotation) as GameObject;
+            spawnedMagic05 = GameObject.Instantiate(magicPrefab05, transform.position, transform.rotation) as GameObject;
+            spawnedMagic06 = GameObject.Instantiate(magicPrefab06, transform.position, transform.rotation) as GameObject;
+            spawnedMagic07 = GameObject.Instantiate(magicPrefab07, transform.position, transform.rotation) as GameObject;
+            spawnedMagic.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, 500));
+            spawnedMagic01.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(500, 0));
+            spawnedMagic02.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, -500));
+            spawnedMagic03.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-500, 0));
+            spawnedMagic04.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-500, -500));
+            spawnedMagic05.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(500, 500));
+            spawnedMagic06.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-500, 500));
+            spawnedMagic07.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(500, -500));
+
+        }
+
+
+
+            if (Input.GetKey (KeyCode.Space) && Time.time >nextAttack) {
 			anim.SetBool ("Attacking", true);
-		} else {
-			anim.SetBool ("Attacking", false);
+            //attackSound.Play();
+//            nextAttack = Time.time + attackRate;
+//            spawnedAttack = GameObject.Instantiate(attackPrefab, transform.position, transform.rotation) as GameObject;
+//            if (playerStat.playerDirection == 1)
+//            {
+//                spawnedAttack.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, 500));
+//            }
+//            else if (playerStat.playerDirection == 2)
+//            {
+//                spawnedAttack.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(500, 0));
+//            }
+//            else if (playerStat.playerDirection == 3)
+//            {
+//                spawnedAttack.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, -500));
+//            }
+//            else if (playerStat.playerDirection == 4)
+//            {
+//                spawnedAttack.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-500, 0));
+//            }
+
+            }else {
+            
+            anim.SetBool ("Attacking", false);
 		}
 
 	}
 
-
-    void OnCollisionEnter2D(Collision2D collision)
+    
+        void OnCollisionEnter2D(Collision2D collision)
     {
         // If player collides with an enemy they take damage
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Lava")
+        {
+            playerStat.health = playerStat.health - 10;
+        }
+        
+            if (collision.gameObject.tag == "Enemy")
         {
             StatCollectionClass enemyStat = collision.gameObject.GetComponent<StatCollectionClass>();
             playerStat.health = playerStat.health - enemyStat.intellect;
         }
-
+        
         if (playerStat.health <= 0)
         {
+            Instantiate(deadSoundObject);
 			transform.position = startPosition;
-			playerStat.health = playerStat.initialHealth;
-			playerStat.mana = playerStat.initialMana;
+			playerStat.health = 100;
+			playerStat.mana = 100;
+
+
+            lives--;
+            
             //Reset ();
             //Instantiate(deadsound);
             //Destroy(gameObject);
@@ -73,6 +170,18 @@ public class PlayerControl : MonoBehaviour {
         }
     }
 
+
+    void OnGUI()
+    {
+        if(lives > -1)
+        {
+            GUI.Label(new Rect(10,100, 60, 50), "lives:" + lives);
+        }
+        else
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
+    }
 //    // Restart level
 //    void Reset()
 //    {
