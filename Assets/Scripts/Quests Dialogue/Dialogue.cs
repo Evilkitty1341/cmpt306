@@ -50,6 +50,12 @@ public class Dialogue : MonoBehaviour {
 	//Switch for conversations
 	string CurrentConvo;
 
+	public GameObject FrontGate1;
+	public GameObject FrontGate2;
+	public GameObject FrontGate3;
+
+	bool townDone;
+
 	// Use this for initialization
 	void Start () {
 		//Q2.setGoToTown(false);
@@ -68,6 +74,12 @@ public class Dialogue : MonoBehaviour {
 		speechBubble.SetActive(false);
 		speechPos = speechBubble.transform.position;
 
+		FrontGate1.SetActive (true);
+		FrontGate2.SetActive (false);
+		FrontGate3.SetActive (false);
+
+		townDone = false;
+
 
 		//Dialogue Array:
 
@@ -80,15 +92,16 @@ public class Dialogue : MonoBehaviour {
 		//Elizabeth/Player Dialogue:
 		Dl[4] = "\nHello\n My name is Elizabeth\n have you seen my friend Mathius?!";
 		Dl[5] = "\nYes I have, he wanted me to tell you he's okay!"; //player dialogue
-		Dl[6] = "\nThanks! I was very worried! \n you should head over to the town,\n it's been steeped in turmoil since the skyfall\n here's a town pass, since the skyfall you'll need it to enter";
+		Dl[6] = "\nThanks! I was very worried! \n you should head over to Birdtown,\n it's been steeped in turmoil since the skyfall\n here's a town pass, since the skyfall you'll need it to pass through the gate";
 		Dl[7] = "\nThanks, I'll check it out!";
 
 		//Guard1 Dialogue:
 		Dl[8] = "\nWho Goes There!";
 		Dl[9] = "\nMathius!"; // player dialogue
-		Dl[10] = "\nYou don't have a town pass AND the entry fee, \nYOU \nSHALL NOT \nPASS! \n come back when you have both";
+		Dl[10] = "\nYou don't have a town pass AND the entry fee, \nYOU \nSHALL NOT \nPASS! \n come back when you have both!";
 		Dl[11] = "\nMathius! \nI have a town pass and enough coins to pay the entry fee"; //player dialogue
 		Dl[12] = "\nhmm.. looks like you have the required items, \nyou may enter, \n OPEN THE GATE!";
+		Dl[13] = "\nIt's too dangerous to leave the gate open at this time\n CLOSE THE GATE!!";
 	}
 	
 	// Update is called once per frame
@@ -102,7 +115,7 @@ public class Dialogue : MonoBehaviour {
 			AllQuests.QL [0].Has = true;
 			CurrentConvo = "QuestGiver1.0";
 		}
-		else if (Input.anyKeyDown && AllQuests.QL [0].Has == true && Q1.Completed == true && Q1.Repeat == false && CurrentConvo == "QuestGiver1.4"){
+		else if (Input.GetKeyDown("space") && AllQuests.QL [0].Has == true && Q1.Completed == true && Q1.Repeat == false && CurrentConvo == "QuestGiver1.4"){
 
 			//Outro 2 for QUEST NUMBER 1
 			//makes sure dialogue closes and speech bubble disapears
@@ -123,7 +136,7 @@ public class Dialogue : MonoBehaviour {
 			CurrentConvo = "QuestGiver2.0";
 			
 		}
-		else if ( Input.anyKeyDown && AllQuests.QL [1].Has == true && CurrentConvo == "QuestGiver2.3" && Q2.Repeat == true)
+		else if ( Input.GetKeyDown("space") && AllQuests.QL [1].Has == true && CurrentConvo == "QuestGiver2.3" && Q2.Repeat == true)
 		{
 			//Outro for QUEST NUMBER 2
 			speechPos = PlayerSpeechPos;
@@ -133,7 +146,7 @@ public class Dialogue : MonoBehaviour {
 			Q2.Repeat = false;
 			CurrentConvo = "QuestGiver2.4";
 		}
-		else if (Input.anyKeyDown && AllQuests.QL [1].Has == true && Q2.Repeat == false && CurrentConvo == "QuestGiver2.4"){
+		else if (Input.GetKeyDown("space") && AllQuests.QL [1].Has == true && Q2.Repeat == false && CurrentConvo == "QuestGiver2.4"){
 			dialogue = false;
 			speechBubble.SetActive (false);
 			Q2.Finished1 = true;
@@ -157,14 +170,14 @@ public class Dialogue : MonoBehaviour {
 		//Mid Dialogue Conversations
 
 		//Quest # 1 Conversation
-		if (Input.anyKeyDown && AllQuests.QL [0].Has == true && CurrentConvo == "QuestGiver1.0" && AllQuests.QL [0].Complete == false)
+		if (Input.GetKeyDown("space") && AllQuests.QL [0].Has == true && CurrentConvo == "QuestGiver1.0" && AllQuests.QL [0].Complete == false)
 		{ 
 			message = Dl [1];
 			speechPos = PlayerSpeechPos;
 			speechPos.y += 1f;
 			CurrentConvo = "QuestGiver1.1";
 
-		} else if (Input.anyKeyDown && AllQuests.QL [0].Has == true && CurrentConvo == "QuestGiver1.1" && AllQuests.QL [0].Complete == false) 
+		} else if (Input.GetKeyDown("space") && AllQuests.QL [0].Has == true && CurrentConvo == "QuestGiver1.1" && AllQuests.QL [0].Complete == false) 
 		{
 
 			message = Dl [2];
@@ -173,7 +186,7 @@ public class Dialogue : MonoBehaviour {
 			Q1.Repeat = false;
 			CurrentConvo = "QuestGiver1.2";
 	
-		} else if (Input.anyKeyDown && AllQuests.QL [0].Has == true && CurrentConvo == "QuestGiver1.2" && AllQuests.QL [0].Complete == false) 
+		} else if (Input.GetKeyDown("space") && AllQuests.QL [0].Has == true && CurrentConvo == "QuestGiver1.2" && AllQuests.QL [0].Complete == false) 
 		{
 			dialogue = false;
 			speechBubble.SetActive (false);
@@ -183,7 +196,7 @@ public class Dialogue : MonoBehaviour {
 
 
 		//Quest # 2 Conversation
-		if (Input.anyKeyDown && AllQuests.QL [1].Has == true && CurrentConvo == "QuestGiver2.0" && AllQuests.QL [1].Complete == false)
+		if (Input.GetKeyDown("space") && AllQuests.QL [1].Has == true && CurrentConvo == "QuestGiver2.0" && AllQuests.QL [1].Complete == false)
 		{ 
 
 			message = Dl [4];
@@ -191,7 +204,7 @@ public class Dialogue : MonoBehaviour {
 			speechPos.y += 1f;;
 			CurrentConvo = "QuestGiver2.1";
 			
-		} else if (Input.anyKeyDown && AllQuests.QL [1].Has == true && CurrentConvo == "QuestGiver2.1" && AllQuests.QL [1].Complete == false) 
+		} else if (Input.GetKeyDown("space") && AllQuests.QL [1].Has == true && CurrentConvo == "QuestGiver2.1" && AllQuests.QL [1].Complete == false) 
 		{
 
 			message = Dl [5];
@@ -199,7 +212,7 @@ public class Dialogue : MonoBehaviour {
 			speechPos.y += 1f;
 			CurrentConvo = "QuestGiver2.2";
 
-		} else if (Input.anyKeyDown && AllQuests.QL [1].Has == true && CurrentConvo == "QuestGiver2.2" && AllQuests.QL [1].Complete == false) 
+		} else if (Input.GetKeyDown("space") && AllQuests.QL [1].Has == true && CurrentConvo == "QuestGiver2.2" && AllQuests.QL [1].Complete == false) 
 		{
 			
 			message = Dl [6];
@@ -213,7 +226,7 @@ public class Dialogue : MonoBehaviour {
 
 		//Guard 1 Conversation:
 		//MAKE Q2.COMPLETED EQUALS TRUE!!!!
-		if(Input.anyKeyDown && Q2.getGoToTown() == false && Q2.Completed == false && CurrentConvo == "Guard1")
+		if(Input.GetKeyDown("space") && Q2.getGoToTown() == false && Q2.Completed == false && CurrentConvo == "Guard1")
 		{
 			message = Dl[9];
 			dialogue = true;
@@ -222,7 +235,7 @@ public class Dialogue : MonoBehaviour {
 			speechPos.y += 1f;
 			CurrentConvo = "Guard1.1";
 		}
-		else if(Input.anyKeyDown && Q2.getGoToTown() == false && Q2.Completed == false && CurrentConvo == "Guard1.1")
+		else if(Input.GetKeyDown("space") && Q2.getGoToTown() == false && Q2.Completed == false && CurrentConvo == "Guard1.1")
 		{
 			message = Dl[10];
 			dialogue = true;
@@ -231,7 +244,7 @@ public class Dialogue : MonoBehaviour {
 			speechPos.y += 1f;
 			CurrentConvo = "Guard1.2";
 		}
-		else if(Input.anyKeyDown && Q2.getGoToTown() == false && Q2.Completed == false && CurrentConvo == "Guard1.2")
+		else if(Input.GetKeyDown("space") && Q2.getGoToTown() == false && Q2.Completed == false && CurrentConvo == "Guard1.2")
 		{
 			//Exits out of negative guard response
 			dialogue = false;
@@ -245,15 +258,17 @@ public class Dialogue : MonoBehaviour {
 			speechPos.y += 1f;
 			CurrentConvo = "Guard1.1";
 		}
-		else if (Input.anyKeyDown && Q2.getGoToTown() == true && Q2.Completed == true && CurrentConvo == "Guard1.1") 
+		else if (Input.GetKeyDown("space") && Q2.getGoToTown() == true && Q2.Completed == true && CurrentConvo == "Guard1.1") 
 		{
 			message = Dl[12];
 			CurrentConvo = "Guard1.2";
 			speechBubble.SetActive(true);
 			speechPos = G1SpeechPos;
 			speechPos.y += 1f;
+			FrontGate1.SetActive(false);
+			FrontGate2.SetActive(true);
 		}
-		else if(Input.anyKeyDown && Q2.getGoToTown() == true && Q2.Completed == true && CurrentConvo == "Guard1.2")
+		else if(Input.GetKeyDown("space") && Q2.getGoToTown() == true && Q2.Completed == true && CurrentConvo == "Guard1.2")
 		{
 			//exits out of positive guards response
 			dialogue = false;
@@ -261,6 +276,13 @@ public class Dialogue : MonoBehaviour {
 			AllQuests.QL [1].Complete = true;
 			Q2.Finished2 = true;
 
+		}
+		else if(Input.GetKeyDown("space") && Q2.Finished2 == true && CurrentConvo == "GateClosed")
+		{
+			dialogue = false;
+			speechBubble.SetActive (false);
+			CurrentConvo = " ";
+			townDone = true;
 		}
 	}
 	
@@ -285,10 +307,6 @@ public class Dialogue : MonoBehaviour {
 		//OUTRO for QuestGiver1
 		if(col.gameObject.tag == "QuestGiver1" && Q1.Repeat == true && Q1.Finished == false && Q1.Completed == true)
 		{
-			print ("Repeat2 " + Q1.Repeat);
-			print ("Finished2 " + Q1.Finished);
-			print ("Completed2 " + Q1.Completed);
-
 				//Outro 1 for QUEST NUMBER 1
 				MSpeechPos = col.gameObject.transform.position;
 				speechPos = MSpeechPos;
@@ -323,6 +341,24 @@ public class Dialogue : MonoBehaviour {
 			speechPos.y += 1f;
 			message = Dl[8];
 			CurrentConvo = "Guard1";
+		}
+
+	}
+
+	void OnTriggerEnter2D (Collider2D other)
+	{
+		if (other.gameObject.tag == "Gate" && townDone == false) 
+		{
+			FrontGate2.SetActive(false);
+			FrontGate3.SetActive(true);
+
+			dialogue = true;
+			speechBubble.SetActive(true);
+			speechPos = G1SpeechPos;
+			speechPos.y += 1f;
+
+			message = Dl[13];
+			CurrentConvo = "GateClosed";
 		}
 	}
 
