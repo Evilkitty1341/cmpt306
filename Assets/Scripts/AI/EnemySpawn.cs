@@ -92,7 +92,7 @@ public class EnemySpawn : MonoBehaviour {
 	void SpawnWave(){
 		spawnRadius = 1.0f;
 		spawnLocations = GameObject.FindGameObjectsWithTag ("Spawn");
-		print (spawnLocations.Length);
+		//print (spawnLocations.Length);
 		spawnFilled = new int[spawnLocations.Length];
 		
 		if (spawnLocations.Equals (null)) {
@@ -110,7 +110,7 @@ public class EnemySpawn : MonoBehaviour {
 		{
 			// Pick random spawn point
 			int j = Random.Range(0, spawnLocations.Length);
-			print (j);
+			//print (j);
 			if(spawnFilled[j] == 1 && failedAttempts < 10){
 				failedAttempts++;
 				k--;

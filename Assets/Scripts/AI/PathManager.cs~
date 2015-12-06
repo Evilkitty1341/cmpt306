@@ -30,7 +30,7 @@ public class PathManager : MonoBehaviour {
 		homePos = this.transform.position;
 		delP = Vector3.zero;
 		rbody = this.GetComponent<Rigidbody2D>();
-		Debug.Log (homePos.ToString ());
+		//Debug.Log (homePos.ToString ());
 		int check = Random.Range (1, 3);
 
 		if (check == 1) {
@@ -447,7 +447,7 @@ public class PathManager : MonoBehaviour {
 		//print ("waiting to change direction");
 		pause = true;
 		lastPos = transform.position;
-		yield return new WaitForSeconds(0.5f + Random.Range (0.05f, 0.1f));
+		yield return new WaitForSeconds(0.2f + Random.Range (0.25f, 0.5f));
 		DirectionSet ("clear");
 		pause = false;
 		obstacle = false;

@@ -17,12 +17,12 @@ public class EnemySpawn : MonoBehaviour {
 	public GameObject spawnObjectHybrid;
 	public GameObject spawnObjectBoss;
 
-	public int maxNumGroups = 2;	// Maximum number of group of enemies to spawn in the area
-	public int groupWeight = 50;	// Overall weighting for a group of enemies
-	public int minInGroup = 2;		// Minimum number of enemies that can spawn in a group
-	public int maxInGroup = 5;		// Maximum number of enemies that can spawn in a group
-	public int minStatPerNPC = 2;
-	public int maxStatPerNpc = 10;
+	public int maxNumGroups;	// Maximum number of group of enemies to spawn in the area
+	public int groupWeight;	// Overall weighting for a group of enemies
+	public int minInGroup;		// Minimum number of enemies that can spawn in a group
+	public int maxInGroup;		// Maximum number of enemies that can spawn in a group
+	public int minStatPerNPC;
+	public int maxStatPerNpc;
 	private float countdown;
 	private int numEnemies;			// This will be determined per group spawned
 	private int statPerEnemy;		// This will be determined after the number of enemies for a group is determined
@@ -31,12 +31,12 @@ public class EnemySpawn : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		if((groupWeight/minInGroup) < maxStatPerNpc * 3){
+		if((groupWeight/minInGroup) > maxStatPerNpc * 3){
 			Debug.LogError("Improper spawn configuration");
 		}
 		else{
 			SpawnWave();
-			SpawnSingle(Vector3.zero);
+			//SpawnSingle(Vector3.zero);
 		}
 	}
 
@@ -92,6 +92,7 @@ public class EnemySpawn : MonoBehaviour {
 	void SpawnWave(){
 		spawnRadius = 1.0f;
 		spawnLocations = GameObject.FindGameObjectsWithTag ("Spawn");
+		//print (spawnLocations.Length);
 		spawnFilled = new int[spawnLocations.Length];
 		
 		if (spawnLocations.Equals (null)) {
@@ -104,12 +105,13 @@ public class EnemySpawn : MonoBehaviour {
 		
 		aiMaker = gameObject.AddComponent<ProceduralAI> ();
 		int failedAttempts = 0;
-		
+
 		for(int k = 0; k < maxNumGroups; k++)
 		{
 			// Pick random spawn point
 			int j = Random.Range(0, spawnLocations.Length);
-			if(spawnFilled[j] >= maxInGroup && failedAttempts < 10){
+			//print (j);
+			if(spawnFilled[j] == 1 && failedAttempts < 10){
 				failedAttempts++;
 				k--;
 			}
@@ -123,7 +125,7 @@ public class EnemySpawn : MonoBehaviour {
 				numEnemies = Random.Range (minInGroup, maxInGroup);
 				statPerEnemy = groupWeight / numEnemies;
 				spawnFilled[j] += 1;
-				
+
 				for (int i = 1; i < numEnemies; i++)
 				{
 					float spawnDelta = Random.Range(0f, 2f * Mathf.PI);
@@ -148,9 +150,10 @@ public class EnemySpawn : MonoBehaviour {
 					locWDelta.z = 0.0f;
 					enemy.transform.position = locWDelta;
 				}
+
 			}
 		}
-		
+
 		// Initial timer
 		countdown = timer + dTimer;
 	}

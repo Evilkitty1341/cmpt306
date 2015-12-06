@@ -174,7 +174,7 @@ public class AIBehavior : MonoBehaviour {
 	public int AdvanceTowards(){
 		pathing.LineOfSight ("Player");
 		if(pathing.los){
-			pathing.LocalPathToTarget("Player");
+			return 0;
 		}
 		return 0;
 	}

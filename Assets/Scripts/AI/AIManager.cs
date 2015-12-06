@@ -56,11 +56,16 @@ public struct AIConfig {
 	//When do I choose to run? At 1 hp. With more max hp this would likely change.
 	public int minHealth;
 
+	//How to scale normalized stats. Used for balancing.
 	public float healthMultiplier;
 
 	public float manaMultiplier;
 
 	public float attackMultiplier;
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	//A k-lookgood variable, offsets behavioral elemnts by a multiple of this percentage.
+	public float delta;
 
 	public float movementSpeed;
 
@@ -114,15 +119,15 @@ public class AIManager : MonoBehaviour {
 	DecisionTree behavior;
 
 	public AIConfig config;
-	
+
 
 	void Start () {
 
 		//AIConfig mob = AIBuilder ("mob", weightedLevel);
 
-		print (config.statExchange.health.ToString ());
-		print (config.statExchange.strength.ToString ());
-		print (config.statExchange.intellect.ToString ());
+		//print (config.statExchange.health.ToString ());
+		//print (config.statExchange.strength.ToString ());
+		//print (config.statExchange.intellect.ToString ());
 
 
 		StatCollectionClass tempStat;
@@ -170,6 +175,21 @@ public class AIManager : MonoBehaviour {
 		behavior.startDeciding ();
 	}
 
+
+	void Update () {
+		//print ("Health: " + config.statExchange.health.ToString());
+		if (gameObject.GetComponentInParent<StatCollectionClass>().health <= 0.09f) {
+			print ("Health: " + config.statExchange.health.ToString());
+			behavior.stopDeciding();
+			DestroyObject(gameObject);
+		}
+		else{
+			//print ("Health: " + config.statExchange.health.ToString());
+			//behavior.stopDeciding();
+			//DestroyObject (gameObject);
+		}
+
+	}
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/* 

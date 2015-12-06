@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class DecisionTree : MonoBehaviour {
@@ -34,7 +34,10 @@ public class DecisionTree : MonoBehaviour {
 		if (dPath.GetElement ().taskResult () > 0) {
 			dPath.GetChild (dPath.GetElement ().taskResult ());
 		}
-		else {
+		else if (dPath.GetElement().taskResult() == -1.0f){
+			dPath.GetParent();
+		}
+		else if (dPath.GetElement ().taskResult() == 0){
 			dPath.GetRoot();
 		}
 	}
@@ -75,6 +78,10 @@ public class DecisionTree : MonoBehaviour {
 		dPath.AddChild (new BranchLogic (methodLibrary.Attack));
 		dPath.AddChild (new BranchLogic (methodLibrary.AdvanceTowards));
 		dPath.GetRoot ();
+
+	}
+
+	void pathToSpawn(){
 
 	}
 }
