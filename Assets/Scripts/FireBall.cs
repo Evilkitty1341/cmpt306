@@ -17,12 +17,15 @@ public class FireBall : MonoBehaviour {
 	
 	//the Ball that has been spawned
 	public GameObject spawnedFireBall;
+
+	StoryLineComponents SLC;
 	
 	
 	
 	// Use this for initialization
 	void Start () {
 		//audio = GetComponent<AudioSource>();
+		SLC = GameObject.Find("Main Camera").GetComponent<StoryLineComponents>();
 	}
 	
 	// Update is called once per frame
@@ -31,7 +34,7 @@ public class FireBall : MonoBehaviour {
 		cooldownTimer -= Time.deltaTime;
 		
 		
-		if(Input.GetKey(KeyCode.Alpha1)&& stat.EnergyBallUnlocked == true && cooldownTimer <=0 && stat.mana>= skill.EnergyBallMpCost){
+		if(Input.GetKey(KeyCode.Alpha1)&& stat.EnergyBallUnlocked == true && cooldownTimer <=0 && stat.mana>= skill.EnergyBallMpCost && SLC.playerEnabled == true){
 			
 			stat.mana -= skill.EnergyBallMpCost;
 			

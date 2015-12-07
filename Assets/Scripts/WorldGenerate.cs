@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+//using System;
+using System.IO;
 
 public class WorldGenerate : MonoBehaviour {
 	public GameObject wall;
@@ -16,59 +18,64 @@ public class WorldGenerate : MonoBehaviour {
 	//set up room numbers
 	public int XroomNum;
 	public int YroomNum;
-
+	
 	public int RoomStartX;
 	public int RoomStartY;
-
+	
 	public float wallDimensions;
 	public int mapWidth = 1;
 	public int mapHeight = 1;
-	public int lavaEndX=1;
+	public int lavaWidth = 1;
 	public int type = 0;
 	public float mapOffsetX = 0f; // Used to determine where the algorithm will start from
 	public float mapOffsetY = 0f; // Used to determine where the algorithm will start from
 	public int wallsInGroup = 1;
-	public int minWallsInLevel = 1;
-	public int maxWallsInLevel = 1;
+	public float minWallDensity = 0.5f;
+	public float maxWallDensity = 0.5f;
 	public int minSpawnsInLevel = 1;
 	public int maxSpawnsInLevel = 1;
-	public int minObstaclesInLevel =1;
-	public int maxObstaclesInLevel =1;
-	private float realSize = 0.6f;
-    
+	public int minObstaclesInLevel = 1;
+	public int maxObstaclesInLevel = 1;
+	public Vector2[] pathsBetween; // Points for which there must be a non-lava path from one to the next
+	
 	private GameObject[ , ] wallSet; // Storage for walls
 	private Sprite[] flowerSprites;
 	private Sprite[] treeSprites;
 	private Sprite[] stoneSprites;
-
+	
 	//0 for empty
 	//1 for lava pool
 	//2 for items
 	//3 for enemy spwan
 	//4 for tunnel( can not put anything on it)
-	//5 for obstical 
+	//5 for obstacle
+	//6 for tree
+	//7 for flower
+	//8 for stone
 	private int[ , ] typeSet;
-
-
+	
 	// Use this for initialization
 	void Start () {
 		flowerSprites = Resources.LoadAll<Sprite> ("flowers");
 		treeSprites = Resources.LoadAll<Sprite> ("smallTrees");
 		stoneSprites = Resources.LoadAll<Sprite> ("stones");
 		typeSet = new int[mapWidth, mapHeight];
-
+		
 		wallSet = new GameObject[mapWidth, mapHeight]; // This array now represents the entire  map of the level
 		for(int i = 0; i < mapWidth; i++) {
 			for(int j = 0; j < mapHeight; j++){
 				wallSet[i, j] = null;
-				typeSet[i, j] =0;
+				typeSet[i, j] = 0;
 			}
 		}
-
-
+		
+		minWallDensity = Mathf.Max(Mathf.Min (minWallDensity, 1),0);
+		maxWallDensity = Mathf.Max(Mathf.Min (maxWallDensity, 1),0);
+		
+		
 		CreateRoom (RoomStartX,RoomStartY);
-
-//		GenerateWallGroup (5, 5, 4);
+		
+		//		GenerateWallGroup (5, 5, 4);
 		GenerateWalls ();  //Generates random walls and adds them into the wallSet array
 		GenerateMaps ();
 		GenerateSpawns (); // Generates random enemy spawns and adds them into the wallSet array
@@ -78,101 +85,80 @@ public class WorldGenerate : MonoBehaviour {
 		GenerateSword (); //Generates random positon items into wallSet array
 		GenerateBow ();
 		GenerateArmor ();
-		GameObject.Find ("SpawnController").GetComponent<EnemySpawn> ().enabled = true;
+		
+		// Create an instance of StreamWriter to write text to a file.
+		// The using statement also closes the StreamWriter.
+		//
+		using (StreamWriter sw = new StreamWriter("TestFile.txt")) 
+		{
+			// Add some text to the file.
+			sw.Write("This is the ");
+			sw.WriteLine("header for the file.");
+			//sw.WriteLine("-------------------");
+			// Arbitrary objects can also be written to the file.
+			for (int j = 0; j < mapHeight; j++) {
+				for (int i = 0; i < lavaWidth; i++) {
+					if (typeSet[i, j] == 1)
+						sw.Write(1);
+					else
+						sw.Write("-");
+				}
+				sw.WriteLine("***");
+			}
+		}
+		TypeSetToWallSet ();
+		GameObject.Find ("SpawnController").GetComponent<EnemySpawn> ().enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-
+	
 	//check is position(x,y) a path
 	bool notPath(int x, int y){
-
 		if (typeSet [x, y] == 4) {
 			return false;
 		} else
 			return true;
 	}
-
-	// Tests if x,y is within the bounds of the map
+	
+	// Tests if x,y is within the bounds of the map (array)
 	bool WithinBounds (int x, int y) {
 		return (x >= 0 && x < mapWidth && y >= 0 && y < mapHeight);
 	}
-
-	// Returns the the wall at x,y if one exists and was 
+	
+	// Returns the the object at x,y if one exists and was 
 	// created by this object. Otherwise returns null
-	GameObject GetWall (int x, int y){
+	GameObject GetObject (int x, int y){
 		if (WithinBounds(x, y)) {
 			return wallSet [x, y];
 		} else {
 			return null;
 		}
 	}
-
-	// Returns the the wall at x,y if one exists and was 
-	// created by this object. Otherwise returns null
-	GameObject GetFlower (int x, int y){
-		if (WithinBounds(x, y)) {
-			return wallSet [x, y];
-		} else {
-			return null;
+	
+	// Removes an object at x,y if one exists
+	// and was created by this object
+	void RemoveObject (int x, int y) {
+		if (WithinBounds (x, y)) {
+			if (wallSet [x, y] != null) {
+				Destroy (wallSet[x, y]);
+				wallSet[x, y] = null;
+			}
 		}
 	}
-
-	 // Places a wall object at x,y if one that was created 
+	
+	// Places a wall object at x,y if one that was created 
 	// by this object does not already exist	 
-	void PutWall (int x, int y) {
+	void PutType (int x, int y, int val) {
 		if (WithinBounds (x, y)) {
-			if (wallSet [x, y] == null&&typeSet[x, y]==0) {
-				GameObject tempWall = Instantiate (wall) as GameObject;
-				tempWall.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
-				wallSet [x, y] = tempWall;
-				typeSet[x, y] = 1;
+			if (typeSet[x, y]==0) {
+				typeSet[x, y] = val;
 			}
 		}
 	}
-
-	// Places a flower object at x,y if one that was created 
-	// by this object does not already exist
-	//	void PutFlower (int x, int y) {
-	//		if (WithinBounds (x, y)) {
-	//			if (wallSet [x, y] == null) {
-	//				GameObject tempFlower = Instantiate (flower) as GameObject;
-	//				tempFlower.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
-	//				tempFlower.GetComponent<SpriteRenderer> ().sprite = flowerSprites [Random.Range (0, flowerSprites.Length)];
-	//				wallSet [x, y] = tempFlower;
-	//				typeSet[x, y] = 1;
-	//			}
-	//		}
-	//	}
-
-	// Places a tree at x,y if it is within bounds and null
-	void PutTree (int x, int y) {
-		if (WithinBounds (x, y)) {
-			if (wallSet [x, y] == null) {
-				GameObject tempTree = Instantiate (tree) as GameObject;
-				tempTree.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
-				tempTree.GetComponent<SpriteRenderer> ().sprite = treeSprites [Random.Range (0, treeSprites.Length)];
-				wallSet [x, y] = tempTree;
-				typeSet[x, y] = 1;
-			}
-		}
-	}
-
-	// Places a stone at x,y if it is within bounds and null
-	void PutStone (int x, int y) {
-		if (WithinBounds (x, y)) {
-			if (wallSet [x, y] == null) {
-				GameObject tempStone = Instantiate (stone) as GameObject;
-				tempStone.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
-				tempStone.GetComponent<SpriteRenderer> ().sprite = stoneSprites [Random.Range (0, stoneSprites.Length)];
-				wallSet [x, y] = tempStone;
-				typeSet[x, y] = 1;
-			}
-		}
-	}
-
+	
 	// Places a rock object at x,y if one that was created 
 	// by this object does not already exist	 
 	void PutRocks (int x, int y) {
@@ -185,23 +171,11 @@ public class WorldGenerate : MonoBehaviour {
 			}
 		}
 	}
-
-	// Places an obstacle object at x,y if one that was created 
-	// by this object does not already exist	 
-	void PutObstacles (int x, int y) {
-		if (WithinBounds (x, y)) {
-			if (wallSet [x, y] == null&&typeSet[x, y]==0) {
-				GameObject tempObstacle = Instantiate (obstacle) as GameObject;
-				tempObstacle.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
-				wallSet [x, y] = tempObstacle;
-				typeSet[x, y] = 5;
-			}
-		}
-	}
 	
+	/*
 	// Places an enemy spawn point at x,y if it is within bounds and null
 	void PutSpawn (int x, int y) {
-		if (WithinBounds (x, y)&&typeSet[x, y]==0) {
+		if (WithinBounds (x, y) && typeSet[x, y]==0) {
 			if (wallSet [x, y] == null) {
 				GameObject tempSpawn = Instantiate (spawn) as GameObject;
 				tempSpawn.tag = "Spawn";
@@ -211,10 +185,11 @@ public class WorldGenerate : MonoBehaviour {
 			}
 		}
 	}
-
+	*/
+	
 	// place a item object at x,y if it in bounds and nothing here
 	void PutItem (int x, int y, GameObject item) {
-		if (WithinBounds (x, y)&&typeSet[x, y]==0) {
+		if (WithinBounds (x, y) && typeSet[x, y]==0) {
 			if (wallSet [x, y] == null) {
 				GameObject temp = Instantiate (item) as GameObject;
 				temp.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
@@ -223,106 +198,38 @@ public class WorldGenerate : MonoBehaviour {
 			}
 		}
 	}
-
-
-	// Removes a wall object at x,y if one exists
-	// and was created by this object
-	void RemoveWall (int x, int y) {
-		if (WithinBounds (x, y)) {
-			if (wallSet [x, y] != null) {
-				Destroy (wallSet[x, y]);
-				wallSet[x, y] = null;
-			}
-		}
-	}
 	
-	// Generates a squiggly line of wall objects starting at the position startX,startY
+	
+	
+	// Generates a squiggly line of integers in the array starting at the position startX,startY
 	// Generates a maximum of numWall number of walls
-	// If the line would go off the map, the function will return to the starting point 
-	void GenerateWallGroup (int startX, int startY, int numWalls) {
-
-
+	// If the line would go off the map, the function will return to the starting point
+	// Returns the number of remaining walls it coult not put
+	int GenerateValGroup (int startX, int startY, int val, int numWalls) {
 		int x = startX; //the "pointer" x coord
 		int y = startY; //the "pointer" y coord
 		int direction = Random.Range (0, 4);
-
+		int remWalls = 0;
+		
 		for (int i = 0; i < numWalls; i++) {
 			switch(direction) {	// Moves the "pointer" position to the next location
 			case 0: //going right
-				while(WithinBounds (x,y) && GetWall(x, y) != null) {
+				while(WithinBounds (x,y) && typeSet[x,y]!=0 && typeSet[x,y]!=4) {
 					x++;
 				}
 				break;
 			case 1: //going up
-				while(WithinBounds (x,y) && GetWall(x, y) != null) {
+				while(WithinBounds (x,y) && typeSet[x,y]!=0 && typeSet[x,y]!=4) {
 					y--;
 				}
 				break;
 			case 2: //going left
-				while(WithinBounds (x,y) && GetWall(x, y) != null) {
+				while(WithinBounds (x,y) && typeSet[x,y]!=0 && typeSet[x,y]!=4) {
 					x--;
 				}
 				break;
 			case 3: //going down
-				while(WithinBounds (x,y) && GetWall(x, y) != null) {
-					y++;
-				}
-				break;
-			default:
-				break;
-			}
-
-			if (WithinBounds (x,y)&& typeSet[x,y]!=4) {
-				PutWall (x,y);	// Places a wall at the "pointer" position
-			} else {
-				x = startX;	// Moves the "pointer" back to the start position
-				y = startY; // if the pointer is out of the map bounds
-			}
-
-			switch (Random.Range(0,3)) { // Change the direction of the pointer (turn left, go straight, turn right)
-			case 0:
-				direction--;
-				if (direction<0) direction=3;
-				break;
-			case 2:
-				direction++;
-				if (direction>3) direction=0;
-				break;
-			default:
-				break;
-			}
-
-		}
-	}
-
-	// Generates a squiggly line of flower objects starting at the position startX,startY
-	// Generates a maximum of numWall number of flowers
-	// If the line would go off the map, the function will return to the starting point 
-	void GenerateFlowerGroup (int startX, int startY, int numWalls) {
-		int x = startX; //the "pointer" x coord
-		int y = startY; //the "pointer" y coord
-		int direction = Random.Range (0, 4);
-		Sprite tempSprite = flowerSprites [Random.Range (0, flowerSprites.Length)];
-		
-		for (int i = 0; i < numWalls/2; i++) {
-			switch(direction) {	// Moves the "pointer" position to the next location
-			case 0: //going right
-				while(WithinBounds (x,y) && GetFlower(x, y) != null) {
-					x++;
-				}
-				break;
-			case 1: //going up
-				while(WithinBounds (x,y) && GetFlower(x, y) != null) {
-					y--;
-				}
-				break;
-			case 2: //going left
-				while(WithinBounds (x,y) && GetFlower(x, y) != null) {
-					x--;
-				}
-				break;
-			case 3: //going down
-				while(WithinBounds (x,y) && GetFlower(x, y) != null) {
+				while(WithinBounds (x,y) && typeSet[x,y]!=0 && typeSet[x,y]!=4) {
 					y++;
 				}
 				break;
@@ -331,15 +238,11 @@ public class WorldGenerate : MonoBehaviour {
 			}
 			
 			if (WithinBounds (x,y)) {
-				if (wallSet [x, y] == null) {
-					GameObject tempFlower = Instantiate (flower) as GameObject;
-					tempFlower.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
-					tempFlower.GetComponent<SpriteRenderer> ().sprite = tempSprite;
-					wallSet [x, y] = tempFlower;// Places a flower at the "pointer" position
-				}
+				PutType (x,y,val);	// Places the val at the "pointer" position
 			} else {
 				x = startX;	// Moves the "pointer" back to the start position
 				y = startY; // if the pointer is out of the map bounds
+				remWalls++;
 			}
 			
 			switch (Random.Range(0,3)) { // Change the direction of the pointer (turn left, go straight, turn right)
@@ -353,21 +256,31 @@ public class WorldGenerate : MonoBehaviour {
 				break;
 			default:
 				break;
-			}			
+			}
+			
 		}
+		return remWalls;
 	}
-
-	 //Generates several squiggly lines of walls
+	
+	//Generates several squiggly lines of walls
 	void GenerateWalls () {
-		for (int i=0; i<Random.Range(minWallsInLevel,maxWallsInLevel); i++) {
-			GenerateWallGroup (Random.Range (0, mapWidth/3), Random.Range (0, mapHeight), Random.Range (1, wallsInGroup));
+		int walls=(int) (Random.Range(minWallDensity,maxWallDensity)*(lavaWidth)*mapHeight);
+		int tryToPut;
+		while (walls>0) {
+			tryToPut = Mathf.Min (Mathf.Max(Random.Range (1, wallsInGroup), Random.Range (1, wallsInGroup)), walls);
+			tryToPut -= GenerateValGroup (Random.Range (0, lavaWidth), Random.Range (0, mapHeight), 1, tryToPut);
+			walls -= tryToPut;
 		}
 	}
-
+	
 	// Generates several squiggly lines of flowers
 	void GenerateFlowers () {
-		for (int i=0; i<Random.Range(minWallsInLevel,maxWallsInLevel); i++) {
-			GenerateFlowerGroup (Random.Range (0, mapWidth/3), Random.Range (0, mapHeight), Random.Range (1, wallsInGroup));
+		int flowers=(int) (Random.Range(minWallDensity,maxWallDensity)*(lavaWidth)*mapHeight); // Change this formula
+		int tryToPut;
+		while (flowers>0) {
+			tryToPut = Mathf.Min (Mathf.Max(Random.Range (1, wallsInGroup), Random.Range (1, wallsInGroup)), flowers);
+			tryToPut -= GenerateValGroup (Random.Range (0, lavaWidth), Random.Range (0, mapHeight), 7, tryToPut);
+			flowers -= tryToPut;
 		}
 	}
 	
@@ -375,12 +288,14 @@ public class WorldGenerate : MonoBehaviour {
 	void GenerateTrees () {
 		int x;
 		int y;
-		for (int i=0; i<Random.Range(minWallsInLevel/2,maxWallsInLevel/2); i++) {
+		int n = 0;
+		for (int i=0; i<Random.Range(minWallDensity*(lavaWidth)*mapHeight/2,maxWallDensity*(lavaWidth)*mapHeight/2); i++) {
 			do {
-				x = Random.Range (0, mapWidth/3); 
+				x = Random.Range (0, lavaWidth); 
 				y = Random.Range (0, mapHeight); 
-			} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
-			PutTree (x, y);
+				n++;
+			} while(!(WithinBounds (x,y)&& wallSet [x, y] == null) && (n<300));
+			PutType (x, y, 6);
 		}
 	}
 	
@@ -388,46 +303,130 @@ public class WorldGenerate : MonoBehaviour {
 	void GenerateStones () {
 		int x;
 		int y;
-		for (int i=0; i<Random.Range(minWallsInLevel/2,maxWallsInLevel/2); i++) {
+		int n = 0;
+		for (int i=0; i<Random.Range(minWallDensity*(lavaWidth)*mapHeight/2,maxWallDensity*(lavaWidth)*mapHeight/2); i++) {
 			do {
-				x = Random.Range (0, mapWidth/3); 
+				x = Random.Range (0, lavaWidth); 
 				y = Random.Range (0, mapHeight); 
-			} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
-			PutStone (x, y);
+				n++;
+			} while(!(WithinBounds (x,y)&& wallSet [x, y] == null) && (n<300));
+			PutType (x, y, 8);
 		}
 	}
-
+	
 	//set up bound and obstacles
 	void GenerateMaps() {
-
-
 		//put obstacles
 		int x;
 		int y;
+		int n = 0;
 		for (int i=1; i<Random.Range(minObstaclesInLevel,maxObstaclesInLevel); i++) {
 			do {
 				x = Random.Range (this.RoomStartX, mapWidth); 
 				y = Random.Range (0, mapHeight); 
-			} while(!(WithinBounds (x,y)&& wallSet [x, y] == null&&notPath(x,y)));
-			PutObstacles (x, y);
+				n++;
+			} while(!(WithinBounds (x,y) && wallSet [x , y] == null && notPath(x,y)) && (n<300));
+			PutType (x, y, 5);
 		}
-
-
+	}
+	
+	void TypeSetToWallSet() {
+		int [ , ] tempTypeSet = new int[lavaWidth, mapHeight];
+		for (int i = 0; i < lavaWidth; i++) {
+			for (int j = 0; j < mapHeight; j++) {
+				tempTypeSet[i , j] = typeSet[i , j];
+			}
 		}
-
+		//int aOOB=0;
+		bool isAGroup = true;
+		for (int groupSize = 3; groupSize > 0; groupSize--) {
+			for (int i = 0; i < lavaWidth; i++) {
+				for (int j = 0; j < mapHeight; j++) {
+					isAGroup = true;
+					for (int m = 0; m < groupSize; m++) {
+						for (int n = 0; n < groupSize; n++) {
+							if (WithinBounds (i+m, j+n) && (i+m<lavaWidth)) { // If i+m,j+n is in the map, and on the correct third of the map
+								//if (n+m>1)
+								//print("Found a partial group of "+(n+m)+" items! (out of "+(groupSize*groupSize)+" wanted items)");
+								isAGroup = isAGroup && (tempTypeSet[i+m , j+n] == 1);
+							}
+							else {
+								//aOOB++;
+								isAGroup = false;
+							}
+						}
+					}
+					if (isAGroup) {
+						//if (groupSize!=1)
+						//print(groupSize);
+						GameObject tempWall = Instantiate (wall) as GameObject;
+						tempWall.transform.position = new Vector3 ((i+(groupSize*0.5f)) * wallDimensions - mapOffsetX,
+						                                           (-j-(groupSize*0.5f)) * wallDimensions + mapOffsetY, 0f);
+						tempWall.transform.localScale = new Vector3((groupSize)*wallDimensions, (groupSize)*wallDimensions, 0);
+						
+						//print("in a group");
+						for (int m = 0; m < groupSize; m++) {
+							for (int n = 0; n < groupSize; n++) {
+								wallSet [i+m , j+n] = tempWall;
+								tempTypeSet [i+m , j+n] = 0;
+							}
+						}
+					}
+				}
+			}
+		}
+		for (int i = 0; i < lavaWidth; i++) {
+			for (int j = 0; j < mapHeight; j++) {
+				GameObject tempObj = null;
+				switch (tempTypeSet[i , j]) {
+				case 1:
+					tempObj = Instantiate (wall) as GameObject;
+					break;
+				case 3:
+					tempObj = Instantiate (spawn) as GameObject;
+					tempObj.tag = "Spawn";
+					break;
+				case 5:
+					tempObj = Instantiate (obstacle) as GameObject;
+					break;
+				case 6:
+					tempObj = Instantiate (tree) as GameObject;
+					tempObj.GetComponent<SpriteRenderer> ().sprite = treeSprites [Random.Range (0, treeSprites.Length)];
+					tempObj.GetComponent<CircleCollider2D>().radius = wallDimensions/2;
+					break;
+				case 7:
+					tempObj = Instantiate (flower) as GameObject;
+					tempObj.GetComponent<SpriteRenderer> ().sprite = flowerSprites [Random.Range (0, flowerSprites.Length)];
+					break;
+				case 8:
+					tempObj = Instantiate (stone) as GameObject;
+					tempObj.GetComponent<SpriteRenderer> ().sprite = stoneSprites [Random.Range (0, stoneSprites.Length)];
+					break;
+				}
+				if (tempObj!=null && GetObject (i,j)==null) {
+					tempObj.transform.position = new Vector3 ((i+0.5f) * wallDimensions - mapOffsetX, (-j-0.5f) * wallDimensions + mapOffsetY, 0f);
+					tempObj.transform.localScale = new Vector3((float) wallDimensions, (float) wallDimensions, 0);
+					wallSet [i , j] = tempObj;
+				}
+			}
+		}
+		//print ("# of indeces not in array: "+aOOB);
+		//print ("Expected # of indeces not in array: "+(mapWidth * 12));
+	}
+	
 	// give map a room like seperate spaces
 	void CreateRoom(int StartX, int StartY) {
-
+		
 		int x = StartX;
 		int y = StartY;
-
+		
 		int roomHeight = (mapHeight)/YroomNum;
 		int roomWidth = (mapWidth-x) /XroomNum;
-
-		//X direction path
-
-		for (int i =y+roomHeight/2; i<=mapHeight; i+=roomHeight) {
 		
+		//X direction path
+		
+		for (int i =y+roomHeight/2; i<=mapHeight; i+=roomHeight) {
+			
 			for(int j =x; j<mapWidth-1; j++)
 			{
 				typeSet[j,i]=4;
@@ -435,11 +434,11 @@ public class WorldGenerate : MonoBehaviour {
 				typeSet[j,i-1]=4;
 			}
 		}
-
-		//Y direction path
-
-		for (int i =x+ roomWidth/2; i<=mapWidth; i+=roomWidth) {
 		
+		//Y direction path
+		
+		for (int i =x+ roomWidth/2; i<=mapWidth; i+=roomWidth) {
+			
 			for (int j=y+2; j<mapHeight-1; j++)
 			{
 				typeSet[i,j]=4;
@@ -447,94 +446,104 @@ public class WorldGenerate : MonoBehaviour {
 				typeSet[i-1,j]=4;
 			}
 		}
-
-		//create room by rocks seperate
-
-		//X direction rocks
-
-		for (int i =y; i<=mapHeight-roomHeight; i+=roomHeight) {
 		
+		//create room by rocks seperate
+		
+		//X direction rocks
+		
+		for (int i =y; i<=mapHeight-roomHeight; i+=roomHeight) {
+			
 			for(int j =x; j<mapWidth; j++)
 			{
 				if(typeSet[j,i]!=4){
-				PutRocks(j,i);
+					PutRocks(j,i);
 				}
 			}
-
+			
 		}
-
-		//Y direction rocks
-
-		for (int i = x+roomWidth; i<=mapWidth-roomWidth; i+=roomWidth) {
 		
+		//Y direction rocks
+		
+		for (int i = x+roomWidth; i<=mapWidth-roomWidth; i+=roomWidth) {
+			
 			for (int j=y; j<mapHeight; j++)
 			{
 				if(typeSet[i,j]!=4){
-				PutRocks(i,j);
+					PutRocks(i,j);
 				}
 			}
-
+			
 		}
 	}
-
+	
 	// Generates a random number of enemy spawn points in the level
 	void GenerateSpawns () {
 		int x;
 		int y;
+		int n;
 		for (int i=0; i<Random.Range(minSpawnsInLevel,maxSpawnsInLevel); i++) {
+			n=0;
 			do {
-
-				x = Random.Range (0, mapWidth/3); 
+				
+				x = Random.Range (0, lavaWidth); 
 				y = Random.Range (0, mapHeight); 
-	
-
-			} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
-			PutSpawn (x, y);
+				n++;
+				
+			} while((!(WithinBounds (x,y)&& typeSet [x, y] == 0)) && (n<20));
+			PutType (x, y, 3);
 		}
+		/*
 		for (int i=0; i<Random.Range(minSpawnsInLevel,maxSpawnsInLevel); i++) {
+			n = 0;
 			do {
 				
 				x = Random.Range (RoomStartX, mapWidth); 
 				y = Random.Range (0, mapHeight); 
+				n++;
 				
-				
-			} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
-			PutSpawn (x, y);
+			} while(!(WithinBounds (x,y)&& wallSet [x, y] == null) && (n<300));
+			PutType (x, y, 3);
 		}
+		*/
 	}
-
+	
 	//Generates items by get random x,y within map bounds and check is there any other object
 	void GenerateSword() {
 		int x;
 		int y;
+		int n=0;
 		do {
 			x = Random.Range (0, mapWidth); 
 			y = Random.Range (0, mapHeight); 
-		} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
-
+			n++;
+		} while((!(WithinBounds (x,y)&& typeSet [x, y] == 0)) && (n<20));
+		
 		PutItem (x,y,Sword);
 	}
-
+	
 	void GenerateBow() {
 		int x;
 		int y;
+		int n = 0;
 		do {
 			x = Random.Range (0, mapWidth); 
 			y = Random.Range (0, mapHeight); 
-		} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
+			n++;
+		} while((!(WithinBounds (x,y)&& typeSet [x, y] == 0)) && (n<20));
 		
 		PutItem (x,y,Bow);
 	}
-
+	
 	void GenerateArmor() {
 		int x;
 		int y;
+		int n=0;
 		do {
 			x = Random.Range (0, mapWidth); 
 			y = Random.Range (0, mapHeight); 
-		} while(!(WithinBounds (x,y)&& wallSet [x, y] == null));
+		} while((!(WithinBounds (x,y)&& typeSet [x, y] == 0)) && (n<20));
 		
 		PutItem (x,y,Armor);
 	}
-
+	
 }

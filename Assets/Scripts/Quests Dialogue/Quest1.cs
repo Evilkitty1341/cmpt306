@@ -58,7 +58,7 @@ public class Quest1 : MonoBehaviour {
 	{
 		//If you run into quest giver and they haven't given you the quest yet, 
 		//they give you the quest
-		if (col.gameObject.tag == "QuestGiver1" && AllQuests.QL[0].Has == false) 
+		if (col.gameObject.tag == "QuestGiver1" && Finished == false && AllQuests.QL[0].Has == false) 
 		{
 			Has = true;	
 			GameObject Item1 = Instantiate (Item) as GameObject;
@@ -67,7 +67,7 @@ public class Quest1 : MonoBehaviour {
 		
 		//if you collide with an Item before you have the quest it won't do anything
 		//but if you collide once you have the quest it destroys the item and adds 1 to the CurNumItems you have
-		if (col.gameObject.tag == "Items1" && AllQuests.QL[0].Has == true )
+		if (col.gameObject.tag == "Items1" && Finished == false && AllQuests.QL[0].Has == true)
 		{
 			Destroy(col.gameObject);
 			CurNumItems += 1;
