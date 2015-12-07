@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerControl : MonoBehaviour {
+public class PlayerControl : MonoBehaviour 
+{
 	public float speed = 8f; // Character's movement speed
 	private Animator anim;
 	Vector3 startPosition; 
+	Vector3 townPosition;
     StatCollectionClass playerStat;
     
     public float attackRate = 1.0F;
@@ -33,12 +35,19 @@ public class PlayerControl : MonoBehaviour {
     public int lives =4;
 
     public GameObject deadSoundObject;
+
+	//used to check tha tthe intro scene is done
+	StoryLineComponents SLC;
+
+	//for respawn position at town
+	Dialogue D;
     
 
     // public GameObject projectile;
 
     // Use this for initialization
-    void Start () {
+    void Start () 
+	{
 		anim = GetComponent<Animator> ();
 		startPosition = new Vector3(-120, 0, -1);
         playerStat = gameObject.GetComponent<StatCollectionClass>();
@@ -47,27 +56,31 @@ public class PlayerControl : MonoBehaviour {
         playerStat.intellect = 1;
         playerStat.playerDirection = 2;
         attackSound = GetComponent<AudioSource>();
+		SLC = GameObject.Find("Main Camera").GetComponent<StoryLineComponents>();
+		D = GetComponent<Dialogue>();
+		townPosition = new Vector3 (137f, -46f, 10f);
     }
 
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		// Controls for character movement
-		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {
+		if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))  && SLC.playerEnabled == true && D.freezePos == false) {
 			transform.Translate (Vector3.up * speed * Time.deltaTime);
             playerStat.playerDirection = 1;
             anim.SetInteger ("Direction", 0); // Up
 			anim.SetBool ("Moving", true);
-		} else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
+		} else if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && SLC.playerEnabled == true && D.freezePos == false) {
 			transform.Translate (Vector3.right * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 1); // Right
             playerStat.playerDirection = 2;
             anim.SetBool ("Moving", true);
-		} else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
+		} else if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && SLC.playerEnabled == true &&D.freezePos == false) {
 			transform.Translate (Vector3.down * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 2); // Down
             playerStat.playerDirection = 3;
             anim.SetBool ("Moving", true);
-		} else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
+		} else if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && SLC.playerEnabled == true && D.freezePos == false){
 			transform.Translate (Vector3.left * speed * Time.deltaTime);
             playerStat.playerDirection = 4;
             anim.SetInteger ("Direction", 3); // Left
@@ -76,7 +89,7 @@ public class PlayerControl : MonoBehaviour {
 			anim.SetBool ("Moving", false);
 		}
         // Controls for attacking
-        if (Input.GetKeyDown("f") && Time.time > nextAttack && playerStat.mana >= 40)
+		if (Input.GetKeyDown("f") && Time.time > nextAttack && playerStat.mana >= 40 && SLC.playerEnabled == true)
         {
 
             anim.SetBool("Attacking", true);
@@ -106,8 +119,11 @@ public class PlayerControl : MonoBehaviour {
         }
 
 
-
-            if (Input.GetKey (KeyCode.Space) && Time.time >nextAttack) {
+		/*********************
+		 * NOTE:
+		 * SHOULD TAKE THIS OUT BECAUSE NOW USE SPACE FOR QUESTS AND DIALOGUE
+            if (Input.GetKey (KeyCode.Space) && Time.time >nextAttack)
+		{
 			anim.SetBool ("Attacking", true);
             //attackSound.Play();
 //            nextAttack = Time.time + attackRate;
@@ -129,11 +145,12 @@ public class PlayerControl : MonoBehaviour {
 //                spawnedAttack.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-500, 0));
 //            }
 
-            }else {
+            }else
+		{
             
             anim.SetBool ("Attacking", false);
 		}
-		checkHealth();
+		checkHealth();*/
 	}
 
     
@@ -150,26 +167,28 @@ public class PlayerControl : MonoBehaviour {
             StatCollectionClass enemyStat = collision.gameObject.GetComponent<StatCollectionClass>();
             playerStat.health = playerStat.health - enemyStat.intellect;
         }
+<<<<<<< Updated upstream
         */
 
     }
-	void checkHealth(){
-	if (playerStat.health <= 0)
-		{
-			Instantiate(deadSoundObject);
-			transform.position = startPosition;
-			playerStat.health = 100;
-			playerStat.mana = 100;
-			
-			
-			lives--;
-			
-			//Reset ();
-			//Instantiate(deadsound);
-			//Destroy(gameObject);
-			//GUI.Label(new Rect(Screen.width / 2, Screen.height / 2 - 25, 100, 50), " You Dead!!!!! ");
-			
-			//Application.LoadLevel(Application.loadedLevel);
+
+	void checkHealth()
+	{
+		if (playerStat.health <= 0) {
+			Instantiate (deadSoundObject);
+
+			if (playerStat.health <= 0) {
+				Instantiate (deadSoundObject);
+				
+				if (D.townDone) {
+					transform.position = townPosition;
+				} else {
+					transform.position = startPosition;
+				}
+				playerStat.health = 100;
+				playerStat.mana = 100;
+				lives--;
+			}
 		}
 	}
 

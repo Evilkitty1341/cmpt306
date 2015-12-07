@@ -14,6 +14,7 @@ public class AIBehavior : MonoBehaviour {
 	public AIConfig rb;
 
 	public ProjectileSpawner ps;
+	public Vector3 destination;
 
 	void start(){
 
@@ -58,6 +59,48 @@ public class AIBehavior : MonoBehaviour {
 		}
 	}
  
+	public int InRangeCautious(){
+		
+		float check = checkDistance (GameObject.FindWithTag ("Player"));
+		if (check == -1) {
+			//return 0;
+		}
+		if(check < rb.idealRange){
+			pathing.killForce();
+			Debug.Log("Target is within range.");
+			return 1;
+		}
+		else{
+			hpAndFriends = false;
+			Debug.Log("Target is out of range.");
+			return 2;
+		}
+	}
+
+	public int AtDest(){
+		if(destination == null){
+
+			return 0;
+		}
+
+		float check = checkDistance(destination);
+		if(check <= 2.0f)
+			return 0;
+		else
+			pathing.LocalPathToTarget(destination);
+		return 1;
+	}
+
+	public int IsAggressive(){
+		if(rb.isAggressive){
+			return -2;
+		}
+		else{
+			return 2;
+		}
+
+	}
+
 	//TODO No enemy prefabs.
 	public int MaxWander(){
 		anim.SetBool("Attacking", false);
@@ -121,6 +164,24 @@ public class AIBehavior : MonoBehaviour {
 				return 2;
 			}
 	}
+
+	//Check the hitpoints of the current entity.
+	//Run away if its low, advance or attack if its high.
+	//Slightly different outcomes depending which node calls it.
+	//TODO No enemy prefabs.
+	public int HPCheckCautious(){
+		
+		float check = gameObject.GetComponent<StatCollectionClass> ().health;
+		
+		if(check > rb.minHealth * 0.5){
+			Debug.Log("HP for days!");
+			return 1;
+		}
+		else{
+			Debug.Log("My HP is low, this is unfortunate");
+			return 2;
+		}
+	}
 	//Randomly pick between a walk, idle, or taunt action.
 	public int RandomWalkOrIdle(){
 		bool i = randomBinary ();
@@ -174,7 +235,7 @@ public class AIBehavior : MonoBehaviour {
 	public int AdvanceTowards(){
 		pathing.LineOfSight ("Player");
 		if(pathing.los){
-			return 0;
+			pathing.LocalPathToTarget(GameObject.FindWithTag("Player").transform.position);
 		}
 		return 0;
 	}
@@ -187,6 +248,7 @@ public class AIBehavior : MonoBehaviour {
 	}
 	//Flip the animation variable idle to true so unity idles the entity.
 	public int Idle(){
+		anim.SetInteger("Direction", Random.Range(0,5));
 		return 0;
 	}
 	//Taunt by playing a sound.
@@ -213,9 +275,6 @@ public class AIBehavior : MonoBehaviour {
 			anim.SetBool("Attacking", true);
 			ps.rangedAttack(damage, GameObject.FindWithTag("Player").transform.position);
 		}
-		else{
-			AdvanceTowards();
-		}
 		return 0;
 	}
 
@@ -227,9 +286,6 @@ public class AIBehavior : MonoBehaviour {
 			anim.SetBool("Attacking", true);
 			GameObject.FindWithTag("Player").GetComponent<StatCollectionClass>().doDamage(damage);
 			//fire off melee attack animation
-		}
-		else{
-			AdvanceTowards();
 		}
 		return 0;
 	}

@@ -15,18 +15,22 @@ public class spawnFireBall : MonoBehaviour {
     private float nextFire = 0.0F;
     StatCollectionClass playerStat;
 
+	//to check that the intro scene is done
+	StoryLineComponents SLC;
+
     // Use this for initialization
-    /* void Start()
+     void Start()
      {
-         audio = GetComponent<AudioSource>();
-     }*/
+         //audio = GetComponent<AudioSource>();
+		SLC = GameObject.Find("Main Camera").GetComponent<StoryLineComponents>();
+     }
 
     // Update is called once per frame
     void Update()
     {
         //fire1 is set as left mouse button
 
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
+        if (Input.GetButtonDown("Fire1") && Time.time > nextFire && SLC.playerEnabled == true)
         {
             nextFire = Time.time + fireRate;
             //print ("fire");

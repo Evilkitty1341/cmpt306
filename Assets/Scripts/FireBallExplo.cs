@@ -3,11 +3,11 @@ using System.Collections;
 
 public class FireBallExplo : MonoBehaviour {
 
-	public StatCollectionClass enemyStat;
+	StatCollectionClass enemyStat;
 	
 	GameObject player;
 
-	StatCollectionClass playerStat;
+	SkillTree skill;
 
 	public GameObject explosion;
 	
@@ -23,7 +23,7 @@ public class FireBallExplo : MonoBehaviour {
 	{
 		player = GameObject.FindWithTag ("Player");
 		
-		playerStat = player.GetComponent<StatCollectionClass >();
+		skill = player.GetComponent<SkillTree >();
 		
 		Destroy(gameObject, 2f);
 
@@ -40,7 +40,7 @@ public class FireBallExplo : MonoBehaviour {
 			
 			enemyStat = col.GetComponent<StatCollectionClass>();
 			
-			enemyStat.doDamage(playerStat.EnergyBalldamage);
+			enemyStat.doDamage(skill.FireBallDamage);
 			/*
 			if(enemyStat.health <= 0)
 			{
@@ -56,9 +56,7 @@ public class FireBallExplo : MonoBehaviour {
 			
 		} 
 		
-		if (col.gameObject.tag == "wallTop"||col.gameObject.tag == "wallBottom"
-		    ||col.gameObject.tag == "wallLeft"|| col.gameObject.tag == "wallRight"
-		    ||col.gameObject.tag == "Obstacle") {
+		if (col.gameObject.tag == "Obstacle") {
 
 			this.onExplosion();
 

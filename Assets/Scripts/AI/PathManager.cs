@@ -58,7 +58,7 @@ public class PathManager : MonoBehaviour {
 	public void LocalPathToTarget(string tag){
 		player = GameObject.FindWithTag (tag).transform.localPosition;
 		if (obstacle) {
-			Debug.Log ("Obstacle pathing time!");
+			//Debug.Log ("Obstacle pathing time!");
 			localObstacle ();
 		} else if (delP.magnitude >= 0.05) {
 			MoveToOnAxis (player);
@@ -70,7 +70,7 @@ public class PathManager : MonoBehaviour {
 	
 	public void LocalPathToTarget(Vector3 tar){
 		if (obstacle) {
-			Debug.Log ("Obstacle pathing time!");
+			//Debug.Log ("Obstacle pathing time!");
 			localObstacle ();
 		} else if (delP.magnitude >= 0.05) {
 			MoveToOnAxis (tar);;
@@ -112,12 +112,12 @@ public class PathManager : MonoBehaviour {
 	public void localObstacle(){
 		//Collision on axis
 		if(forward){
-			Debug.Log("Time to do local Obstacle forward stuff.");
+			//Debug.Log("Time to do local Obstacle forward stuff.");
 			delP.x += mobSp * Time.deltaTime * randomSign;
 			MoveToOnAxis (new Vector3(transform.position.x + Time.deltaTime * randomSign, transform.position.y, 0));
 		}
 		else if (backward){
-			Debug.Log("Time to do local Obstacle backward stuff.");
+			//Debug.Log("Time to do local Obstacle backward stuff.");
 			delP.x -= mobSp * Time.deltaTime * randomSign;
 			MoveToOnAxis (new Vector3(transform.position.x - Time.deltaTime * randomSign, transform.position.y, 0));
 		}
@@ -204,13 +204,13 @@ public class PathManager : MonoBehaviour {
 				if (Mathf.Abs (diffX) >= Mathf.Abs (diffY)) {
 					if (diffX < 0f) {
 						rbody.AddRelativeForce (Vector2.left * mobSp * randomSign);
-						rbody.AddRelativeForce (Vector2.up * 0.01f * randomSign);
+						//rbody.AddRelativeForce (Vector2.up * 0.001f * randomSign);
 						anim.SetInteger("Direction", 3);
 
 						lastDir = Vector2.left;
 					} else {
 						rbody.AddRelativeForce (Vector2.right * mobSp * randomSign);
-						rbody.AddRelativeForce (Vector2.down * 0.01f * randomSign);
+						//rbody.AddRelativeForce (Vector2.down * 0.001f * randomSign);
 						anim.SetInteger("Direction", 1);
 
 						lastDir = Vector2.right;
@@ -218,13 +218,13 @@ public class PathManager : MonoBehaviour {
 				} else {
 					if (diffY < 0f) {
 						rbody.AddRelativeForce (Vector2.down * mobSp * randomSign);
-						rbody.AddRelativeForce (Vector2.left * 0.01f * randomSign);
+						//rbody.AddRelativeForce (Vector2.left * 0.001f * randomSign);
 						anim.SetInteger("Direction", 2);
 
 						lastDir = Vector2.down;
 					} else {
 						rbody.AddRelativeForce (Vector2.up * mobSp * randomSign);
-						rbody.AddRelativeForce (Vector2.right * 0.01f * randomSign);
+						//rbody.AddRelativeForce (Vector2.right * 0.001f * randomSign);
 						anim.SetInteger("Direction", 0);
 
 						lastDir = Vector2.up;
@@ -260,14 +260,14 @@ public class PathManager : MonoBehaviour {
 					if(decay == 1){
 						Debug.Log ("Decay X...");
 						if(delP.x < 0f){
-							checkX = Mathf.Exp(Mathf.Abs (delP.x * Time.deltaTime * mobSp));
+							checkX = Mathf.Exp(Mathf.Abs (Time.deltaTime * mobSp));
 							if(checkX >= Mathf.Abs (delP.x))
 								delP.x = 0.0f;
 							else 
 								delP.x = delP.x + checkX;
 						}
 						else{
-							checkX = Mathf.Exp(Mathf.Abs (delP.x * Time.deltaTime * mobSp));
+							checkX = Mathf.Exp(Mathf.Abs (Time.deltaTime * mobSp));
 							if(checkX >= Mathf.Abs (delP.x))
 								delP.x = 0.0f;
 							else 
@@ -276,14 +276,14 @@ public class PathManager : MonoBehaviour {
 					}
 					else if(decay == 2){
 						if(delP.y < 0f){
-							checkY = Mathf.Exp(Mathf.Abs (delP.y * Time.deltaTime * mobSp));
+							checkY = Mathf.Exp(Mathf.Abs (Time.deltaTime * mobSp));
 							if(checkY >= Mathf.Abs (delP.y))
 								delP.y = 0.0f;
 							else 
 								delP.y = delP.y + checkY;
 						}
 						else{
-							checkY= Mathf.Exp(Mathf.Abs (delP.y * Time.deltaTime * mobSp));
+							checkY= Mathf.Exp(Mathf.Abs (Time.deltaTime * mobSp));
 							if(checkY >= Mathf.Abs (delP.y))
 								delP.y = 0.0f;
 							else 
@@ -317,6 +317,7 @@ public class PathManager : MonoBehaviour {
 		}
 		StartCoroutine(waitForMove ());
 	}
+
 	//Moves the caller to the position vector.
 	public void MoveTo(Vector3 pos){
 		killForce ();
@@ -357,14 +358,14 @@ public class PathManager : MonoBehaviour {
 	public void LineOfSight(string name){
 		GameObject tar = GameObject.FindGameObjectWithTag (name);
 		LayerMask mask = 1 << tar.layer;
-		Debug.Log ("Layer found: " + LayerMask.LayerToName (mask.value));
+		//Debug.Log ("Layer found: " + LayerMask.LayerToName (mask.value));
 
 		RaycastHit2D hit = Physics2D.Linecast(transform.position, tar.transform.position, mask);
 		if (hit.collider == null){
 			return;
 		}
 
-		Debug.Log ("Hit: " + hit.collider.gameObject.tag.ToString() + " Meant to hit: " + name);
+		//Debug.Log ("Hit: " + hit.collider.gameObject.tag.ToString() + " Meant to hit: " + name);
 
 		if(hit.collider.gameObject.tag == name){
 			Debug.Log ("I can see the player!");
@@ -447,7 +448,7 @@ public class PathManager : MonoBehaviour {
 		//print ("waiting to change direction");
 		pause = true;
 		lastPos = transform.position;
-		yield return new WaitForSeconds(0.2f + Random.Range (0.25f, 0.5f));
+		yield return new WaitForSeconds(0.1f + Random.Range (0.2f, 0.3f));
 		DirectionSet ("clear");
 		pause = false;
 		obstacle = false;

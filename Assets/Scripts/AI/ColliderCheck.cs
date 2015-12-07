@@ -13,7 +13,7 @@ public class ColliderCheck : MonoBehaviour {
 		GetComponentInParent<PathManager> ().SendMessage ("DirectionSet", "clear");
 		if (collision.gameObject.tag == "Player") {
 			//Stuff
-		} else if (collision.gameObject.tag == "Wall") {
+		} else if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Lava") {
 			parentPM.DirectionSet(direction);
 			parentPM.obstacle = true;
 			if(parentPM.delP == Vector3.zero || parentPM.delP == null){

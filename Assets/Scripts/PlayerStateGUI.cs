@@ -42,7 +42,7 @@ public class PlayerStateGUI : MonoBehaviour {
 		
 		GUI.TextArea (new Rect (Screen.width/8, 50, Screen.width/7, 30), "Level: " + stat.playerLevel);
 		
-		GUI.TextArea (new Rect (Screen.width/8, 90, Screen.width/7, 30), "Xp: " + stat.xp);
+		GUI.TextArea (new Rect (Screen.width/8, 90, Screen.width/7, 30), "Xp: " + stat.xp+"/"+stat.xpNextLevel);
 		
 //		GUI.TextArea (new Rect (Screen.width/8, 130, Screen.width/7, 30), "Health: " + stat.health+"/"+stat.initialHealth);
 //		

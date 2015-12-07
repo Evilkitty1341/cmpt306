@@ -7,15 +7,15 @@ public class ItemBow : MonoBehaviour {
 	StatCollectionClass stat;
 	
 	GameObject player;
-
+	
 	ItemUpgrade Up;
 	
 	//give a damage value to bow
-	public float BowDamage = 50f;
-
+	public float BowDamage = 0.5f;
+	
 	void Start(){
 		
-
+		
 		
 	}
 	void OnTriggerEnter2D(Collider2D other) {  
@@ -26,27 +26,27 @@ public class ItemBow : MonoBehaviour {
 		if (other.tag == "Player") {
 			stat=other.GetComponent<StatCollectionClass>();
 			Up = other.GetComponent<ItemUpgrade>();
-				// set item bow unlocked
-				stat .itemBow = true;
-
+			// set item bow unlocked
+			stat.itemBow = true;
+			
 			Up.BowLevel++;
-
-			Up.BowDamage+=50;
 			
-				if (stat .ArmorEquip == false && stat .SwordEquip == false) {
+			Up.BowDamage+=0.5f;
+			
+			if (stat.ArmorEquip == false && stat.SwordEquip == false) {
 				
-					//add player attack damage with bow damage
-					stat .damage += Up.BowDamage;
+				//add player attack damage with bow damage
+				stat.damage += Up.BowDamage;
 				
-					stat .BowEquip = true;
-				}
+				stat.BowEquip = true;
 			}
-		
-			// Destroy the item
-			Destroy(this.gameObject);
-			
-			
-			
 		}
+		
+		// Destroy the item
+		Destroy(this.gameObject);
+		
+		
+		
 	}
+}
 

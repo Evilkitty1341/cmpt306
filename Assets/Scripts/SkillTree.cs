@@ -29,68 +29,69 @@ public class SkillTree: MonoBehaviour {
 	Rect winPos = new Rect (Screen.width/13, Screen.height/5, Screen.width-Screen.width/6, Screen.height-Screen.height/2);
 	
 	//skill level
-	public int maxEnergyBallLv=5;
-	//xp cost
-	public int EnergyBallPrice=30;
+	public int maxFireBallLv=5;
 	//mana cost
-	public float EnergyBallMpCost = 5f;
+	public float FireBallMpCost = 10f;
+	
+	public float FireBallDamage = 3f;
 	//use for skill grow
-	int i =0;
+	int i =1;
 	
 	//sample of second skill
 	public int maxFireBreathLv=5;
-	public int FireBreathPrice=60;
-	public float FireBreathMpCost = 10f;
-	public float FireBreathDamage = 120f;
+	public float FireBreathMpCost = 20f;
+
+	public float FireBreathDamage = 5f;
+
 	int j =0;
 	
 	//sample of third skill
 	public int maxSunStrikeLv=5;
-	public int SunStrikePrice=120;
-	public float SunStrikeMpCost = 20f;
-	public float SunStrikeDamage = 300f;
-	int k =0;
+	public float SunStrikeMpCost = 40f;
 
+	public float SunStrikeDamage = 10f;
+	int k =0;
+	
 	//connect to each script
 	void Start()
 	{
 		player = this.gameObject;
 		
 		stat = player.GetComponent<StatCollectionClass >();
-
+		
 		psg = player.GetComponent<PlayerStateGUI> ();
-
+		
 		quest = player.GetComponent<All_Quests> ();
-
+		
 		item = player.GetComponent<ItemGUI>();
-
-
-
+		
+		
+		
 	}
-
+	
 	// create GUI Button on panel
 	void something (int ID) {
 		//set the location of button
-		if (GUI.Button (new Rect (Screen.width/2-Screen.width/7, 50, Screen.width/7, 30), "Energy Ball Lv" + i)) {
+		if (GUI.Button (new Rect (Screen.width/2-Screen.width/7, 50, Screen.width/7, 30), "Fire Ball Lv" + i)) {
 			//skill level must lower than max level
-			if (i < maxEnergyBallLv) {
+			if (i < maxFireBallLv) {
 				// player's xp value max higher than skill xp cost
-				if (stat.xp >= EnergyBallPrice) {
-					//set skill actived
-					stat.EnergyBallUnlocked = true;
-					//cost the player's xp by skill xp cost value
-					stat.xp -= EnergyBallPrice;
+				if (stat.skillPoint >0) {
+
+
+					//cost the player's skill point by 1
+					stat.skillPoint--;
 					//level up
 					i++;
 					//each skill value increase with the level
-					EnergyBallPrice *=i+1;
-					EnergyBallMpCost *=i;
-					stat.EnergyBalldamage+=10f;
+
+					FireBallMpCost +=i;
+					FireBallDamage+=1f;
 					
 					
 					
 					
-				} else if (stat.xp < EnergyBallPrice) {
+				} else if (stat.skillPoint < 1) {
 					Debug.Log ("not enouph xp");
 				}
 			} else {
@@ -98,22 +99,23 @@ public class SkillTree: MonoBehaviour {
 			}
 			
 		}
+
 		//same as 1st skill
 		if (GUI.Button (new Rect (Screen.width/2-Screen.width/7, 150, Screen.width/7, 30), "Fire Breath Lv" + j)) {
-			if (i == maxEnergyBallLv) {
+			if (i == maxFireBallLv) {
 				if (j < maxFireBreathLv) {
 					
-					if (stat.xp >= FireBreathPrice) {
+					if (stat.skillPoint >0) {
 						stat.FireBreathUnlocked = true;
-						stat.xp -= FireBreathPrice;
+						stat.skillPoint--;
 						j++;
-						FireBreathPrice *= j+1;
-						FireBreathMpCost *=j;
-						FireBreathDamage *=j;
+
+						FireBreathMpCost +=j;
+						FireBreathDamage +=2f;;
 						
 						
 						
-					} else if (stat.xp < FireBreathPrice) {
+					} else if (stat.skillPoint < 1) {
 						Debug.Log ("not enouph xp");
 					}
 				} else {
@@ -134,17 +136,17 @@ public class SkillTree: MonoBehaviour {
 				
 				if (k < maxSunStrikeLv) {
 					
-					if (stat.xp >= SunStrikePrice) {
+					if (stat.skillPoint >0) {
 						stat.SunStrikeUnlocked = true;
-						stat.xp -= SunStrikePrice;
+						stat.skillPoint--;
 						k++;
-						SunStrikePrice *= k+1;
-						SunStrikeMpCost *=k;
-						SunStrikeDamage *=k;
+
+						SunStrikeMpCost +=k;
+						SunStrikeDamage +=5f;
 						
 						
 						
-					} else if (stat.xp < SunStrikePrice) {
+					} else if (stat.skillPoint < 1) {
 						Debug.Log ("not enouph xp");
 					}
 				} else {
@@ -157,6 +159,8 @@ public class SkillTree: MonoBehaviour {
 				Debug.Log (" need previous skill");
 			}
 		}
+
+		GUI.TextArea (new Rect (Screen.width/8, 50, Screen.width/7, 30), "Skill Point: " + stat.skillPoint);
 	}
 	
 

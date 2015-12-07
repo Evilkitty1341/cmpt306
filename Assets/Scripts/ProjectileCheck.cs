@@ -31,9 +31,11 @@ public class ProjectileCheck : MonoBehaviour {
 			if(collision.gameObject.tag == "Player"){
 				collision.gameObject.GetComponent<StatCollectionClass>().doDamage(damage);
 			}
+			Destroy (spawned_Bullet);
+			Destroy(this.gameObject);
 		}
-		Destroy (spawned_Bullet);
-		Destroy(this.gameObject);
+		Destroy (spawned_Bullet, 5);
+		Destroy(this.gameObject, 5);
 	}
 
 }

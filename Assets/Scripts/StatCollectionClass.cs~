@@ -38,8 +38,12 @@ public class StatCollectionClass : MonoBehaviour {
 	public int agility;
 	
 	public int xp;
+
+	public float xpNextLevel;
 	
 	public int playerLevel;
+
+	public int skillPoint;
 	
 	//add bool for item get and item equip for item manager
 	public bool itemSword;
@@ -56,9 +60,7 @@ public class StatCollectionClass : MonoBehaviour {
 	
 	//add end
 	
-	public bool EnergyBallUnlocked;
-	
-	public float EnergyBalldamage;
+	public bool FireBallUnlocked=true;
 	
 	public bool FireBreathUnlocked;
 	
@@ -88,8 +90,7 @@ public class StatCollectionClass : MonoBehaviour {
 		ArmorEquip = target.ArmorEquip;
 		itemBow = target.itemBow;
 		BowEquip = target.BowEquip;
-		EnergyBallUnlocked = target.EnergyBallUnlocked;
-		EnergyBalldamage = target.EnergyBalldamage;
+		FireBallUnlocked = target.FireBallUnlocked;
 		FireBreathUnlocked = target.FireBreathUnlocked;
 		SunStrikeUnlocked = target.SunStrikeUnlocked;
 	}
@@ -101,7 +102,7 @@ public class StatCollectionClass : MonoBehaviour {
 			if (check >= health && check < 0) {
 				health = 0;
 			} else {
-				health += check;
+				health -= check;
 			}
 		}
 	}

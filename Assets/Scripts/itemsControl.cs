@@ -6,6 +6,7 @@ public class itemsControl : MonoBehaviour {
 	public StatCollectionClass stat;
 	public GameObject items; 
 	public GameObject text;
+	public ItemUpgrade up;
 	
 	void OnMouseEnter() {
 		text.SetActive (true);
@@ -29,9 +30,9 @@ public class itemsControl : MonoBehaviour {
 				stat.ArmorEquip =true;
 				
 				//adjust player state
-				stat.damage-=100f;
+				stat.damage-=up.SwordDamage;
 				
-				stat.defend+=50f;
+				stat.defend+=up.ArmorDamage;
 				
 				//adjust item show on the scene
 
@@ -45,7 +46,7 @@ public class itemsControl : MonoBehaviour {
 				
 				stat.BowEquip =true;
 				
-				stat.damage-=50f;
+				stat.damage-=up.SwordDamage-up.BowDamage;
 				
 
 			}
@@ -62,9 +63,9 @@ public class itemsControl : MonoBehaviour {
 				
 				stat.BowEquip =true;
 				
-				stat.damage+=50f;
+				stat.damage+=up.BowDamage;
 				
-				stat.defend-=50f;
+				stat.defend-=up.ArmorDamage;
 				
 
 			}
@@ -76,9 +77,9 @@ public class itemsControl : MonoBehaviour {
 				
 				stat.SwordEquip =true;
 				
-				stat.damage+=100f;
+				stat.damage+=up.SwordDamage;
 				
-				stat.defend-=50;
+				stat.defend-=up.ArmorDamage;
 				
 
 			}
@@ -95,7 +96,7 @@ public class itemsControl : MonoBehaviour {
 				
 				stat.SwordEquip =true;
 				
-				stat.damage+=50f;
+				stat.damage+=up.SwordDamage-up.BowDamage;
 				
 
 			}
@@ -107,9 +108,9 @@ public class itemsControl : MonoBehaviour {
 				
 				stat.ArmorEquip =true;
 				
-				stat.damage-=50f;
+				stat.damage-=up.BowDamage;
 				
-				stat.defend+=50f;
+				stat.defend+=up.ArmorLevel;
 				
 
 			}

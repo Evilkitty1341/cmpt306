@@ -3,19 +3,19 @@ using System.Collections;
 
 public class ItemSword : MonoBehaviour {
 	
-    StatCollectionClass stat;
-
+	StatCollectionClass stat;
+	
 	GameObject player;
-
+	
 	ItemUpgrade Up;
 	
 	//give sowrd a damage
-	public float SwordDamage = 100f;
-
+	public float SwordDamage = 1f;
+	
 	void Start(){
-
-
-
+		
+		
+		
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {  
@@ -24,20 +24,20 @@ public class ItemSword : MonoBehaviour {
 		
 		// If player collided with item Sword
 		if (other.tag == "Player") {
-
+			
 			stat=other.GetComponent<StatCollectionClass>();
-
+			
 			Up = other.GetComponent<ItemUpgrade>();
-
+			
 			Destroy(this.gameObject);
-
-
+			
+			
 			// set item sword unlocked
 			stat.itemSword = true;
-
+			
 			Up.SwordLevel++;
-
-			Up.SwordDamage+=100f;
+			
+			Up.SwordDamage+=1f;
 			
 			//if no equipment now just equip sword to player
 			if(stat.ArmorEquip==false &&stat.BowEquip==false)
@@ -49,15 +49,15 @@ public class ItemSword : MonoBehaviour {
 				//set sword equip to true
 				stat.SwordEquip= true;
 			}
-
-
-			}
-			
-			// Destroy the item
-
 			
 			
-			
-
+		}
+		
+		// Destroy the item
+		
+		
+		
+		
+		
 	}
 }

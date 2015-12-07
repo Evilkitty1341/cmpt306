@@ -31,9 +31,11 @@ public class All_Quests : MonoBehaviour {
 	//counter for quests
 	Quest1 Q1Script;
 	Quest2 Q2Script;
+	Quest3 Q3Script;
+	Quest4 Q4Script;
 
 	//Array for quest items
-	public int[] QI = new int[4]; 
+	public int[] QI = new int[5]; 
 
 
 	//shows quests
@@ -101,13 +103,13 @@ public class All_Quests : MonoBehaviour {
 	}
 	
 	//Array for quests
-	public quest[] QL = new quest[4]; 
+	public quest[] QL = new quest[5]; 
 
 	//creating quests
 	quest Q1 = new quest ("Q1: ", "Return Mathius' bag!", false, false, 1); 
 	quest Q2 = new quest ("Q2: ", "Gain entry into the town!", false, false, 2);
-	quest Q3 = new quest ("Q3: ", "laugh at a bad joke", false, false, 3); 
-	quest Q4 = new quest ("Q4: ", "sing in the shower", false, false, 4);
+	quest Q3 = new quest ("Q3: ", "Talk to Selina", false, false, 3); 
+	quest Q4 = new quest ("Q4: ", "Kill General E. Speaking", false, false, 4);
 
 
 	//putting quests into an array list
@@ -137,6 +139,8 @@ public class All_Quests : MonoBehaviour {
 
 		Q1Script = this.gameObject.GetComponent<Quest1>();
 		Q2Script = this.gameObject.GetComponent<Quest2>();
+		Q3Script = this.gameObject.GetComponent<Quest3>();
+		Q4Script = this.gameObject.GetComponent<Quest4>();
 
 	}
 	
@@ -204,19 +208,20 @@ public class All_Quests : MonoBehaviour {
 					QI [0] = Q2Script.CurNumItems;
 					QI [1] = Q2Script.ItemsTotal;
 				}
+				else if(QL[i].Identify == 3)
+				{
+					QI [0] = Q3Script.CurNumItems;
+					QI [1] = Q3Script.ItemsTotal;
+				}
+				else if(QL[i].Identify == 4)
+				{
+					QI [0] = Q4Script.CurNumItems;
+					QI [1] = Q4Script.ItemsTotal;
+				}
 				GUILayout.Box((QL[i]).Name + (QL[i]).Info + " " + QI[0] + "/" + QI[1]);
 			}
 		}
 		
 	}
-	
-	
-	/*
-	****************************************************
-	Side Note:
-	When the character hits the QuestGiver after they've received the quest the mesage still appears. 
-	Use GUIStyle later to change the look of them
-	Add Scroll bar for Alpha version
-	*/
 
 }

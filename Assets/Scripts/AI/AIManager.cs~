@@ -54,7 +54,7 @@ public struct AIConfig {
 	public float kiteDistance;
 	
 	//When do I choose to run? At 1 hp. With more max hp this would likely change.
-	public int minHealth;
+	public float minHealth;
 
 	//How to scale normalized stats. Used for balancing.
 	public float healthMultiplier;
@@ -171,7 +171,7 @@ public class AIManager : MonoBehaviour {
 		tempTre.enabled = true;
 		tempCol.enabled = true;
 		behavior.enabled = true;
-
+		//behavior.coreTreeSetup();
 		behavior.startDeciding ();
 	}
 

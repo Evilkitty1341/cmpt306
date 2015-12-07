@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class GuiManage : MonoBehaviour {
-
+	
 	GameObject player;
 	StatCollectionClass playerStat;
-	int maxHealth = 100;
-	int maxMana  = 100;
-
+	float maxHealth;
+	float maxMana ;
+	
 	//var currentStamin : float = 100.0;
 	//var maxStamina : int = 100;
 	
@@ -20,14 +20,24 @@ public class GuiManage : MonoBehaviour {
 		player = GameObject.FindWithTag ("Player");
 		playerStat = gameObject.GetComponent<StatCollectionClass> ();
 		barLength = Screen.width / 7;
+		
+		
+		
+		playerStat.initialHealth = 100;
+		
+		playerStat.initialMana = 100;
 		//chMotor = GetComponent(CharacterJoint);
 	}
 	
 	void Update()
 	{
 		
+		maxHealth = playerStat.initialHealth;
+		
+		maxMana = playerStat.initialMana;
+		
 		//AdjustCurrentHealth(0);
-	//	AdjustCurrentMana(0);
+		//	AdjustCurrentMana(0);
 		
 		if(playerStat.mana >= 0 )
 		{
@@ -120,5 +130,5 @@ public class GuiManage : MonoBehaviour {
 		playerStat.mana += adj;
 	}
 	
-
+	
 }

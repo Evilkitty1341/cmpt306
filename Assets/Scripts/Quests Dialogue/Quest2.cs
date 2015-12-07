@@ -79,7 +79,7 @@ public class Quest2 : MonoBehaviour {
 
 		//if you've completed the quest they gave you and go collide with them again 
 		//they give you your reward
-		if (AllQuests.QL[1].Has == true && CurNumItems == ItemsTotal && goToTown == true && Q1.Finished == true ) 
+		if (CurNumItems == ItemsTotal && goToTown == true && Q1.Finished == true ) 
 		{
 			Completed = true;
 			
@@ -100,7 +100,7 @@ public class Quest2 : MonoBehaviour {
 	{
 		//If you run into quest giver and they haven't given you the quest yet, 
 		//they give you the quest
-		if (col.gameObject.tag == "QuestGiver2" && AllQuests.QL[1].Has == false) 
+		if (col.gameObject.tag == "QuestGiver2" && Finished1 == false && AllQuests.QL[1].Has == false) 
 		{
 			
 			Has = true;
@@ -109,7 +109,7 @@ public class Quest2 : MonoBehaviour {
 
 		//if you collide with an Item before you have the quest it won't do anything
 		//but if you collide once you have the quest it destroys the item and adds 1 to the CurNumItems you have
-		if (col.gameObject.tag == "Guard1" && AllQuests.QL[1].Has == true )
+		if (col.gameObject.tag == "Guard1" && Finished2 == false)
 		{
 
 		}

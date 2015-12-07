@@ -15,7 +15,7 @@ public class ProjectileSpawner : MonoBehaviour {
 		bullet.transform.position = transform.position;
 		bullet.transform.rotation = Quaternion.AngleAxis (rotZ + 90.0f, Vector3.forward);
 		bullet.GetComponent<ProjectileCheck>().damage = damage;
-		bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x - transform.position.x , target.y - transform.position.y) * 100);
+		bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(target.x - transform.position.x , target.y - transform.position.y) * 50);
 
 	}
 

@@ -5,7 +5,7 @@ public class BehaviorTypes : MonoBehaviour {
 
 	float movSpMultiplier = 10; // Global stat to scale all speeds.
 
-	public float difficulty = 0.5f;
+	public float difficulty = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +14,8 @@ public class BehaviorTypes : MonoBehaviour {
 
 	public AIConfig intializeRangedGeneric(AIConfig ai){
 		ai.delta = getDelta (5.0f, 10.0f);
-		ai.threatZone = 25.00f;
-		ai.idealRange = 15.0f;
+		ai.threatZone = 10.00f;
+		ai.idealRange = 7.0f;
 		ai.friendlyMinDis = 5.0f;
 		ai.kiteDistance = 40.0f;
 		ai.minHealth = 3;
@@ -28,7 +28,7 @@ public class BehaviorTypes : MonoBehaviour {
 
 	public AIConfig intializeMeleeGeneric(AIConfig ai){
 		ai.delta = getDelta (5.0f, 10.0f);
-		ai.threatZone = 17.50f;
+		ai.threatZone = 8.50f;
 		ai.idealRange = 1.5f;
 		ai.friendlyMinDis = 5.0f;
 		ai.kiteDistance = 40.0f;
@@ -42,8 +42,8 @@ public class BehaviorTypes : MonoBehaviour {
 
 	public AIConfig intializeHybridGeneric(AIConfig ai){
 		ai.delta = getDelta (5.0f, 10.0f);
-		ai.threatZone = 20.00f;
-		ai.idealRange = 5.0f;
+		ai.threatZone = 10.00f;
+		ai.idealRange = 4.0f;
 		ai.friendlyMinDis = 5.0f;
 		ai.kiteDistance = 40.0f;
 		ai.minHealth = 3;
