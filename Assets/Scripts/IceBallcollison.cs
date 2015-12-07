@@ -14,7 +14,7 @@ public class IceBallcollison : MonoBehaviour {
 
 			enemyStat= col.GetComponent<StatCollectionClass>();
 
-			enemyStat.doDamage(10);
+			enemyStat.doDamage(40);
 
 			if(enemyStat.health==0 && enemyStat.initialHealth>0)
 			{
