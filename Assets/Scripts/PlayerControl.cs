@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerControl : MonoBehaviour {
+public class PlayerControl : MonoBehaviour 
+{
 	public float speed = 8f; // Character's movement speed
 	private Animator anim;
 	Vector3 startPosition; 
@@ -45,7 +46,8 @@ public class PlayerControl : MonoBehaviour {
     // public GameObject projectile;
 
     // Use this for initialization
-    void Start () {
+    void Start () 
+	{
 		anim = GetComponent<Animator> ();
 		startPosition = new Vector3(-120, 0, -1);
         playerStat = gameObject.GetComponent<StatCollectionClass>();
@@ -60,7 +62,8 @@ public class PlayerControl : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		// Controls for character movement
 		if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))  && SLC.playerEnabled == true && D.freezePos == false) {
 			transform.Translate (Vector3.up * speed * Time.deltaTime);
@@ -119,8 +122,8 @@ public class PlayerControl : MonoBehaviour {
 		/*********************
 		 * NOTE:
 		 * SHOULD TAKE THIS OUT BECAUSE NOW USE SPACE FOR QUESTS AND DIALOGUE
-		 * *********************/
-            if (Input.GetKey (KeyCode.Space) && Time.time >nextAttack) {
+            if (Input.GetKey (KeyCode.Space) && Time.time >nextAttack)
+		{
 			anim.SetBool ("Attacking", true);
             //attackSound.Play();
 //            nextAttack = Time.time + attackRate;
@@ -142,11 +145,12 @@ public class PlayerControl : MonoBehaviour {
 //                spawnedAttack.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-500, 0));
 //            }
 
-            }else {
+            }else
+		{
             
             anim.SetBool ("Attacking", false);
 		}
-		checkHealth();
+		checkHealth();*/
 	}
 
     
@@ -167,53 +171,26 @@ public class PlayerControl : MonoBehaviour {
         */
 
     }
-	void checkHealth(){
-	if (playerStat.health <= 0)
-		{
-			Instantiate(deadSoundObject);
-			transform.position = startPosition;
-			playerStat.health = 100;
-			playerStat.mana = 100;
-			
-			
-			lives--;
-			
-			//Reset ();
-			//Instantiate(deadsound);
-			//Destroy(gameObject);
-			//GUI.Label(new Rect(Screen.width / 2, Screen.height / 2 - 25, 100, 50), " You Dead!!!!! ");
-			
-			//Application.LoadLevel(Application.loadedLevel);
+
+	void checkHealth()
+	{
+		if (playerStat.health <= 0) {
+			Instantiate (deadSoundObject);
+
+			if (playerStat.health <= 0) {
+				Instantiate (deadSoundObject);
+				
+				if (D.townDone) {
+					transform.position = townPosition;
+				} else {
+					transform.position = startPosition;
+				}
+				playerStat.health = 100;
+				playerStat.mana = 100;
+				lives--;
+			}
 		}
 	}
-=======
-        
-        if (playerStat.health <= 0)
-        {
-            Instantiate(deadSoundObject);
-
-			if(D.townDone)
-			{
-				transform.position = townPosition;
-			}else
-			{
-				transform.position = startPosition;
-			}
-
-			playerStat.health = 100;
-			playerStat.mana = 100;
-            lives--;
-            
-            //Reset ();
-            //Instantiate(deadsound);
-            //Destroy(gameObject);
-            //GUI.Label(new Rect(Screen.width / 2, Screen.height / 2 - 25, 100, 50), " You Dead!!!!! ");
-
-            //Application.LoadLevel(Application.loadedLevel);
-        }
-    }
-
->>>>>>> Stashed changes
 
     void OnGUI()
     {

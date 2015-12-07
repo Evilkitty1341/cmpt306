@@ -86,15 +86,10 @@ public class LavaGenerate : MonoBehaviour {
 		//GenerateSword (); //Generates random positon items into wallSet array
 		//GenerateBow ();
 		//GenerateArmor ();
-		for (int i = 0; i < mapWidth/3; i++) {
-			for (int j = 0; j < mapHeight; j++) {
-				rrrr += typeSet[i,j] + " ";
-			}
-			rrrr += "\n";
-		}
+
 		// Create an instance of StreamWriter to write text to a file.
 		// The using statement also closes the StreamWriter.
-		using (StreamWriter sw = new StreamWriter("TestFile.txt")) 
+		/*using (StreamWriter sw = new StreamWriter("TestFile.txt")) 
 		{
 			// Add some text to the file.
 			sw.Write("This is the ");
@@ -110,7 +105,7 @@ public class LavaGenerate : MonoBehaviour {
 				}
 				sw.WriteLine("***");
 			}
-		}
+		}*/
 		//TypeSetToWallSet ();
 		GameObject.Find ("SpawnController").GetComponent<EnemySpawn> ().enabled = false;
 	}

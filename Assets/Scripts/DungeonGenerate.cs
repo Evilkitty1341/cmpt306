@@ -98,7 +98,7 @@ public class DungeonGenerate : MonoBehaviour {
 		AddLoot ();
 		DrawDungeon ();
 		
-		using (StreamWriter sw = new StreamWriter("MapTest.txt")) 
+		/*using (StreamWriter sw = new StreamWriter("MapTest.txt")) 
 		{
 			// Add some text to the file.
 			sw.Write("This is the ");
@@ -118,7 +118,7 @@ public class DungeonGenerate : MonoBehaviour {
 				}
 				sw.WriteLine("***");
 			}
-		}
+		}*/
 	}
 	
 	public void GenerateRooms() {
