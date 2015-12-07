@@ -177,7 +177,7 @@ public class StoryLineComponents : MonoBehaviour {
 					controller.followMale.GetComponent<SpriteRenderer>().enabled = true;
 					
 					tutorial = GameObject.Instantiate(tutorial, transform.position, transform.rotation) as GameObject;
-					tutorial.transform.position = new Vector3(-124f, -1.97f, 0f);
+					tutorial.transform.position = new Vector3(-123f, -1.37f, 0f);
 					
 					playerEnabled = true;
 					
@@ -295,7 +295,7 @@ public class StoryLineComponents : MonoBehaviour {
 					controller.followFemale.GetComponent<SpriteRenderer>().enabled = true;
 
 					tutorial = GameObject.Instantiate(tutorial, transform.position, transform.rotation) as GameObject;
-					tutorial.transform.position = new Vector3(-124f, -1.97f, 0f);
+					tutorial.transform.position = new Vector3(-123f, -1.37f, 0f);
 					playerEnabled = true;
 
 					Num8.SetActive(false);

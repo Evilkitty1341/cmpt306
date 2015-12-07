@@ -34,7 +34,7 @@ public class FireBall : MonoBehaviour {
 		cooldownTimer -= Time.deltaTime;
 		
 		
-		if(Input.GetKey(KeyCode.Alpha1)&& stat.EnergyBallUnlocked == true && cooldownTimer <=0 && stat.mana>= skill.EnergyBallMpCost && SLC.playerEnabled == true){
+		if(Input.GetKey(KeyCode.Alpha2)&& stat.EnergyBallUnlocked == true && cooldownTimer <=0 && stat.mana>= skill.EnergyBallMpCost && SLC.playerEnabled == true){
 			
 			stat.mana -= skill.EnergyBallMpCost;
 			

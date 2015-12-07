@@ -11,6 +11,10 @@ public class Lava2Generate : MonoBehaviour {
 	public GameObject flower;
 	public GameObject tree;
 	public GameObject stone;
+	public GameObject bag;
+	public GameObject largeBag;
+	public GameObject questGiver;
+	public GameObject largeQuestGiver;
 	//add for generate items
 	public GameObject Bow;
 	public GameObject Sword;
@@ -77,14 +81,16 @@ public class Lava2Generate : MonoBehaviour {
 		
 		//		GenerateWallGroup (5, 5, 4);
 		GenerateWalls ();  //Generates random walls and adds them into the wallSet array
-		GenerateMaps ();
-		GenerateSpawns (); // Generates random enemy spawns and adds them into the wallSet array
-		GenerateFlowers ();
-		GenerateTrees ();
-		GenerateStones ();
-		GenerateSword (); //Generates random positon items into wallSet array
-		GenerateBow ();
-		GenerateArmor ();
+		GenerateBag ();
+		GenerateQuestGiver ();
+		//GenerateMaps ();
+	//	GenerateSpawns (); // Generates random enemy spawns and adds them into the wallSet array
+		//GenerateFlowers ();
+	//	GenerateTrees ();
+	//	GenerateStones ();
+	//	GenerateSword (); //Generates random positon items into wallSet array
+	//	GenerateBow ();
+	//	GenerateArmor ();
 		
 		// Create an instance of StreamWriter to write text to a file.
 		// The using statement also closes the StreamWriter.
@@ -195,6 +201,34 @@ public class Lava2Generate : MonoBehaviour {
 				temp.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
 				wallSet [x, y] = temp;
 				typeSet[x, y] = 2;
+			}
+		}
+	}
+
+	void PutQuestGiver(int x, int y)
+	{
+		if (WithinBounds (x, y) && typeSet[x, y]==0) {
+			if (wallSet [x, y] == null) {
+				GameObject temp = Instantiate (questGiver) as GameObject;
+				temp.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
+				wallSet [x, y] = temp;
+				typeSet[x, y] = 2;
+				GameObject temp2 = Instantiate (largeQuestGiver) as GameObject;
+				temp2.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
+			}
+		}
+	}
+
+	void PutBag(int x, int y)
+	{
+		if (WithinBounds (x, y) && typeSet[x, y]==0) {
+			if (wallSet [x, y] == null) {
+				GameObject temp = Instantiate (bag) as GameObject;
+				temp.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
+				wallSet [x, y] = temp;
+				typeSet[x, y] = 2;
+				GameObject temp2 = Instantiate (largeBag) as GameObject;
+				temp2.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
 			}
 		}
 	}
@@ -544,6 +578,36 @@ public class Lava2Generate : MonoBehaviour {
 		} while((!(WithinBounds (x,y)&& typeSet [x, y] == 0)) && (n<20));
 		
 		PutItem (x,y,Armor);
+	}
+
+	void GenerateQuestGiver()
+	{
+		int x;
+		int y;
+		int n=0;
+		do {
+			x = Random.Range (0, mapWidth); 
+			y = Random.Range (0, mapHeight); 
+			n++;
+		} while((!(WithinBounds (x,y)&& typeSet [x, y] == 0)) && (n<20));
+		
+		PutQuestGiver (x,y);
+
+	}
+
+	void GenerateBag()
+	{
+		int x;
+		int y;
+		int n=0;
+		do {
+			x = Random.Range (0, mapWidth); 
+			y = Random.Range (0, mapHeight); 
+			n++;
+		} while((!(WithinBounds (x,y)&& typeSet [x, y] == 0)) && (n<20));
+		
+		PutBag (x,y);
+		
 	}
 	
 }

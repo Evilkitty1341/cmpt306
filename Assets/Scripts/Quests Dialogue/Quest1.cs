@@ -61,7 +61,6 @@ public class Quest1 : MonoBehaviour {
 		if (col.gameObject.tag == "QuestGiver1" && Finished == false && AllQuests.QL[0].Has == false) 
 		{
 			Has = true;	
-			GameObject Item1 = Instantiate (Item) as GameObject;
 	
 		}
 		
