@@ -17,21 +17,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject spawnedAttack;
 
     public GameObject magicPrefab;
-    public GameObject magicPrefab01;
-    public GameObject magicPrefab02;
-    public GameObject magicPrefab03;
-    public GameObject magicPrefab04;
-    public GameObject magicPrefab05;
-    public GameObject magicPrefab06;
-    public GameObject magicPrefab07;
     public GameObject spawnedMagic;
-    public GameObject spawnedMagic01;
-    public GameObject spawnedMagic02;
-    public GameObject spawnedMagic03;
-    public GameObject spawnedMagic04;
-    public GameObject spawnedMagic05;
-    public GameObject spawnedMagic06;
-    public GameObject spawnedMagic07;
     public int lives =4;
 
     public GameObject deadSoundObject;
@@ -50,8 +36,8 @@ public class PlayerControl : MonoBehaviour
     void Start () 
 	{
 		anim = GetComponent<Animator> ();
-		flamethrower = GameObject.Find ("FlameThrowerParticles").GetComponent<ParticleSystem>();
-		flameEmmision = GameObject.Find ("FlameThrowerParticles");
+		flamethrower = gameObject.GetComponentInChildren<ParticleSystem>();
+		flameEmmision = flamethrower.gameObject;
 		startPosition = new Vector3(-120, 0, -1);
         playerStat = gameObject.GetComponent<StatCollectionClass>();
         playerStat.health = 100;
