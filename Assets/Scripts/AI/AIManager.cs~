@@ -79,12 +79,12 @@ public struct AIConfig {
 	since this is a fairly hefty code set.
 	
 	This script is attached to a prefab and startup will assign stats and behavior, randomly(DONE), or 
-	specified(TODO).
+	specified(DONE).
 
-	Pathing is handled in PathManager.cs (INPROGRESS)
-	Attacking is handled in AttackManager.cs (TODO?)
-	Decision making will be handled in DecisionTree.cs (INPROGRESS)
-	Decision behavior is defined in AIBehavior.cs(INPROGRESS), that the DecisionTree will use at each step(DONE).
+	Pathing is handled in PathManager.cs (DONE TODO Keep refining.)
+	Attacking is handled in AIBehavior.cs (DONE)
+	Decision making will be handled in DecisionTree.cs (DONE)
+	Decision behavior is defined in AIBehavior.cs(DONE), that the DecisionTree will use at each step(DONE).
 	DTree.cs contains our tree structure, and decision logic class.(DONE)
 	Each node will contain an instance of BranchLogic, which will execute a delegate, and store the result.(DONE)
 	That result is then used to move the tree iterator to the appropriate child.(DONE)
@@ -96,11 +96,11 @@ public struct AIConfig {
 
 	Once stats and behavior are choosen, the AI starts, drawing on the other scripts to carry out actions and
 	choices. 
-	This will be encapsulated in a decision tree using function pointers.(INPROGRESS)
+	This will be encapsulated in a decision tree using function pointers.(DONE)
 	A decision tree template will be constructed and the pointers will be adjusted depending on the AI type.
-	(INPROGRESS)
-	Function pointers are added to an instance of BranchLogic, where they are carried out when prompted and
-	the decision path stored. This can be drawn on to adjust the tree pointer in DecisionTree.
+	(DONE)
+	Function pointers (delegates) are added to an instance of BranchLogic, where they are carried out when 
+	prompted and the decision path stored. This can be drawn on to adjust the tree pointer in DecisionTree.
 	If a result fails all conditionals or we hit a leaf node, a return value of zero prompts a return to root.
 	**(May need to confine this behavior if we run across exploits)
 	
@@ -109,7 +109,10 @@ public struct AIConfig {
 	That is stats must fall between minStatValue and maxStatValue.
 	weightedLevel to generate by can never be greater than maxStatValue*numOfStats (an impossible assignment).
 	This will throw a debug break and error message. (DONE)
-	
+
+	IMPORTANT:
+	Functionality has been split between AIManager.cs and Procedural AI so that AI stored state can be seperated
+	from AI generation.	
 */
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 public class AIManager : MonoBehaviour {
@@ -122,13 +125,6 @@ public class AIManager : MonoBehaviour {
 
 
 	void Start () {
-
-		//AIConfig mob = AIBuilder ("mob", weightedLevel);
-
-		//print (config.statExchange.health.ToString ());
-		//print (config.statExchange.strength.ToString ());
-		//print (config.statExchange.intellect.ToString ());
-
 
 		StatCollectionClass tempStat;
 		PathManager tempPath;
@@ -163,6 +159,7 @@ public class AIManager : MonoBehaviour {
 
 		behavior = gameObject.GetComponent<DecisionTree> ();
 		behavior.enabled = false;
+		behavior.behaviorType = decisionType;
 
 		//AI START//
 		tempStat.enabled = true;
@@ -171,7 +168,7 @@ public class AIManager : MonoBehaviour {
 		tempTre.enabled = true;
 		tempCol.enabled = true;
 		behavior.enabled = true;
-		//behavior.coreTreeSetup();
+
 		behavior.startDeciding ();
 	}
 
