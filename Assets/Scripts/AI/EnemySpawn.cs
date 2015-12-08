@@ -92,6 +92,7 @@ public class EnemySpawn : MonoBehaviour {
 		enemy.GetComponent<AIManager>().decisionType = "boss";
 		enemy.GetComponent<AIManager>().enabled = true;
 
+		enemy.transform.localScale = new Vector3(10f, 10f, 0f);
 		// Set position to selected spawn point
 		enemy.transform.position = pos;
 

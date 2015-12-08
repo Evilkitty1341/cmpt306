@@ -19,7 +19,7 @@ public class ManualAI : MonoBehaviour {
 		aihelp.AssignStats(numbers, config.statExchange);
 
 		BehaviorTypes besetup = new BehaviorTypes();
-		config = besetup.intializeHyrbidBoss(config);
+		config = besetup.intializeRangedBoss(config);
 
 		aihelp.AssignModifiers(config);
 

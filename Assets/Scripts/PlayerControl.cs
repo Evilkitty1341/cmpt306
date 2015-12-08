@@ -188,14 +188,7 @@ public class PlayerControl : MonoBehaviour
 		//flamethrower.Pause();
         anim.SetBool ("Attacking", false);
 		checkHealth();
-		/*
-		GameObject fireM2 = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
-		fireM2.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, 50));
-		GameObject fireL2 = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
-		fireL2.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(25, 25));
-		GameObject fireR2 = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
-		fireR2.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-25, 25));
-		*/
+
 		}
     /*
         void OnCollisionEnter2D(Collision2D collision)
