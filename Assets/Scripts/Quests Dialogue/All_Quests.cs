@@ -34,6 +34,8 @@ public class All_Quests : MonoBehaviour {
 	Quest3 Q3Script;
 	Quest4 Q4Script;
 
+	RotateTo R;
+
 	//Array for quest items
 	public int[] QI = new int[5]; 
 
@@ -142,10 +144,15 @@ public class All_Quests : MonoBehaviour {
 		Q3Script = this.gameObject.GetComponent<Quest3>();
 		Q4Script = this.gameObject.GetComponent<Quest4>();
 
+		R = GameObject.Find ("Arrow").GetComponent<RotateTo>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		//for minimap arrow
+		//setRotationString ();
 
 	}
 	
@@ -223,5 +230,42 @@ public class All_Quests : MonoBehaviour {
 		}
 		
 	}
+
+
+	/************
+	* To Be Continued...
+	****************/
+	//Set the rotation for the Arrow towards the next thing in here!
+	/*void setRotationString()
+	{
+		if (QL[0].Has && !Q1Script.Completed && GameObject.Find("Items1Prefab") != null) {
+			R.setRotateTo("Items1");
+		}
+		else if(GameObject.Find("Items1Prefab") == null)
+		{
+			R.setRotateTo("QuestGiver1");
+		}
+		else if(Q1Script.Completed && Q2Script.Has && !Q2Script.Completed)
+		{
+			R.setRotateTo("QuestGiver2");
+		}
+		/*else if(Q1Script.Completed && Q2Script.Finished1)
+		{
+			R.setRotateTo("Guard1");
+		}
+		else if(Q2Script.Finished2)
+		{
+			R.setRotateTo("Gigabyte");
+		}
+		else if(Q3Script.Has && !Q3Script.Completed)
+		{
+			R.setRotateTo("Selina");
+		}
+		else if(Q3Script.Completed)
+		{
+			R.setRotateTo("Guard2");
+		}
+
+	}*/
 
 }

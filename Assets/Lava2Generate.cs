@@ -40,8 +40,8 @@ public class Lava2Generate : MonoBehaviour {
 	public int maxSpawnsInLevel = 1;
 	public int minObstaclesInLevel = 1;
 	public int maxObstaclesInLevel = 1;
-	public Vector2[] pathsBetween; // Points for which there must be a non-lava path from one to the next
-	
+
+	private Vector2[] pathsBetween; // Points for which there must be a non-lava path from one to the next
 	private GameObject[ , ] wallSet; // Storage for walls
 	private Sprite[] flowerSprites;
 	private Sprite[] treeSprites;
@@ -75,22 +75,26 @@ public class Lava2Generate : MonoBehaviour {
 		
 		minWallDensity = Mathf.Max(Mathf.Min (minWallDensity, 1),0);
 		maxWallDensity = Mathf.Max(Mathf.Min (maxWallDensity, 1),0);
+
+		pathsBetween = new Vector2[4];
+		pathsBetween [0] = new Vector2 (-90f,0f);
+		pathsBetween[2] = GenerateBag ();
+		pathsBetween[1] = GenerateQuestGiver ();
+		pathsBetween [3] = new Vector2 (130f,0f);
 		
-		
-		CreateRoom (RoomStartX,RoomStartY);
+		//CreateRoom (RoomStartX,RoomStartY);
 		
 		//		GenerateWallGroup (5, 5, 4);
+		Protect ();
 		GenerateWalls ();  //Generates random walls and adds them into the wallSet array
-		GenerateBag ();
-		GenerateQuestGiver ();
 		//GenerateMaps ();
-	//	GenerateSpawns (); // Generates random enemy spawns and adds them into the wallSet array
+		//	GenerateSpawns (); // Generates random enemy spawns and adds them into the wallSet array
 		//GenerateFlowers ();
-	//	GenerateTrees ();
-	//	GenerateStones ();
-	//	GenerateSword (); //Generates random positon items into wallSet array
-	//	GenerateBow ();
-	//	GenerateArmor ();
+		//	GenerateTrees ();
+		//	GenerateStones ();
+		//	GenerateSword (); //Generates random positon items into wallSet array
+		//	GenerateBow ();
+		//	GenerateArmor ();
 		
 		// Create an instance of StreamWriter to write text to a file.
 		// The using statement also closes the StreamWriter.
@@ -178,6 +182,27 @@ public class Lava2Generate : MonoBehaviour {
 		}
 	}
 	
+	// Places an item in the lava portion of the program
+	// It is guaranteed to place the item in a place not
+	// inhabited by lava or other objects
+	public void PutInLavaSafe (GameObject item) {
+		bool foundPosition = false;
+		int x=0;
+		int y=0;
+		while (!foundPosition) {
+			x = Random.Range (0,lavaWidth);
+			y = Random.Range (0,mapHeight);
+			if (WithinBounds (x, y)) {
+				if (typeSet [x, y] == 0) {
+					typeSet [x, y] = 2; // 2 is the code for an item
+					item.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
+					wallSet [x, y] = item;
+					foundPosition = true;
+				}
+			}
+		}
+	}
+	
 	/*
 	// Places an enemy spawn point at x,y if it is within bounds and null
 	void PutSpawn (int x, int y) {
@@ -204,8 +229,8 @@ public class Lava2Generate : MonoBehaviour {
 			}
 		}
 	}
-
-	void PutQuestGiver(int x, int y)
+	
+	Vector2 PutQuestGiver(int x, int y)
 	{
 		if (WithinBounds (x, y) && typeSet[x, y]==0) {
 			if (wallSet [x, y] == null) {
@@ -215,11 +240,13 @@ public class Lava2Generate : MonoBehaviour {
 				typeSet[x, y] = 2;
 				GameObject temp2 = Instantiate (largeQuestGiver) as GameObject;
 				temp2.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
+				return new Vector2 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY);
 			}
 		}
+		return new Vector2 (0f, 0f);
 	}
-
-	void PutBag(int x, int y)
+	
+	Vector2 PutBag(int x, int y)
 	{
 		if (WithinBounds (x, y) && typeSet[x, y]==0) {
 			if (wallSet [x, y] == null) {
@@ -229,7 +256,108 @@ public class Lava2Generate : MonoBehaviour {
 				typeSet[x, y] = 2;
 				GameObject temp2 = Instantiate (largeBag) as GameObject;
 				temp2.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
+				return new Vector2 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY);
 			}
+		}
+		return new Vector2 (0f, 0f);
+	}
+	
+	/*
+	 * Returns the array index X from a "real world" vector2
+	 */
+	public int GetArrayX(Vector2 v) {
+		return (int) Mathf.Floor((v.x) / wallDimensions + mapOffsetX);
+	}
+	
+	/*
+	 * Returns the array index Y from a "real world" vector2
+	 */
+	public int GetArrayY(Vector2 v) {
+		return (int) Mathf.Floor((-v.y / wallDimensions) + mapOffsetY);
+	}
+	
+	/*
+	 * Returns if the position is filled with lava
+	 */
+	public bool PositionIsLava(Vector3 v) {
+		int x = GetArrayX (new Vector2(v.x, v.y));
+		int y = GetArrayY (new Vector2(v.x, v.y));
+		if (WithinBounds (x, y)) {
+			return typeSet [x, y] == 1;
+		} else {
+			return false;
+		}
+	}
+	
+	/*
+	 * Puts the value in a line
+	 */
+	void PutInLine(Vector2 v1, Vector2 v2, int width, int val) {
+		int x0 = GetArrayX(v1);
+		int y0 = GetArrayY(v1);
+		int x1 = GetArrayX(v2);
+		int y1 = GetArrayY(v2);
+		int tmp;
+		if (x1 < x0) {
+			tmp = x0;
+			x0 = x1;
+			x1 = tmp;
+			tmp = y0;
+			y0 = y1;
+			y1 = tmp;
+		}
+		float error = 0f;
+		float deltax = (float) x1 - x0;
+		float deltay = (float) y1 - y0;
+		if (deltax != 0f) { // If the line is not vertical
+			float deltaErr = Mathf.Abs ((float)deltay / (float)deltax);
+			int y = y0;
+			for (int x=x0; x<x1; x++) {
+				// plots the line's points
+				for (int i=-width; i<=width; i++) {
+					for (int j=-width; j<=width; j++) {
+						PutType (x + i, y + j, val);
+					}
+				}
+				error += deltaErr;
+				while (error >= 0.5f) {
+					for (int i=-width; i<=width; i++) {
+						for (int j=-width; j<=width; j++) {
+							PutType (x + i, y + j, val);
+						}
+					}
+					y += (int)Mathf.Sign (y1 - y0);
+					error -= 1.0f;
+				}
+			}
+		} else { // If the line is vertical
+			if (y1 < y0) {
+				tmp = y0;
+				y0 = y1;
+				y1 = tmp;
+			}
+			for (int y=y0; y<y1; y++) {
+				// plots the line's points
+				for (int i=-width; i<=width; i++) {
+					for (int j=-width; j<=width; j++) {
+						PutType (x0 + i, y + j, val);
+					}
+				}
+			}
+		}
+	}
+	
+	/*
+	 *  Generates a safe path between all the protected points
+	 */
+	void Protect() {
+		
+		// TODO add some sort of sorting algorithm... But that is not a trivial problem
+		// or, I guess, TODON'T
+		
+		// Draws lines between each protected point
+		for (int i=0; i<pathsBetween.Length-1; i++) {
+			PutInLine (pathsBetween[i], pathsBetween[i+1], 1, 4); // 4 is the value of a "protected" square
 		}
 	}
 	
@@ -575,38 +703,38 @@ public class Lava2Generate : MonoBehaviour {
 		do {
 			x = Random.Range (0, mapWidth); 
 			y = Random.Range (0, mapHeight); 
-		} while((!(WithinBounds (x,y)&& typeSet [x, y] == 0)) && (n<20));
+		} while((!(WithinBounds (x,y) && typeSet [x, y] == 0)) && (n<20));
 		
 		PutItem (x,y,Armor);
 	}
 
-	void GenerateQuestGiver()
+	Vector2 GenerateQuestGiver()
 	{
 		int x;
 		int y;
 		int n=0;
 		do {
-			x = Random.Range (0, mapWidth); 
+			x = Random.Range (0, lavaWidth); 
 			y = Random.Range (0, mapHeight); 
 			n++;
-		} while((!(WithinBounds (x,y)&& typeSet [x, y] == 0)) && (n<20));
+		} while((!(WithinBounds (x,y) && typeSet [x, y] == 0)) && (n<20));
 		
-		PutQuestGiver (x,y);
+		return PutQuestGiver (x,y);
 
 	}
 
-	void GenerateBag()
+	Vector2 GenerateBag()
 	{
 		int x;
 		int y;
 		int n=0;
 		do {
-			x = Random.Range (0, mapWidth); 
+			x = Random.Range (0, lavaWidth); 
 			y = Random.Range (0, mapHeight); 
 			n++;
 		} while((!(WithinBounds (x,y)&& typeSet [x, y] == 0)) && (n<20));
 		
-		PutBag (x,y);
+		return PutBag (x,y);
 		
 	}
 	

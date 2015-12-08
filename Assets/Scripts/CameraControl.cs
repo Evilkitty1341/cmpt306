@@ -41,5 +41,11 @@ public class CameraControl : MonoBehaviour {
 			this.transform.position = followMale.transform.position + new Vector3 (0, 0, -10);
 
 		}
+
+		if (Input.GetKeyDown (KeyCode.Escape)) 
+		{
+			Application.LoadLevel (0);
+		}
 	}
+	
 }
