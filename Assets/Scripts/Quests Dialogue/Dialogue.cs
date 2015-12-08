@@ -502,7 +502,6 @@ public class Dialogue : MonoBehaviour {
 		//townRobot Collision
 		if (col.gameObject.tag == "QuestGiver3" && Q3P1 == false)
 		{
-			AllQuests.QL [2].Has = true;
 			dialogue = true;
 			speechBubble.SetActive(true);
 			RSpeechPos = col.gameObject.transform.position;
@@ -511,6 +510,7 @@ public class Dialogue : MonoBehaviour {
 			message = Dl[14];
 			CurrentConvo = "Robo1.0";
 			freezePos = true;
+			AllQuests.QL [2].Has = true;
 		}
 		
 		

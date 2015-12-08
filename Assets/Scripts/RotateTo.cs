@@ -10,7 +10,7 @@ public class RotateTo : MonoBehaviour {
 	 * *****/
 	
 	//Quest1
-	/*public GameObject Items1;
+	public GameObject Items1;
 	public GameObject QuestGiver1;
 	
 	//Quest2
@@ -18,7 +18,7 @@ public class RotateTo : MonoBehaviour {
 	
 	
 	//Quest3
-	/*public GameObject Guard1;
+	public GameObject Guard1;
 	public GameObject Gigabyte;
 	public GameObject Selina;
 	public GameObject Guard2;
@@ -34,9 +34,14 @@ public class RotateTo : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		Items1 = GameObject.Find ("Items1Prefab");
+		Items1 = GameObject.Find ("Item1Prefab(Clone)");
 		QuestGiver1 = GameObject.Find("QuestGiver1Prefab");
-		QuestGiver2 = GameObject.Find("QuestGiver2Prefab");
+		QuestGiver2 = GameObject.Find("QuestGiver2Prefab(Clone)");
+		Guard2 = GameObject.Find("Guard2");
+		Guard1 = GameObject.Find("Guard1");
+		Selina = GameObject.Find("Town1");
+		Gigabyte = GameObject.Find("townRobot");
+
 
 		if(Items1 == null)
 		{
@@ -79,23 +84,23 @@ public class RotateTo : MonoBehaviour {
 		}
 		else if(rotateTo == "Guard1")
 		{
-			//Current = Guard1;
+			Current = Guard1;
 		}
 		else if(rotateTo == "Gigabyte")
 		{
-			//Current = Gigabyte;
+			Current = Gigabyte;
 		}
 		else if(rotateTo == "Selina")
 		{
-			//Current = Selina;
+			Current = Selina;
 		}
 		else if(rotateTo == "Guard2")
 		{
-		//	Current = Guard2;
+			Current = Guard2;
 		}
 		else if(rotateTo == "Boss")
 		{
-			//Current = Boss;
+			Current = Boss;
 		}
-	}*/
+	}
 }

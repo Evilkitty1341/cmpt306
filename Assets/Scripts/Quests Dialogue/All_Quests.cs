@@ -152,7 +152,7 @@ public class All_Quests : MonoBehaviour {
 	void Update () {
 
 		//for minimap arrow
-		//setRotationString ();
+		setRotationString ();
 
 	}
 	
@@ -236,24 +236,23 @@ public class All_Quests : MonoBehaviour {
 	* To Be Continued...
 	****************/
 	//Set the rotation for the Arrow towards the next thing in here!
-	/*void setRotationString()
+	void setRotationString()
 	{
-		if (QL[0].Has && !Q1Script.Completed && GameObject.Find("Items1Prefab") != null) {
-			R.setRotateTo("Items1");
-		}
-		else if(GameObject.Find("Items1Prefab") == null)
+		if (QL [0].Has && !Q1Script.Completed && Q1Script.CurNumItems == 0) 
 		{
-			R.setRotateTo("QuestGiver1");
-		}
-		else if(Q1Script.Completed && Q2Script.Has && !Q2Script.Completed)
+			R.setRotateTo ("Items1");
+		} else if (QL [0].Has && !Q1Script.Completed && Q1Script.CurNumItems == 1) 
 		{
-			R.setRotateTo("QuestGiver2");
+			R.setRotateTo ("QuestGiver1");
+		} else if (QL [0].Complete && !Q2Script.Completed && Q2Script.CurNumItems == 0) 
+		{
+			R.setRotateTo ("QuestGiver2");
 		}
-		/*else if(Q1Script.Completed && Q2Script.Finished1)
+		else if(QL [0].Complete && Q2Script.Finished1 && !Q2Script.Finished2 )
 		{
 			R.setRotateTo("Guard1");
 		}
-		else if(Q2Script.Finished2)
+		else if(Q2Script.Finished2 && Q1Script.Finished && !Q3Script.Has)
 		{
 			R.setRotateTo("Gigabyte");
 		}
@@ -261,11 +260,11 @@ public class All_Quests : MonoBehaviour {
 		{
 			R.setRotateTo("Selina");
 		}
-		else if(Q3Script.Completed)
+		else if(Q1Script.Completed && Q2Script.Completed && Q3Script.Completed)
 		{
 			R.setRotateTo("Guard2");
 		}
 
-	}*/
+	}
 
 }
