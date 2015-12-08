@@ -9,6 +9,7 @@ public class StoryLine : MonoBehaviour {
 
 	//Text scenes in order
 	public GameObject T1;
+	public GameObject TSpace;
 	public GameObject T2;
 	public GameObject T3;
 
@@ -19,6 +20,7 @@ public class StoryLine : MonoBehaviour {
 		S1.SetActive (true);
 		S2.SetActive (false);
 
+		TSpace.SetActive (true);
 		T1.SetActive (false);
 		T2.SetActive (false);
 		T3.SetActive (false);
@@ -37,6 +39,7 @@ public class StoryLine : MonoBehaviour {
 	{
 		if (Input.anyKeyDown && S1.activeSelf == true) {
 
+			TSpace.SetActive (false);
 			S1.SetActive(false);
 			T1.SetActive(true);
 			S2.SetActive(true);
