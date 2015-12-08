@@ -88,12 +88,15 @@ public class PlayerControl : MonoBehaviour
 		} else {
 			anim.SetBool ("Moving", false);
 		}
+
+		if(Input.GetKeyDown ("2")){
+			attackSound.Play();
+		}
         // Controls for attacking
-		if (Input.GetKey("f") && SLC.playerEnabled == true)
+		if (Input.GetKey("2") && SLC.playerEnabled == true)
         {
             anim.SetBool("Attacking", true);
-            attackSound.Play();
-            
+
 
 			flamethrower.Emit(25);
 			if(Time.time > nextAttack){
@@ -186,6 +189,9 @@ public class PlayerControl : MonoBehaviour
             }else
 		{*/
 		//flamethrower.Pause();
+		if(Input.GetKeyUp ("2")){
+			attackSound.Stop ();
+		}
         anim.SetBool ("Attacking", false);
 		checkHealth();
 

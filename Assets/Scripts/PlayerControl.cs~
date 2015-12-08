@@ -22,6 +22,8 @@ public class PlayerControl : MonoBehaviour
 
     public GameObject deadSoundObject;
 
+	private Lava2Generate lavaGenerator;
+
 	//used to check tha tthe intro scene is done
 	StoryLineComponents SLC;
 
@@ -46,6 +48,7 @@ public class PlayerControl : MonoBehaviour
         playerStat.playerDirection = 2;
         attackSound = GetComponent<AudioSource>();
 		SLC = GameObject.Find("Main Camera").GetComponent<StoryLineComponents>();
+		lavaGenerator = GameObject.Find("Main Camera").GetComponent<Lava2Generate>();
 		D = GetComponent<Dialogue>();
 		townPosition = new Vector3 (137f, -46f, 10f);
     }
@@ -85,12 +88,15 @@ public class PlayerControl : MonoBehaviour
 		} else {
 			anim.SetBool ("Moving", false);
 		}
+
+		if(Input.GetKeyDown ("2")){
+			attackSound.Play();
+		}
         // Controls for attacking
-		if (Input.GetKey("f") && SLC.playerEnabled == true)
+		if (Input.GetKey("2") && SLC.playerEnabled == true)
         {
             anim.SetBool("Attacking", true);
-            attackSound.Play();
-            
+
 
 			flamethrower.Emit(25);
 			if(Time.time > nextAttack){
@@ -149,6 +155,11 @@ public class PlayerControl : MonoBehaviour
         }
 
 
+		// Deals damage while standing in lava
+		if (lavaGenerator.PositionIsLava (this.transform.position)) {
+			playerStat.health--;
+		}
+
 		/*********************
 		 * NOTE:
 		 * SHOULD TAKE THIS OUT BECAUSE NOW USE SPACE FOR QUESTS AND DIALOGUE
@@ -178,16 +189,12 @@ public class PlayerControl : MonoBehaviour
             }else
 		{*/
 		//flamethrower.Pause();
+		if(Input.GetKeyUp ("2")){
+			attackSound.Stop ();
+		}
         anim.SetBool ("Attacking", false);
 		checkHealth();
-		/*
-		GameObject fireM2 = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
-		fireM2.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, 50));
-		GameObject fireL2 = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
-		fireL2.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(25, 25));
-		GameObject fireR2 = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
-		fireR2.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-25, 25));
-		*/
+
 		}
     /*
         void OnCollisionEnter2D(Collision2D collision)

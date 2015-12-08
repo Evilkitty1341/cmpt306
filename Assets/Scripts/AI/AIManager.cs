@@ -178,6 +178,7 @@ public class AIManager : MonoBehaviour {
 		if (gameObject.GetComponentInParent<StatCollectionClass>().health <= 0.09f) {
 			print ("Health: " + config.statExchange.health.ToString());
 			behavior.stopDeciding();
+			GameObject.FindWithTag("Player").GetComponent<StatCollectionClass>().xp += config.statExchange.xp;
 			DestroyObject(gameObject);
 		}
 		else{
