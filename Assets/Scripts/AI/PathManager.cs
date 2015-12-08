@@ -91,9 +91,11 @@ public class PathManager : MonoBehaviour {
 	*/
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void GlobalPathToTarget(){
-		
-		
-		
+		/*
+		Given the search space and the way procedural is handed A* did not become viable for every AI.
+		AI implementation removed as it was not cost effective.
+		Time pending, look at a fast A* alternative or redefine the search space to an array with lower cost access.
+		*/
 	}
 	
 	

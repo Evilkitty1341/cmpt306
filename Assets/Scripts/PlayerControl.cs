@@ -42,13 +42,16 @@ public class PlayerControl : MonoBehaviour
 	//for respawn position at town
 	Dialogue D;
     
-
+	ParticleSystem flamethrower;
+	GameObject flameEmmision;
     // public GameObject projectile;
 
     // Use this for initialization
     void Start () 
 	{
 		anim = GetComponent<Animator> ();
+		flamethrower = GameObject.Find ("FlameThrowerParticles").GetComponent<ParticleSystem>();
+		flameEmmision = GameObject.Find ("FlameThrowerParticles");
 		startPosition = new Vector3(-120, 0, -1);
         playerStat = gameObject.GetComponent<StatCollectionClass>();
         playerStat.health = 100;
@@ -69,36 +72,46 @@ public class PlayerControl : MonoBehaviour
 			transform.Translate (Vector3.up * speed * Time.deltaTime);
             playerStat.playerDirection = 1;
             anim.SetInteger ("Direction", 0); // Up
+			flameEmmision.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, 0f);
+			flameEmmision.transform.rotation = Quaternion.AngleAxis(-90f, new Vector3(1, 0, 0));
 			anim.SetBool ("Moving", true);
 		} else if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && SLC.playerEnabled == true && D.freezePos == false) {
 			transform.Translate (Vector3.right * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 1); // Right
             playerStat.playerDirection = 2;
+			flameEmmision.transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y, 0f);
+			flameEmmision.transform.rotation = Quaternion.AngleAxis(90f, new Vector3(0, 1, 0));
             anim.SetBool ("Moving", true);
 		} else if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && SLC.playerEnabled == true &&D.freezePos == false) {
 			transform.Translate (Vector3.down * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 2); // Down
             playerStat.playerDirection = 3;
+			flameEmmision.transform.position = new Vector3(transform.position.x, transform.position.y - 1f, 0f);
+			flameEmmision.transform.rotation = Quaternion.AngleAxis(90f, new Vector3(1, 0, 0));
             anim.SetBool ("Moving", true);
 		} else if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && SLC.playerEnabled == true && D.freezePos == false){
 			transform.Translate (Vector3.left * speed * Time.deltaTime);
             playerStat.playerDirection = 4;
             anim.SetInteger ("Direction", 3); // Left
+			flameEmmision.transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y, 0f);
+			flameEmmision.transform.rotation = Quaternion.AngleAxis(-90f, new Vector3(0, 1, 0));
 			anim.SetBool ("Moving", true);
 		} else {
 			anim.SetBool ("Moving", false);
 		}
         // Controls for attacking
-		if (Input.GetKeyDown("f") && Time.time > nextAttack && playerStat.mana >= 40 && SLC.playerEnabled == true)
+		if (Input.GetKey("f") && SLC.playerEnabled == true)
         {
-
             anim.SetBool("Attacking", true);
             attackSound.Play();
             nextAttack = Time.time + attackRate;
 
+			flamethrower.Emit(20);
+			//flamethrower.enableEmission = true;
+            //playerStat.mana = playerStat.mana - 40f;
 
-            playerStat.mana = playerStat.mana - 40f;
 
+			/*
             spawnedMagic = GameObject.Instantiate(magicPrefab, transform.position, transform.rotation) as GameObject;
             spawnedMagic01 = GameObject.Instantiate(magicPrefab01, transform.position, transform.rotation) as GameObject;
             spawnedMagic02 = GameObject.Instantiate(magicPrefab02, transform.position, transform.rotation) as GameObject;
@@ -115,7 +128,7 @@ public class PlayerControl : MonoBehaviour
             spawnedMagic05.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(500, 500));
             spawnedMagic06.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-500, 500));
             spawnedMagic07.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(500, -500));
-
+			*/
         }
 
 
@@ -146,14 +159,12 @@ public class PlayerControl : MonoBehaviour
 //            }
 
             }else
-		{
-            
-            anim.SetBool ("Attacking", false);
+		{*/
+		//flamethrower.Pause();
+        anim.SetBool ("Attacking", false);
+		checkHealth();
 		}
-		checkHealth();*/
-	}
-
-    
+    /*
         void OnCollisionEnter2D(Collision2D collision)
     {
         // If player collides with an enemy they take damage
@@ -167,12 +178,11 @@ public class PlayerControl : MonoBehaviour
             StatCollectionClass enemyStat = collision.gameObject.GetComponent<StatCollectionClass>();
             playerStat.health = playerStat.health - enemyStat.intellect;
         }
-<<<<<<< Updated upstream
-        */
-
     }
+     */
 
-	void checkHealth()
+
+void checkHealth()
 	{
 		if (playerStat.health <= 0) {
 			Instantiate (deadSoundObject);
