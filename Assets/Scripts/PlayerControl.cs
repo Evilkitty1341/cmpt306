@@ -22,6 +22,8 @@ public class PlayerControl : MonoBehaviour
 
     public GameObject deadSoundObject;
 
+	private Lava2Generate lavaGenerator;
+
 	//used to check tha tthe intro scene is done
 	StoryLineComponents SLC;
 
@@ -46,6 +48,7 @@ public class PlayerControl : MonoBehaviour
         playerStat.playerDirection = 2;
         attackSound = GetComponent<AudioSource>();
 		SLC = GameObject.Find("Main Camera").GetComponent<StoryLineComponents>();
+		lavaGenerator = GameObject.Find("Main Camera").GetComponent<Lava2Generate>();
 		D = GetComponent<Dialogue>();
 		townPosition = new Vector3 (137f, -46f, 10f);
     }
@@ -117,6 +120,11 @@ public class PlayerControl : MonoBehaviour
 			*/
         }
 
+
+		// Deals damage while standing in lava
+		if (lavaGenerator.PositionIsLava (this.transform.position)) {
+			playerStat.health--;
+		}
 
 		/*********************
 		 * NOTE:
