@@ -58,7 +58,7 @@ public class Quest1 : MonoBehaviour {
 	{
 		//If you run into quest giver and they haven't given you the quest yet, 
 		//they give you the quest
-		if (col.gameObject.tag == "QuestGiver1" && Finished == false && AllQuests.QL[0].Has == false) 
+		if (col.gameObject.tag == "QuestGiver1" && Finished == false)// && AllQuests.QL[0].Has == false) 
 		{
 			Has = true;	
 	
