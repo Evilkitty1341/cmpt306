@@ -36,7 +36,11 @@ public class EnemySpawn : MonoBehaviour {
 		}
 		else{
 			SpawnWave();
-			//SpawnSingle(Vector3.zero);
+
+			GameObject spawnBoss = GameObject.FindGameObjectWithTag ("SpawnBoss");
+			if(spawnBoss != null){
+				SpawnSingle(spawnBoss.transform.position);
+			}
 		}
 	}
 
@@ -69,7 +73,11 @@ public class EnemySpawn : MonoBehaviour {
 			countdown = timer - Mathf.Min (0f, 0.5f * dTimer * Mathf.Log10(Mathf.Max (1f, Time.timeSinceLevelLoad) * dTimerReduce) - dTimer);
 		}
 	}
-
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/* 
+		Spawns a single preconfigured AI. Used for boss spawning atm.
+	*/
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void SpawnSingle(Vector3 pos){
 
 		AIConfig ai = new AIConfig();
@@ -88,7 +96,11 @@ public class EnemySpawn : MonoBehaviour {
 		enemy.transform.position = pos;
 
 	}
-
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/* 
+			Finds all target with tag Spawn and spawns a group of procedural enemies based on the configurations.
+	*/
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	void SpawnWave(){
 		spawnRadius = 1.0f;
 		spawnLocations = GameObject.FindGameObjectsWithTag ("Spawn");

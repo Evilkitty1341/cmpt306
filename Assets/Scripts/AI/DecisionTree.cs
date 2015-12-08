@@ -25,7 +25,8 @@ public class DecisionTree : MonoBehaviour {
 			coreTreeSetup ();
 		}
 		else if(behaviorType == "boss"){
-			//Something something darkside...
+			dPath = new DTree<BranchLogic> (new BranchLogic(methodLibrary.MaxWander));
+			coreTreeSetup ();
 		}
 		else{
 			dPath = new DTree<BranchLogic> (new BranchLogic(methodLibrary.MaxWander));

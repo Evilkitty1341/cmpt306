@@ -101,8 +101,11 @@ public class StatCollectionClass : MonoBehaviour {
 			float check = damage - baseDefense - defend;
 			if (check >= health && check < 0) {
 				health = 0;
-			} else {
+			} else if (check > 0){
 				health -= check;
+			}
+			else{
+				Debug.Log ("Damage had no effect!");
 			}
 		}
 	}

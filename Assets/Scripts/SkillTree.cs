@@ -33,7 +33,7 @@ public class SkillTree: MonoBehaviour {
 	//mana cost
 	public float FireBallMpCost = 10f;
 	
-	public float FireBallDamage = 3f;
+	public float FireBallDamage = 10f;
 	//use for skill grow
 	int i =1;
 	

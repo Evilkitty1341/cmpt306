@@ -91,9 +91,11 @@ public class PathManager : MonoBehaviour {
 	*/
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void GlobalPathToTarget(){
-		
-		
-		
+		/*
+		Given the search space and the way procedural is handed A* did not become viable for every AI.
+		AI implementation removed as it was not cost effective.
+		Time pending, look at a fast A* alternative or redefine the search space to an array with lower cost access.
+		*/
 	}
 	
 	
@@ -105,10 +107,15 @@ public class PathManager : MonoBehaviour {
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void GoToSpawn(){
 		
-		MoveTo (homePos);
+		MoveToOnAxis (homePos);
 		
 	}
-	
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/* 
+		Using one of the navigation colliders attempt to walk around an object based on the collider that was hit.
+		Will walk along walls counter clockwise until around object.
+	*/
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void localObstacle(){
 		//Collision on axis
 		if(forward){
@@ -142,7 +149,14 @@ public class PathManager : MonoBehaviour {
 		anim.SetBool("Moving", false);
 	}
 	
-	
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/* 
+		Moves only on the axis pending exterior forces.
+		Accounts for obstacle navigation.
+		Attempts to compensate for navigation done away from the the target destination.
+		Needs some fine tuning...
+	*/
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void MoveToOnAxis(Vector3 pos){
 		killForce ();
 		anim.SetBool("Moving", true);
@@ -326,14 +340,10 @@ public class PathManager : MonoBehaviour {
 		rbody.AddRelativeForce (Vector2.right * mobSp);
 		StartCoroutine(waitForMove ());
 	}
-	
+	//Move to with object if required.
 	public void MoveTo(GameObject target){
-		killForce ();
 		Vector3 pos = target.transform.position;
-		float rotZ = Mathf.Atan2 (pos.y - transform.position.y, pos.x - transform.position.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.AngleAxis (rotZ, Vector3.forward);
-		rbody.AddRelativeForce (Vector2.right * mobSp);
-		StartCoroutine(waitForMove());
+		MoveTo (pos);
 	}
 	
 	//Moves the caller random direction for a second or two.
@@ -354,7 +364,13 @@ public class PathManager : MonoBehaviour {
 		runTo = Vector3.Scale (runTo, new Vector3 (5, 5, 5));
 		MoveToOnAxis (runTo);
 	}
-
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/* 
+		Checks for line of site with the player.
+		Used for path logic and player detection.
+		Uses line casting and bit masks.
+	*/
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void LineOfSight(string name){
 		GameObject tar = GameObject.FindGameObjectWithTag (name);
 		LayerMask mask = 1 << tar.layer;
@@ -376,7 +392,11 @@ public class PathManager : MonoBehaviour {
 			los = false;
 		}
 	}
-
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/* 
+		Sets the collision direction for obstacle pathing.
+	*/
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void DirectionSet(string direction){
 		
 		switch (direction) {
@@ -403,7 +423,12 @@ public class PathManager : MonoBehaviour {
 		}
 		
 	}
-
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/* 
+		Refactored function to check the difference between the the PLAYERS current position with last postion by
+		referencing the change in position with the vector magnitudes.
+	*/
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	float diffPos(){
 		float check = Mathf.Abs(transform.position.magnitude - lastPos.magnitude);
 		if(check < 0.1){
@@ -412,7 +437,11 @@ public class PathManager : MonoBehaviour {
 		return check;
 
 	}
-
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/* 
+		Setup the colliders on this AI prefab.
+	*/
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	void ConfigColliders(){
 		
 		ColliderCheck[] colliders = GetComponentsInChildren<ColliderCheck> ();

@@ -9,8 +9,8 @@ public class PlayerControl : MonoBehaviour
 	Vector3 townPosition;
     StatCollectionClass playerStat;
     
-    public float attackRate = 1.0F;
-    private float nextAttack = 1.0F;
+    public float attackRate = 250.0F;
+    private float nextAttack;
 
     AudioSource attackSound;
     public GameObject attackPrefab;
@@ -58,28 +58,28 @@ public class PlayerControl : MonoBehaviour
 			transform.Translate (Vector3.up * speed * Time.deltaTime);
             playerStat.playerDirection = 1;
             anim.SetInteger ("Direction", 0); // Up
-			flameEmmision.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, 0f);
+			flameEmmision.transform.position = new Vector3(transform.position.x, transform.position.y + 2f, 0f);
 			flameEmmision.transform.rotation = Quaternion.AngleAxis(-90f, new Vector3(1, 0, 0));
 			anim.SetBool ("Moving", true);
 		} else if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && SLC.playerEnabled == true && D.freezePos == false) {
 			transform.Translate (Vector3.right * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 1); // Right
             playerStat.playerDirection = 2;
-			flameEmmision.transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y, 0f);
+			flameEmmision.transform.position = new Vector3(transform.position.x + 1.0f, transform.position.y, 0f);
 			flameEmmision.transform.rotation = Quaternion.AngleAxis(90f, new Vector3(0, 1, 0));
             anim.SetBool ("Moving", true);
 		} else if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && SLC.playerEnabled == true &&D.freezePos == false) {
 			transform.Translate (Vector3.down * speed * Time.deltaTime);
 			anim.SetInteger ("Direction", 2); // Down
             playerStat.playerDirection = 3;
-			flameEmmision.transform.position = new Vector3(transform.position.x, transform.position.y - 1f, 0f);
+			flameEmmision.transform.position = new Vector3(transform.position.x, transform.position.y - 2f, 0f);
 			flameEmmision.transform.rotation = Quaternion.AngleAxis(90f, new Vector3(1, 0, 0));
             anim.SetBool ("Moving", true);
 		} else if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && SLC.playerEnabled == true && D.freezePos == false){
 			transform.Translate (Vector3.left * speed * Time.deltaTime);
             playerStat.playerDirection = 4;
             anim.SetInteger ("Direction", 3); // Left
-			flameEmmision.transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y, 0f);
+			flameEmmision.transform.position = new Vector3(transform.position.x - 1.0f, transform.position.y, 0f);
 			flameEmmision.transform.rotation = Quaternion.AngleAxis(-90f, new Vector3(0, 1, 0));
 			anim.SetBool ("Moving", true);
 		} else {
@@ -90,13 +90,44 @@ public class PlayerControl : MonoBehaviour
         {
             anim.SetBool("Attacking", true);
             attackSound.Play();
-            nextAttack = Time.time + attackRate;
+            
 
-			flamethrower.Emit(20);
-			//flamethrower.enableEmission = true;
-            //playerStat.mana = playerStat.mana - 40f;
+			flamethrower.Emit(25);
+			if(Time.time > nextAttack){
+				nextAttack = Time.time + attackRate;
+				GameObject fireM = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
+				fireM.GetComponent<ProjectileCheck>().damage = playerStat.baseRangedDamage + 10;
+				GameObject fireL = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
+				fireM.GetComponent<ProjectileCheck>().damage = playerStat.baseRangedDamage + 10;
+				GameObject fireR = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
+				fireM.GetComponent<ProjectileCheck>().damage = playerStat.baseRangedDamage + 10;
+		        //playerStat.mana = playerStat.mana - 40f;
 
-
+		       if (playerStat.playerDirection == 1)
+		        {
+					fireM.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, 100));
+					fireL.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(20, 75));
+					fireR.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-20, 75));
+		        }
+		        else if (playerStat.playerDirection == 2)
+		        {
+		            fireM.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(100, 0));
+					fireL.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(75, 20));
+					fireR.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(75, -20));
+		        }
+		        else if (playerStat.playerDirection == 3)
+		        {
+		            fireM.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, -100));
+					fireL.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(20, -75));
+					fireR.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-20, -75));
+		        }
+		        else if (playerStat.playerDirection == 4)
+		        {
+		            fireM.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-100, 0));
+					fireL.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-75, 20));
+					fireR.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-75, -20));
+           		}
+			}
 			/*
             spawnedMagic = GameObject.Instantiate(magicPrefab, transform.position, transform.rotation) as GameObject;
             spawnedMagic01 = GameObject.Instantiate(magicPrefab01, transform.position, transform.rotation) as GameObject;
@@ -149,6 +180,14 @@ public class PlayerControl : MonoBehaviour
 		//flamethrower.Pause();
         anim.SetBool ("Attacking", false);
 		checkHealth();
+		/*
+		GameObject fireM2 = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
+		fireM2.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, 50));
+		GameObject fireL2 = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
+		fireL2.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(25, 25));
+		GameObject fireR2 = Instantiate(attackPrefab, flameEmmision.transform.position, flameEmmision.transform.rotation) as GameObject;
+		fireR2.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-25, 25));
+		*/
 		}
     /*
         void OnCollisionEnter2D(Collision2D collision)
