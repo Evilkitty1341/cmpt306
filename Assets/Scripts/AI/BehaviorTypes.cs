@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BehaviorTypes : MonoBehaviour {
 
-	float movSpMultiplier = 10; // Global stat to scale all speeds.
+	float movSpMultiplier = 20; // Global stat to scale all speeds.
 
 	public float difficulty = 1.0f;
 
@@ -14,7 +14,7 @@ public class BehaviorTypes : MonoBehaviour {
 
 	public AIConfig intializeRangedGeneric(AIConfig ai){
 		ai.delta = getDelta (5.0f, 10.0f);
-		ai.threatZone = 10.00f;
+		ai.threatZone = 15.00f;
 		ai.idealRange = 7.0f;
 		ai.friendlyMinDis = 5.0f;
 		ai.kiteDistance = 40.0f;
@@ -28,7 +28,7 @@ public class BehaviorTypes : MonoBehaviour {
 
 	public AIConfig intializeMeleeGeneric(AIConfig ai){
 		ai.delta = getDelta (5.0f, 10.0f);
-		ai.threatZone = 8.50f;
+		ai.threatZone = 15.00f;
 		ai.idealRange = 1.5f;
 		ai.friendlyMinDis = 5.0f;
 		ai.kiteDistance = 40.0f;
@@ -36,13 +36,13 @@ public class BehaviorTypes : MonoBehaviour {
 		ai.healthMultiplier = 5.0f * difficulty;
 		ai.attackMultiplier = 1.0f;
 		ai.manaMultiplier = 0.0f;
-		ai.movementSpeed = 7f * movSpMultiplier * (1.0f - (1.0f - difficulty));
+		ai.movementSpeed = 10f * movSpMultiplier * (1.0f - (1.0f - difficulty));
 		return ai;
 	}
 
 	public AIConfig intializeHybridGeneric(AIConfig ai){
 		ai.delta = getDelta (5.0f, 10.0f);
-		ai.threatZone = 10.00f;
+		ai.threatZone = 15.00f;
 		ai.idealRange = 4.0f;
 		ai.friendlyMinDis = 5.0f;
 		ai.kiteDistance = 40.0f;
@@ -56,7 +56,7 @@ public class BehaviorTypes : MonoBehaviour {
 
 	public AIConfig intializeTest(AIConfig ai){
 		ai.delta = getDelta (5.0f, 10.0f);
-		ai.threatZone = 25.00f;
+		ai.threatZone = 15.00f;
 		ai.idealRange = 10.0f;
 		ai.friendlyMinDis = 5.0f;
 		ai.kiteDistance = 20.0f;

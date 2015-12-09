@@ -238,17 +238,17 @@ public class All_Quests : MonoBehaviour {
 	//Set the rotation for the Arrow towards the next thing in here!
 	void setRotationString()
 	{
-		if (QL [0].Has && !Q1Script.Completed && Q1Script.CurNumItems == 0) 
+		if (Q1Script.Has && !Q1Script.Completed && Q1Script.CurNumItems == 0) 
 		{
 			R.setRotateTo ("Items1");
-		} else if (QL [0].Has && !Q1Script.Completed && Q1Script.CurNumItems == 1) 
+		} else if (Q1Script.Has && !QL[0].Complete && Q1Script.CurNumItems == 1) 
 		{
 			R.setRotateTo ("QuestGiver1");
-		} else if (QL [0].Complete && !Q2Script.Completed && Q2Script.CurNumItems == 0) 
+		} else if (Q1Script.Completed && !Q2Script.Completed && Q2Script.CurNumItems == 1) 
 		{
 			R.setRotateTo ("QuestGiver2");
 		}
-		else if(QL [0].Complete && Q2Script.Finished1 && !Q2Script.Finished2 )
+		else if(Q1Script.Completed && Q2Script.Finished1 && !Q2Script.Finished2 )
 		{
 			R.setRotateTo("Guard1");
 		}

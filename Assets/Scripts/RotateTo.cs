@@ -22,8 +22,6 @@ public class RotateTo : MonoBehaviour {
 	public GameObject Gigabyte;
 	public GameObject Selina;
 	public GameObject Guard2;
-	
-	public GameObject Boss;
 
 	private GameObject Current;
 
@@ -60,47 +58,40 @@ public class RotateTo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.position = (GameObject.FindGameObjectWithTag ("Player")).transform.position;
-		target = Current.transform.position;
 
-		float rotZ = Mathf.Atan2 (target.y - transform.position.y, target.x - transform.position.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.AngleAxis (rotZ + 90f, Vector3.forward);
+		if (Current != null) {
+			gameObject.GetComponent<SpriteRenderer>().enabled = true;
+			this.transform.position = (GameObject.FindGameObjectWithTag ("Player")).transform.position;
+			target = Current.transform.position;
+
+			float rotZ = Mathf.Atan2 (target.y - transform.position.y, target.x - transform.position.x) * Mathf.Rad2Deg;
+			transform.rotation = Quaternion.AngleAxis (rotZ + 90f, Vector3.forward);
+		} else {
+			gameObject.GetComponent<SpriteRenderer>().enabled = false;
+		}
+
+
 	}
 
 	//This function checks the string and points the arrow towards that game object
 	public void setRotateTo(string rotateTo)
 	{
-		if(rotateTo == "QuestGiver1")
-		{
+		if (rotateTo == "QuestGiver1") {
 			Current = QuestGiver1;
-		}
-		else if(rotateTo == "Items1")
-		{
+		} else if (rotateTo == "Items1") {
 			Current = Items1;
-		}
-		else if(rotateTo == "QuestGiver2")
-		{
+		} else if (rotateTo == "QuestGiver2") {
 			Current = QuestGiver2;
-		}
-		else if(rotateTo == "Guard1")
-		{
+		} else if (rotateTo == "Guard1") {
 			Current = Guard1;
-		}
-		else if(rotateTo == "Gigabyte")
-		{
+		} else if (rotateTo == "Gigabyte") {
 			Current = Gigabyte;
-		}
-		else if(rotateTo == "Selina")
-		{
+		} else if (rotateTo == "Selina") {
 			Current = Selina;
-		}
-		else if(rotateTo == "Guard2")
-		{
+		} else if (rotateTo == "Guard2") {
 			Current = Guard2;
-		}
-		else if(rotateTo == "Boss")
-		{
-			Current = Boss;
+		} else {
+			Current = null;
 		}
 	}
 }

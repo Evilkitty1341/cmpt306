@@ -12,9 +12,7 @@ public class Lava2Generate : MonoBehaviour {
 	public GameObject tree;
 	public GameObject stone;
 	public GameObject bag;
-	public GameObject largeBag;
 	public GameObject questGiver;
-	public GameObject largeQuestGiver;
 	//add for generate items
 	public GameObject Bow;
 	public GameObject Sword;
@@ -117,7 +115,7 @@ public class Lava2Generate : MonoBehaviour {
 			}
 		}
 		TypeSetToWallSet ();
-		GameObject.Find ("SpawnController").GetComponent<EnemySpawn> ().enabled = false;
+		GameObject.Find ("SpawnController").GetComponent<EnemySpawn> ().enabled = true;
 	}
 	
 	// Update is called once per frame
@@ -238,8 +236,6 @@ public class Lava2Generate : MonoBehaviour {
 				temp.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
 				wallSet [x, y] = temp;
 				typeSet[x, y] = 2;
-				GameObject temp2 = Instantiate (largeQuestGiver) as GameObject;
-				temp2.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
 				return new Vector2 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY);
 			}
 		}
@@ -251,17 +247,15 @@ public class Lava2Generate : MonoBehaviour {
 		if (WithinBounds (x, y) && typeSet[x, y]==0) {
 			if (wallSet [x, y] == null) {
 				GameObject temp = Instantiate (bag) as GameObject;
-				temp.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
+				temp.transform.position = new Vector3 ((x+0.5f) * wallDimensions - mapOffsetX, (y-0.5f) * wallDimensions - mapOffsetY, 0f);
 				wallSet [x, y] = temp;
 				typeSet[x, y] = 2;
-				GameObject temp2 = Instantiate (largeBag) as GameObject;
-				temp2.transform.position = new Vector3 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY, 0f);
 				return new Vector2 (x * wallDimensions - mapOffsetX, y * wallDimensions - mapOffsetY);
 			}
 		}
 		return new Vector2 (0f, 0f);
 	}
-	
+
 	/*
 	 * Returns the array index X from a "real world" vector2
 	 */

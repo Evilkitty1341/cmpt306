@@ -61,6 +61,8 @@ public class Dialogue : MonoBehaviour {
 	public GameObject BackGate1;
 	public GameObject BackGate2;
 	public GameObject BackGate3;
+
+	private GameObject Arrow;
 	
 	public bool townDone;
 	
@@ -88,6 +90,8 @@ public class Dialogue : MonoBehaviour {
 		Q1 = gameObject.GetComponent<Quest1>();
 		
 		playerStat = GetComponent<StatCollectionClass>();
+
+		Arrow = GameObject.Find ("Arrow");
 		
 		//SpeechBubble:
 		speechBubble.SetActive(false);
@@ -153,7 +157,7 @@ public class Dialogue : MonoBehaviour {
 		Dl [20] = "\n If you don't have a key, I can't open the gate for you,\n try talking so Selina, she might \n be able to give you one";
 		//Postitive
 		Dl[21] = "\n I have the key, please open the gate for me"; //player
-		Dl[22] = "\n Goodluck, The gate will close behind you,\n we can't risk letting General E. Speaking's soldiers into the town";
+		Dl[22] = "\n Your minimap won't work in General E. Speaking's dungeon, \nGoodluck!";
 		
 		
 		
@@ -538,6 +542,7 @@ public class Dialogue : MonoBehaviour {
 			CurrentConvo = "Guard2.1";
 			BackGate1.SetActive(false);
 			BackGate2.SetActive(true);
+			Arrow.SetActive(false);
 			freezePos = true;
 		}
 		
@@ -578,7 +583,7 @@ public class Dialogue : MonoBehaviour {
 		if (other.gameObject.tag == "backGate") 
 		{
 			BackGate2.SetActive(false);
-			BackGate3.SetActive(true);
+			//BackGate3.SetActive(true);
 			message = Dl[22];
 			dialogue = true;
 			speechBubble.SetActive(true);

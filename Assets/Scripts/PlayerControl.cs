@@ -50,7 +50,7 @@ public class PlayerControl : MonoBehaviour
 		SLC = GameObject.Find("Main Camera").GetComponent<StoryLineComponents>();
 		lavaGenerator = GameObject.Find("Main Camera").GetComponent<Lava2Generate>();
 		D = GetComponent<Dialogue>();
-		townPosition = new Vector3 (137f, -46f, 10f);
+		townPosition = new Vector3 (137f, -46f, -1f);
     }
 
 	// Update is called once per frame
@@ -227,6 +227,7 @@ void checkHealth()
 				} else {
 					transform.position = startPosition;
 				}
+
 				playerStat.health = 100;
 				playerStat.mana = 100;
 				lives--;

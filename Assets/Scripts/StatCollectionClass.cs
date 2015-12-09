@@ -5,7 +5,7 @@ using System.Collections;
 // Each object will have their own version of a stat collection
 public class StatCollectionClass : MonoBehaviour {
 
-	public bool godMode;
+	//public bool godMode;
 
 	public int playerDirection;
 	
@@ -68,7 +68,7 @@ public class StatCollectionClass : MonoBehaviour {
 
 	public void copyStats(StatCollectionClass target){
 
-		godMode = target.godMode;
+	//	godMode = target.godMode;
 		health = target.health;
 		initialHealth = target.initialHealth;
 		mana = target.mana;
@@ -96,8 +96,8 @@ public class StatCollectionClass : MonoBehaviour {
 	}
 
 	public void doDamage(float damage){
-		if (!godMode) {
-			Debug.Log ("Godmode is set to: " + godMode.ToString() + " and " + damage.ToString() + " was applied to health.");
+		//if (true) {
+		//	Debug.Log ("Godmode is set to: " + godMode.ToString() + " and " + damage.ToString() + " was applied to health.");
 			float check = damage - baseDefense - defend;
 			if (check >= health && check < 0) {
 				health = 0;
@@ -107,7 +107,7 @@ public class StatCollectionClass : MonoBehaviour {
 			else{
 				Debug.Log ("Damage had no effect!");
 			}
-		}
+		//}
 	}
 }
 

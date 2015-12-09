@@ -31,7 +31,7 @@ public struct AIConfig {
 	public bool isCautious;	//If the AI has low health, the AI will run away if possible. Use defensive abilities/heal.
 
 	public bool isMade;		//This AI Configuration was successfully setup.	
-
+	
 
 	//Used to determine the radius of aggresion in entitys.
 	//Chosen from play testing and estimating the size of the map.
@@ -123,7 +123,6 @@ public class AIManager : MonoBehaviour {
 
 	public AIConfig config;
 
-
 	void Start () {
 
 		StatCollectionClass tempStat;
@@ -131,8 +130,6 @@ public class AIManager : MonoBehaviour {
 		AIBehavior tempBe;
 		DecisionTree tempTre;
 		ColliderCheck tempCol;
-
-
 
 		tempStat = gameObject.AddComponent<StatCollectionClass>();
 		tempStat.enabled = false;
@@ -179,6 +176,10 @@ public class AIManager : MonoBehaviour {
 			print ("Health: " + config.statExchange.health.ToString());
 			behavior.stopDeciding();
 			GameObject.FindWithTag("Player").GetComponent<StatCollectionClass>().xp += config.statExchange.xp;
+			if(decisionType == "boss")
+			{
+				Application.LoadLevel (3);
+			}
 			DestroyObject(gameObject);
 		}
 		else{
